@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbarArriba{
+    background-color: rgba(146, 177, 146, 0.704);
+    padding: 1%;
+}
+
+.navbarArriba div{
+    display: flex;
+}
+
+.contacto{
+    gap: 10px;
+}
+
+.container-flui{
+    background-color: #004D29;
+}
