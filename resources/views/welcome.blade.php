@@ -8,9 +8,13 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
+    
         <!-- Styles css -->
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" href="../../public/css/footer.css">
+        <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+
+     
 
     </head>
     <body class="antialiased">
@@ -21,7 +25,7 @@
             <div class="contacto">
             <a href="#">
                 <p>Acerca de</p>
-            </a>
+            </a> 
             <a href="">
                 Atencion al cliente
             </a>
@@ -42,11 +46,16 @@
             @endif
 
         </div>
-
         <nav>
             <img src="" alt="" class="">
         </nav>
 
         <script src="{{ asset('js/app.js') }}"></script>
+        
+    
+          @include('footer')  
+      
+    
     </body>
+    
 </html>
