@@ -2,21 +2,126 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
-.navbarArriba{
-    background-color: rgba(146, 177, 146, 0.704);
-    padding: 1%;
-}
-
-.navbarArriba div{
-    display: flex;
-}
-
-.contacto{
-    gap: 10px;
-}
-
-.container-flui{
+header{
     background-color: #004D29;
+    display: flex;
+    /* Que me header distribuya los elementos para ocupar todo el espeacio con una misma medida */
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+header div{
+    display: flex;
+    align-items: center;
+}
+
+a{
+    /* Saca la decoracion de los links (subrayado) */
+    text-decoration: none;
+    color: white;
+}
+
+/* Menu de navegación */
+
+.navbar{
+    /* El menu completo pero sin ser visible para darle animacion con js */
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #1c1c1c;
+    position: absolute;
+    padding: 1rem;
+    left: 0;
+    top: 0;
+    bottom: 0;   
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+}
+
+.navbar.visible{
+    /* menu visible que pisa los anteriores atributos con js */
+    opacity: 1;
+    visibility: visible;
+}
+
+.abrirMenu,
+.cerrarMenu{
+    display: block;
+}
+
+.navList{
+    /* Elimina los puntos de las listas */
+    list-style-type: none;
+    display: flex;
+    /* Para que mi menu quede en columnas */
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+
+}
+
+.navList li a{
+    color: white;
+    font-size: 25px;
+}
+
+/* Logo del Navbar */
+.logo{
+    max-width: 100%;
+    width: 80%;
+}
+
+/* Search del navbar */
+
+.search {
+    width: 85%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+}
+
+.searchTerm {
+    width: 70%;
+    border: 2px solid #7e7e7e;
+    border-right: none;
+    padding: 16px;
+    height: 40px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #000000;
+    background-color: #F2EEE4;
+    font-size: 1rem;
+}
+
+.searchButton {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #7e7e7e;
+    background: #7e7e7e;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.cuenta{
+    width: 15%;
+    gap: 10px;
+    color: white;
+}
+
+.cuenta a,.cuenta p{
+    font-size: 18px;
+}
+
+.shopCar{
+    padding-right: 10px;
 }

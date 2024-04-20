@@ -7,45 +7,17 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
         <!-- Styles css -->
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
     </head>
-    <body class="antialiased">
+    <body>
 
-    <!-- Nabvar de arriba -->
-        <div class="navbarArriba">
-
-            <div class="contacto">
-            <a href="#">
-                <p>Acerca de</p>
-            </a>
-            <a href="">
-                Atencion al cliente
-            </a>
-            </div>
-
-            @if (Route::has('login'))
-                <div class="cuenta">
-                    @auth
-                        <a href="{{ url('/home') }}" class="">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-        </div>
-
-        <nav>
-            <img src="" alt="" class="">
-        </nav>
+        @include('header')
 
         <script src="{{ asset('js/app.js') }}"></script>
     </body>
