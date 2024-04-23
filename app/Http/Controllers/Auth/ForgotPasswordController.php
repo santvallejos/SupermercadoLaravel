@@ -33,17 +33,17 @@ class ForgotPasswordController extends Controller
         $login = $request->input($this->username());
 
         $field = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
-       
+               
         if($field=='username'){
             $user = User::where('username',$login)->first();
         }else{
             $user = User::where('email',$login)->first();
         } 
-        if(is_null($user)){
-            $this->satusReturn(400,'El email no existe');
-            return redirect()->back();
-        }
 
+        if(is_null($user)){
+                $this->statusReturn(400,'El email o el usuario no existe');
+                return redirect()->back();
+        }
 
         $codeToken = Str::random(60);
         session(['codeToken' => $codeToken, 'emailReset'=>$user->email]);
@@ -62,10 +62,8 @@ class ForgotPasswordController extends Controller
 
         SendEmailForgotPasswordJob::dispatch($user,$codeToken);
 
-        $this->satusReturn(200,'Se envio un email');
+        $this->statusReturn(200,'Se envio un email');
         return redirect()->back();
-
-
     }
 
     public function username(){
@@ -81,15 +79,13 @@ class ForgotPasswordController extends Controller
         $email = $passwordReset->email;
         $token = $passwordReset->token;
 
-        return view('auth.passwords.reset',compact('email','token'));
-
+        return view('auth.passwords.reset', compact('email','token'));
     }
 
     public function passwordUpdate(Request $request){
-
         $validate = $this->checkPassword($request->password, $request->password_confirmation);
         if(!$validate){
-            $this->satusReturn(400,'Las contrasenas no coinciden');
+            $this->statusReturn(400,'Las contrasenas no coinciden');
             return redirect()->back();
         }
 
@@ -98,7 +94,7 @@ class ForgotPasswordController extends Controller
         $user = User::where('email',$passwordReset->email)->first();
         if(!$passwordReset && !$user) {
             $this->emptySession();
-            $this->satusReturn(400,'Las credenciales no coinciden');
+            $this->statusReturn(400,'Las credenciales no coinciden');
             return redirect()->back();
         }
      
@@ -107,10 +103,8 @@ class ForgotPasswordController extends Controller
         $user->save();
         $passwordReset->delete();
         $this->emptySession();
-        $this->satusReturn(200,'successfully');
-        return redirect()->back();
-
-
+        $this->statusReturn(200,'Contraseña reestablecida con éxito');
+        return redirect('login');
     }
     protected function emptySession(){
         Session::forget(['codeToken','emailReset']);
@@ -119,7 +113,7 @@ class ForgotPasswordController extends Controller
         if($password != $passwodConfirmation) return false;
         return true;
     }
-    protected function satusReturn($status,$message){
+    protected function statusReturn($status,$message){
         if($status==200){
             Session::flash('flash_message',$message);
             Session::flash('flash_message_class','success');

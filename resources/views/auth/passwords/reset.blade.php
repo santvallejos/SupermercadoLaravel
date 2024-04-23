@@ -21,7 +21,7 @@
                         <input type="hidden" name="token" value="{{ $token }}">
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address | Username') }}</label>
+                            <label for="login" class="col-md-4 col-form-label text-md-end">{{ __('Email Address | User name') }}</label>
 
                             <div class="col-md-6">
                                 <input id="login" type="text" class="form-control @error('login') is-invalid @enderror" name="login" value="{{ $email ?? old('email') }}" required autocomplete="login" autofocus>
