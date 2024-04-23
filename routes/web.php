@@ -14,7 +14,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.inicio');
+});
+
+Route::get('/ofertas', function () {
+    return view('layouts.ofertas');
+});
+
+Route::get('/sucursales', function () {
+    return view('layouts.sucursales');
+});
+
+
+Route::get('/comoComprar', function () {
+    return view('layouts.comoComprar');
+});
+
+Route::get('/sobreNosotros', function () {
+    return view('layouts.sobreNosotros');
 });
 
 Auth::routes();
