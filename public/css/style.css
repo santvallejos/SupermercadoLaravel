@@ -1,22 +1,425 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* Estilos para elementos <footer> y elementos con la clase .footer */
+footer, .footer {
+  background-color: #F2EEE4;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  height: 40vh; /* Usar viewport height para hacerlo responsive en altura */
 }
 
-.navbarArriba{
-    background-color: rgba(146, 177, 146, 0.704);
-    padding: 1%;
+nav {
+  background-color: #F2EEE4;
+  width: 100%;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5em; /* Usar unidades relativas */
+  text-align: center;
+  margin-top: 20px;
+}
+  /* Estilos adicionales específicos para la pie de página */
+.footer {
+  position: absolute;
+  background-color: #F2EEE4;
 }
 
-.navbarArriba div{
+/* Estilos para las columnas */
+.row { 
+   padding: 1%;
+  box-sizing: border-box;
+  height: 40vh;
+  width: 100%;  
+  display: flex;
+  flex-wrap: wrap;  
+}
+
+.column:last-child {
+   border-right: none;
+}
+  
+.column-middle{
+  width: 50%;    
+}
+
+.column-right {
+  width: 25%;
+  float: left;
+  box-sizing: border-box; /* Esto incluye el borde en el ancho total */
+font-size: 1.5em;
+
+}
+
+.column-left {
+  width: 24%;
+  float: left;
+  box-sizing: border-box; /* Esto incluye el borde en el ancho total */
+}
+.redes {
+  display: flex;
+  justify-content: center;
+}
+
+.redes img {
+  margin-right: 15px;
+ width: 50px; /* Tamaño máximo para imágenes de redes sociales */
+ height: 50%;
+}
+
+.info {
+  text-align: center;
+  font-size: 1.5em; /* Usar unidades relativas */
+  padding: 1em;
+}
+
+.links {
+  text-align: center;
+  margin: 25px;
+}
+
+/*color de los links*/
+.footer a {
+ color: black;
+}   
+
+/* Estilos para hacer el logo responsive y alineado a la izquierda */
+.logoFooter {
+width: 50%; /* El logo se ajustará al tamaño del contenedor */
+height: 20%;
+display: flex;
+justify-content: flex-start; /* Alinea el contenido al principio del contenedor */
+margin-bottom: 0.5em; /* Añade un margen inferior más pequeño */
+}
+
+.titulo{
+  text-align: center;
+}
+.formasPago{
+display: flex;
+flex-direction: column;
+align-items: center; /* Centra horizontalmente los elementos */
+text-align: center; /
+}
+.formasPago ul{
+display:inline ;
+justify-content: center;
+}  
+.formasPago{
+display: inline;
+justify-content: center;
+}
+/*pantallas chicas*/
+@media (max-width: 576px) {
+.footer{
+   font-size: 10px;
+}
+.logoFooter img{
+width: 10vh;
+height: 15vw;
+}
+.tex{
+  align-self: flex-end;
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+}
+
+.column-left {
+  width: 25%;
+  height: auto;
+  font-size: 8px;
+}
+.column-right {
+width: 25%;
+font-size: 10px;
+}
+.column-middle{
+width: 50%;
+font-size: 30px;
+
+}
+.redes {
+margin: 1%; /* Reducir el margen en pantallas pequeñas */
+zoom:40%;
+}
+.redes img {
+width: 10vw; /* Tamaño relativo más grande para imágenes de redes sociales */
+}
+
+.formasPago ul li {
+margin: 0 5px; /* Reducir el espacio entre los elementos de la lista */
+}
+
+.info {
+font-size: 10px; /* Reducir el tamaño de fuente */
+display: flex;
+justify-content: center;
+
+}
+
+.links {
+margin: 10px; /* Reducir el margen */
+}
+.formasPago h1{
+font-size:15px ;
+}
+
+.metodosPago img {
+width: 30%;
+}
+
+.tercerColumna{
+margin-left: 10px;
+}
+}
+
+/*pantallas medianas*/
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+
+.logoFooter img{
+  width: 95%;
+  height:95%;
+}
+
+.tex{
+  width: 100%;
+  font-size: small;
+}
+
+.column-left {
+width: 25%;
+height: auto;
+font-size: 8px;
+}
+.column-right {
+width: 25%;
+font-size: 15px;
+}
+.column-middle{
+width: 50%;
+font-size: 10px;
+
+}
+.redes {
+margin: 1%; /* Reducir el margen en pantallas pequeñas */
+zoom:40%;
+}
+.redes img {
+width: 10vw; /* Tamaño relativo más grande para imágenes de redes sociales */
+}
+
+.formasPago ul li {
+margin: 0 5px; /* Reducir el espacio entre los elementos de la lista */
+}
+
+.info {
+  font-size: 15px; /* Reducir el tamaño de fuente */
+  display: flex;
+  justify-content: center;
+}
+.links {
+  margin: 10px; /* Reducir el margen */
+  }
+  .formasPago h1{
+  font-size:15px ;
+  }
+  
+  .metodosPago img {
+  width: 20%;
+  margin-bottom: 10%;
+  }
+  
+  .tercerColumna{
+  margin-left: 20px;
+  }
+ 
+
+}
+/*pantallas grandes*/
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+.logoFooter img{
+    width: 100px;
+    height:100px;
+  }
+  
+.tex{
+    width: 100%;
+    font-size: small;
+      margin-top: 20%;
+    }
+  
+.column-left {
+  width: 25%;
+  height: auto;
+  font-size: 8px;
+}
+.column-right {
+  width: 25%;
+  font-size: 15px;
+  }
+.column-middle{
+  width: 50%;
+  font-size: 50px;
+  
+}
+.redes {
+margin: 1%; /* Reducir el margen en pantallas pequeñas */
+zoom:40%;
+}
+.redes img {
+  width: 10vw; /* Tamaño relativo más grande para imágenes de redes sociales */
+}
+  
+.formasPago ul li {
+  margin: 0 5px; /* Reducir el espacio entre los elementos de la lista */
+  }
+  
+  .info {
+    font-size: 20px; /* Reducir el tamaño de fuente */
     display: flex;
-}
+    justify-content: center;
+  }
+  .links {
+    margin: 10px; /* Reducir el margen */
+    }
+    .formasPago h1{
+    font-size:  20px;
+    }
+    
+    .metodosPago img {
+    width: 25%;
+    margin-bottom: 10%;
+    }
+    
+    .tercerColumna{
+    margin-left: 20px;
+    }
+   
 
-.contacto{
-    gap: 10px;
 }
+/*Pantallas Extras*/  
+@media only screen and (min-width: 992px) and (max-width: 1260px) {
 
-.container-flui{
-    background-color: #004D29;
-}
+  .logoFooter img{
+      width: 100px;
+      height:100px;
+    }
+    
+  .tex{
+      width: 100%;
+      font-size: small;
+      margin-top: 15%;
+       
+    }
+    
+  .column-left {
+    width: 25%;
+    height: auto;
+    font-size: 8px;
+  }
+  .column-right {
+    width: 25%;
+    font-size: 15px;
+    }
+  .column-middle{
+    width: 50%;
+    font-size: 50px;
+    
+  }
+  .redes {
+  margin: 1%; /* Reducir el margen en pantallas pequeñas */
+  zoom:40%;
+  }
+  .redes img {
+    width: 10vw; /* Tamaño relativo más grande para imágenes de redes sociales */
+  }
+    
+  .formasPago ul li {
+    margin: 0 5px; /* Reducir el espacio entre los elementos de la lista */
+    }
+    
+    .info {
+      font-size: 20px; /* Reducir el tamaño de fuente */
+      display: flex;
+      justify-content: center;
+    }
+    .links {
+      margin: 10px; /* Reducir el margen */
+      }
+      .formasPago h1{
+      font-size:  20px;
+      }
+      
+      .metodosPago img {
+      width: 25%;
+      margin-bottom: 10%;
+      }
+      
+      .tercerColumna{
+      margin-left: 20px;
+      }
+     
+  
+  }
+/*ver*/
+  @media only screen and (min-width: 1262px) and (max-width: 1690px) {
+    
+    .logoFooter img{
+        width: 100px;
+        height:100px;
+      }
+      
+    .tex{
+        width: 100%;
+        font-size: small;
+        margin-top: 15%;
+    }
+      
+    .column-left {
+      width: 25%;
+      height: auto;
+      font-size: 8px;
+    }
+    .column-right {
+      width: 25%;
+      font-size: 15px;
+      }
+    .column-middle{
+      width: 50%;
+      font-size: 50px;
+      
+    }
+    .redes {
+    margin: 1%; /* Reducir el margen en pantallas pequeñas */
+    zoom:30%;
+    }
+    .redes img {
+      width: 10vw; /* Tamaño relativo más grande para imágenes de redes sociales */
+    }
+      
+    .formasPago ul li {
+      margin: 0 5px; /* Reducir el espacio entre los elementos de la lista */
+      }
+      
+      .info {
+        font-size: 20px; /* Reducir el tamaño de fuente */
+        display: flex;
+        justify-content: center;
+      }
+      .links {
+        margin: 10px; /* Reducir el margen */
+        }
+        .formasPago h1{
+        font-size:  30px;
+        }
+        
+        .metodosPago img {
+        width: 20%;
+        margin-bottom: 10%;
+        }
+        
+        .tercerColumna{
+        margin-left: 20px;
+        font-size: 20px;
+        }
+       
+    
+    }

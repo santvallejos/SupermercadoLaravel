@@ -2,8 +2,8 @@
         <div class="contenido">
            <div class="row">
               <div class="column-left">
-                <div class="logo">
-                    <img src="../img/WhatsApp Image 2024-04-04 at 15.20.30.jpeg" alt="logo">
+                <div class="logoFooter">
+                    <img src="../img/logo.jpeg" alt="logo">
                 </div>
                 <div class="tex">
                      <h1>Necesitas ayuda?</h1>
@@ -32,9 +32,9 @@
                    <h1>Aceptamos los siguientes métodos de pago</h1>
                     </div>
                     <div class="metodosPago">
-                     <img src="../img/1.png" alt="Efectivo">
-                     <img src="../img/2.png" alt="Transferencias">
-                     <img src="../img/3.png" alt="tarjetas">    
+                     <img src="../img/efectivo.png" alt="Efectivo">
+                     <img src="../img/transferencia.png" alt="Transferencias">
+                     <img src="../img/tarjeta.png" alt="tarjetas">    
                             
                       </div>
                      
