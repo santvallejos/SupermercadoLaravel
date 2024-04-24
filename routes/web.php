@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Por cada ruta que se genera, se mostra su vista respectiva
 Route::get('/', function () {
     return view('layouts.inicio');
 });

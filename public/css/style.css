@@ -9,6 +9,7 @@
 
 header{
     background-color: #004D29;
+        /* Aplica la propieda fle al todo el heaer */
     display: flex;
     /* Que me header distribuya los elementos para ocupar todo el espeacio con una misma medida */
     justify-content: space-between;
@@ -17,6 +18,7 @@ header{
 }
 
 header div{
+
     display: flex;
     align-items: center;
 }
@@ -33,8 +35,11 @@ a{
     /* El menu completo pero sin ser visible para darle animacion con js */
     opacity: 0;
     visibility: hidden;
+
     display: flex;
+    /* Los elementos estaran en columna */
     flex-direction: column;
+    /* estaran al inicio (izquierda) */
     align-items: start;
     background-color: #004D29;
     position: absolute;
@@ -42,10 +47,10 @@ a{
     padding: 2rem 20px 2rem;
     left: 0;
     top: 0;
-    bottom: 0;   
+    bottom: 0;
+    /* Su fondo sera mas oscuro */
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
     transition: opacity 0.3s ease, visibility 0.3s ease;
-
 }
 
 .navbar.visible{
@@ -78,22 +83,40 @@ a{
 }
 
 /* Logo del Navbar */
-.logo{
+.logo {
     max-width: 100%;
-    width: 90%;
+    height: auto;
+    display: block; /* Hacer que la imagen sea un bloque para que el contenedor se ajuste correctamente */
 }
+
+.logo img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.logoMovil{
+    display: none;
+    visibility: hidden;
+}
+
+/* Estilo de la etiqueta <a> que rodea al logo
+.logo-link {
+    display: inline-block;
+} */
 
 /* Search del navbar */
 
 .search {
-    width: 80%;
-    position: relative;
+    width: 100%;
     display: flex;
     align-items: center;
     padding-left: 2rem;
     justify-content: center;
     padding: 0;
 }
+
+
 
 .searchTerm {
     width: 70%;
@@ -128,10 +151,43 @@ a{
     justify-content: end;
 }
 
+
+
 .cuenta a,.cuenta p{
+    display: flex;
     font-size: 18px;
 }
 
 .shopCar{
     padding-right: 10px;
+}
+
+/* diseño responsive */
+@media(max-width: 1246px){
+    .logo{
+        width: 80%;
+    }
+
+    .search{
+        width: 75%;
+    }
+}
+
+@media (max-width: 1110px){
+    .cuenta{
+        display: none;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .logoMovil{
+        display: flex;
+        visibility: visible;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        width: 5rem;
+    }
 }
