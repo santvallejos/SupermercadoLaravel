@@ -111,7 +111,7 @@ justify-content: center;
 /*pantallas chicas*/
 @media (max-width: 576px) {
 .footer{
-  background-color: aquamarine;
+ 
   font-size: 10px;
 }
 .logo img{
@@ -176,9 +176,7 @@ margin-left: 10px;
 
 /*pantallas medianas*/
 @media only screen and (min-width: 577px) and (max-width: 768px) {
-.footer{
-  background-color:chartreuse;
-}
+
 .logo img{
   width: 95%;
   height:95%;
@@ -240,9 +238,6 @@ margin: 0 5px; /* Reducir el espacio entre los elementos de la lista */
 }
 /*pantallas grandes*/
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-.footer{
-    background-color:orange;
-  }
 .logo img{
     width: 100px;
     height:100px;
@@ -306,9 +301,7 @@ zoom:40%;
 }
 /*Pantallas Extras*/  
 @media only screen and (min-width: 992px) and (max-width: 1260px) {
-  .footer{
-      background-color:violet;
-    }
+
   .logo img{
       width: 100px;
       height:100px;
@@ -372,9 +365,7 @@ zoom:40%;
   }
 /*ver*/
   @media only screen and (min-width: 1262px) and (max-width: 1690px) {
-    .footer{
-        background-color:aqua;
-      }
+    
     .logo img{
         width: 100px;
         height:100px;
