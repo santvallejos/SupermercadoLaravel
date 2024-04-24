@@ -51,10 +51,9 @@
         </nav>
 
         <script src="{{ asset('js/app.js') }}"></script>
-        
-    
-          @include('footer')  
-      
+ 
+    <?
+     @include('footer')?>
     
     </body>
     
