@@ -1,3 +1,5 @@
+<!-- Vista en donde se actualiza la contraseña, luego de que te llega el email, el link de reseteo de contraseña te direcciona a esta vista -->
+
 @extends('layouts.app')
 
 @section('content')

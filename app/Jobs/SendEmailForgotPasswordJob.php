@@ -1,3 +1,5 @@
+<!-- Job para el envio de un mail para el reseteo de contraseña -->
+
 <?php
 
 namespace App\Jobs;
@@ -38,6 +40,4 @@ class SendEmailForgotPasswordJob implements ShouldQueue
         $email = new ForgotPasswordSendEmail($this->user,$this->token);
         Mail::to($this->user->email)->send($email);
     }
-
-
 }
