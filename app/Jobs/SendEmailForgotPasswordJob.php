@@ -1,5 +1,3 @@
-<!-- Job para el envio de un mail para el reseteo de contraseña -->
-
 <?php
 
 namespace App\Jobs;

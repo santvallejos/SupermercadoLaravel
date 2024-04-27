@@ -62,7 +62,8 @@ class ForgotPasswordController extends Controller
 
         //Job para el envio de un mail para el reseteo de contraseña
         SendEmailForgotPasswordJob::dispatch($user,$codeToken);                         //despacha un email ($user que puede ser email o username, el token nuevo alamacenado en la BDD password_resets)
-        $this->statusReturn(200,'Se envio un email');                                   //muestra el mensaje en pantalla que se envio un email
+        $this->statusReturn(200,'Revisa tu email, se envio un email para reestablecer la 
+        contraseña.');                                                                  //muestra el mensaje en pantalla que se envio un email
         return redirect()->back();                                                      //retorna a la ultima vista
     }
 
