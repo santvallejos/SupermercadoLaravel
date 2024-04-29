@@ -33,7 +33,7 @@ class ForgotPasswordSendEmail extends Mailable
         //return $this->view('view.name');
         return $this->from('no-reply@supermercadolaravel.com')
             ->subject('Reseteo de password')
-            ->view('email.custom_forgot_password')
+            ->view('email.vistaForgotPassword')
             ->with([
                 'user'  =>  $this->user,
                 'token' =>  $this->token
