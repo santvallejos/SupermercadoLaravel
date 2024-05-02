@@ -158,7 +158,7 @@
                         <td align="center" valign="middle" style="margin: 0; padding: 0; padding-left: 10px; padding-right: 10px; border-collapse: collapse; border-spacing: 0;">
                             <a target="_blank" href="#/" style="text-decoration: none;">
                                 <img border="0" vspace="0" hspace="0" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: inline-block;color: #000000;" alt="Facebook" title="Facebook Laravel" width="44" height="44"
-                                src="https://raw.githubusercontent.com/konsav/email-templates/master/images/social-icons/facebook.png">
+                                src="https://i.postimg.cc/Qxc2P2sk/icons8-facebook-60.png">
                             </a>
                         </td>
         
@@ -166,15 +166,15 @@
                         <td align="center" valign="middle" style="margin: 0; padding: 0; padding-left: 10px; padding-right: 10px; border-collapse: collapse; border-spacing: 0;">
                             <a target="_blank" href="#" style="text-decoration: none;">
                                 <img border="0" vspace="0" hspace="0" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: inline-block;color: #000000;" alt="WhastApp" title="WhastApp Laravel" width="44" height="44"
-                                src="https://i.postimg.cc/rwzJD1gt/whatsapp-icon-icons-com-65542.png">
+                                src="https://i.postimg.cc/mDG2xQJt/icons8-whatsapp-32.png">
                             </a>
                         </td>		
         
                         <!-- ICON 3 INSTAGRAM-->
                         <td align="center" valign="middle" style="margin: 0; padding: 0; padding-left: 10px; padding-right: 10px; border-collapse: collapse; border-spacing: 0;">
                             <a target="_blank" href="#" style="text-decoration: none;">
-                                <img border="0" vspace="0" hspace="0" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: inline-block;color: #000000;" alt="Instagram" title="Instagram Laravel" width="44" height="44"
-                               src="https://i.postimg.cc/zBh2VCzk/INSTAGRAM-icon-icons-com-65535.png">
+                                <img border="0" vspace="0" hspace="0" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: inline-block;color: #000000;" alt="Instagram" title="Instagram Laravel" width="50" height="50"
+                               src="https://i.postimg.cc/v8k2G3Xq/social.png">
                             </a>
                         </td>
                     </tr>
