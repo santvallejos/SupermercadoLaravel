@@ -10,9 +10,6 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
-                        
-                        <label for="" class="col-md-4 col-form-label text-md-end">Agregar foto de perfil</label>
-                        <input type="file" name="fileInput" accept='.jpeg, .jpg, .png'>
 
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
@@ -56,6 +53,29 @@
                             </div>
                         </div>
 
+                        <div class="row mb-3">
+                            <label class="col-md-4 col-form-label text-md-end">{{ __('Sexo') }}</label>
+                            <div class="col-md-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="sexo_femenino" name="sexo" value="Femenino" required>
+                                    <label class="form-check-label" for="sexo_femenino">
+                                        Femenino
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="sexo_masculino" name="sexo" value="Masculino" required>
+                                    <label class="form-check-label" for="sexo_masculino">
+                                        Masculino
+                                    </label>
+                                </div>
+                                @error('sexo')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 

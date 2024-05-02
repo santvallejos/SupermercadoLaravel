@@ -32,7 +32,7 @@ class ForgotPasswordController extends Controller
     /* Metodo para el envio de reseteo de contraseña */
     public function sendResetLinkEmail(Request $request){
         $login = $request->input($this->username());                                    //$login guarda el valor ingresado por el usuario.
-        $field = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';      //$field filtra y valida si es un email o no.
+        $field = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';      /* $field filtra y valida si es un email o no. */
         
         if($field=='username'){                                                         //verificamos si es username el valor ingresado
             $user = User::where('username',$login)->first();                            //$user busca y devuelve el primer username guardado si existe
