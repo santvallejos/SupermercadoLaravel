@@ -17,6 +17,8 @@ cerrarMenu.addEventListener("click", () =>{
     body.style.overflow = 'auto';
 })
 
+/* Carrusel de imagenes */
+
 let slideIndex = 1;
 showSlides(slideIndex)
 
