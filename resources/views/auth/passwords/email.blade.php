@@ -1,4 +1,3 @@
-<!-- Vista donde procedes a colocar tu email o username para que te envie el email con el reset password -->
 @extends('layouts.app')
 
 @section('content')
@@ -8,27 +7,23 @@
             <div class="card">
                 <div class="card-header">{{ __('Reset Password') }}</div>
 
-                <!-- Controla el envio de mensajes ya sea de ingreso exitoso o datos incorrectos -->
                 <div class="card-body">
-                    @if (Session::has('flash_message'))
-                            @if (Session::get('flash_message_class') <> "")
-                                <div class="alert alert-{{Session::get('flash_message_class')}}">{{ Session::get('flash_message') }}</div>
-                            @else
-                                <div class="alert alert-success">{{ Session::get('flash_message') }}</div>
-                            @endif
-                        @endif
-    
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
                     <form method="POST" action="{{ route('password.email') }}">
                         @csrf
 
-                        <!-- Controla que vamos a ingresar en el formulario, si es email o es username -->
                         <div class="row mb-3">
-                            <label for="login" class="col-md-4 col-form-label text-md-end">{{ __('Email Address | Username') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="login" type="text" class="form-control @error('login') is-invalid @enderror" name="login" value="{{ old('login') }}" required autocomplete="login" autofocus>
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
-                                @error('login')
+                                @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
