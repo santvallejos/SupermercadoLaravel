@@ -1,5 +1,3 @@
-<!-- Vista en donde se actualiza la contraseña, luego de que te llega el email, el link de reseteo de contraseña te direcciona a esta vista -->
-
 @extends('layouts.app')
 
 @section('content')
@@ -9,13 +7,6 @@
             <div class="card">
                 <div class="card-header">{{ __('Reset Password') }}</div>
 
-                @if (Session::has('flash_message'))
-                    @if (Session::get('flash_message_class') <> "")
-                        <div class="alert alert-{{Session::get('flash_message_class')}}">{{ Session::get('flash_message') }}</div>
-                    @else
-                        <div class="alert alert-success">{{ Session::get('flash_message') }}</div>
-                    @endif
-                @endif
                 <div class="card-body">
                     <form method="POST" action="{{ route('password.update') }}">
                         @csrf
@@ -23,12 +14,12 @@
                         <input type="hidden" name="token" value="{{ $token }}">
 
                         <div class="row mb-3">
-                            <label for="login" class="col-md-4 col-form-label text-md-end">{{ __('Email Address | User name') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="login" type="text" class="form-control @error('login') is-invalid @enderror" name="login" value="{{ $email ?? old('email') }}" required autocomplete="login" autofocus>
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $email ?? old('email') }}" required autocomplete="email" autofocus>
 
-                                @error('login')
+                                @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
