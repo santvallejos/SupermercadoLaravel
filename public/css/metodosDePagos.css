@@ -1,0 +1,451 @@
+/*
+ * Start Bootstrap - Agency Bootstrap Theme (https://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+ #page-top {
+    overflow-x: hidden;
+    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.text-muted {
+    color: #777;
+}
+
+.text-primary {
+    color: #1ee2e7;
+    background-color: #777;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+p.large {
+    font-size: 16px;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+    outline: 0;
+}
+
+a {
+    color: #1ee2e7;
+}
+
+a:hover,
+a:focus,
+a:active,
+a.active {
+    color: #17d0d5;
+}
+
+.section-heading , .section-subheading .text-muted,.tituloPorcentajeDescuento, .topeDescuento{
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+.img-centered {
+    margin: 0 auto;
+}
+
+.bg-light-gray {
+    background-color: #000;
+}
+/* sacar 1 
+.bg-darkest-gray {
+    background-color: #222;
+}
+*/
+.btn-primary {
+    border-color: #1ee2e7;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #fff;
+    background-color: #1ee2e7;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    border-color: #17d0d5;
+    color: #fff;
+    background-color: #17d0d5;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    background-image: none;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    border-color: #1ee2e7;
+    background-color: #1ee2e7;
+}
+
+.btn-primary .badge {
+    color: #1ee2e7;
+    background-color: #fff;
+}
+
+.btn-xl {
+    padding: 20px 40px;
+    border-color: #1ee2e7;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #004d29;
+}
+
+.btn-xl:hover,
+.btn-xl:focus,
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+    border-color: #000;
+    color: #fff;
+    background-color: #17d0d5;
+}
+
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+    background-image: none;
+}
+
+.btn-xl.disabled,
+.btn-xl[disabled],
+fieldset[disabled] .btn-xl,
+.btn-xl.disabled:hover,
+.btn-xl[disabled]:hover,
+fieldset[disabled] .btn-xl:hover,
+.btn-xl.disabled:focus,
+.btn-xl[disabled]:focus,
+fieldset[disabled] .btn-xl:focus,
+.btn-xl.disabled:active,
+.btn-xl[disabled]:active,
+fieldset[disabled] .btn-xl:active,
+.btn-xl.disabled.active,
+.btn-xl[disabled].active,
+fieldset[disabled] .btn-xl.active {
+    border-color: #1ee2e7;
+    background-color: #1ee2e7;
+}
+
+.btn-xl .badge {
+    color: #fed136;
+    background-color: #fff;
+}
+
+.navbarMP-default {
+    border-color: transparent;
+    background-color: #004d29; /*navbar cuando se contrae*/
+}
+
+.navbarMP-default .navbarMP-brand {
+    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+    color: #fff; /*modificar en el archivo de dai (3);*/
+    font-size: 20px;
+    }
+/* Cuando pasamos por encima de Promociones Bancarias */
+.navbarMP-default .navbarMP-brand:hover,
+.navbarMP-default .navbarMP-brand:focus,
+.navbarMP-default .navbarMP-brand:active,
+.navbarMP-default .navbarMP-brand.active {
+    color: red; /*revisar el color */
+    text-decoration: none;
+}
+/*
+.navbarMP-default .navbar-collapse {
+    border-color: #ffffff;
+}*/
+
+.navbarMP-default .navbar-toggle {
+    border-color: #ffffff;
+    background-color: #004d29; /*revisar (2)*/
+}
+
+/* tres rayitas del menu hamburguesa */
+.navbarMP-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+/* cuando pasas por el menu hambuguesa */
+.navbarMP-default .navbar-toggle:hover,
+.navbarMP-default .navbar-toggle:focus {
+    background-color:#fec503; /*aeglar (1)*/
+  
+}
+
+/* las opciones de lunes a domingo */
+.navbarMP-default .nav li a {
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+/* cuando pasamos por encima de cada dia de la semana de la lista */
+.navbarMP-default .nav li a:hover,
+.navbarMP-default .nav li a:focus {
+    outline: 0;
+    color: #004D29;
+    font-weight: bold;
+}
+
+/* cuando queda seleccionada una opcion de la lista */
+.navbarMP-default .navbar-nav>.active>a {
+    border-radius: 0;
+    color: #004d29;
+    background-color: #fff;
+}
+
+.navbarMP-default .navbar-nav>.active>a:hover,
+.navbarMP-default .navbar-nav>.active>a:focus {
+    color: #004d29;
+    background-color: #fff;
+}
+
+@media(min-width:768px) {
+    .navbarMP-default {
+        padding: 25px 0;
+        border: 0;
+        background-color: transparent;
+        -webkit-transition: padding .3s;
+        -moz-transition: padding .3s;
+        transition: padding .3s;
+    }
+
+    .navbarMP-default .navbarMP-brand {
+        font-size: 2em;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .navbarMP-default .navbar-nav>.active>a {
+        border-radius: 3px;
+    }
+
+    .navbarMP-default.navbarMP-shrink {
+        padding: 10px 0;
+        background-color: #004d29; /*background del nav-bar */
+    }
+
+    .navbarMP-default.navbarMP-shrink .navbarMP-brand {
+        font-size: 1.5em;
+    }
+}
+
+header {
+    text-align: center;
+    color: #fff;
+    background-attachment: scroll;
+    background-image: url(https://www.lavozdeasturias.es/default/2023/11/30/00121701349266338467860/Foto/campana-autoservicios-familia.jpg);
+    background-position: center center;
+    background-repeat: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+header .intro-text {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+header .intro-text .intro-lead-in {
+    margin-bottom: 25px;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 22px;
+}
+
+header .intro-text .intro-heading {
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+}
+
+@media(min-width:768px) {
+    header .intro-text {
+        padding-top: 300px;
+        padding-bottom: 200px;
+    }
+
+    header .intro-text .intro-lead-in {
+        margin-bottom: 25px;
+        font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 40px;
+        font-style: italic;
+        line-height: 40px;
+    }
+
+    header .intro-text .intro-heading {
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 75px;
+        font-weight: 700;
+        line-height: 75px;
+    }
+}
+
+section {
+    padding: 50px 0;
+}
+
+section h2.section-heading {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 40px;
+}
+
+section h3.section-subheading {
+    margin-bottom: 75px;
+    text-transform: none;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+@media(min-width:768px) {
+    section {
+        padding: 150px 0;
+            }
+}
+
+.service-heading {
+    margin: 15px 0;
+    text-transform: none;
+}
+
+.tituloPorcentajeDescuento {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.topeDescuento {
+  color: red;
+  font-weight: bold;
+}
+
+#portfolio #lunes .portfolio-item .lunes-item{
+    right: 0;
+    margin: 0 0 15px;
+}
+
+
+
+#portfolio #lunes .portfolio-item .lunes-item .portfolio-link .lunes-link {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+#portfolio #lunes  .portfolio-item .lunes-item .portfolio-link  .lunes-link .lunes-hover .portfolio-hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: #1ee2e7;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+}
+
+#portfolio  #lunes  .portfolio-item .lunes-item .portfolio-link  .lunes-link .lunes-hover .portfolio-hover  .portfolio-hover:hover .lunes-hover:hover {
+    opacity: 1;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+    margin-top: -12px;
+}
+
+#portfolio #lunes .lunes-item .portfolio-item .lunes-link .portfolio-link .portfolio-hover .lunes-hover-content .portfolio-hover-content h3,
+#portfolio #lunes .lunes-item .portfolio-item .lunes-link .portfolio-link .portfolio-hover .lunes-hover-content .portfolio-hover-content h4 {
+    margin: 0;
+ }
+#portfolio #lunes .portfolio-item .lunes-item .portfolio-caption .lunes-caption {
+    margin: 0 auto;
+    padding: 25px;
+    max-width: 400px;
+    text-align: center;
+    background-color: #fff;
+}
+
+#portfolio #lunes .portfolio-item .lunes-item.portfolio-caption .lunes-caption h4 {
+    margin: 0;
+    text-transform: none;
+}
+
+#portfolio #lunes .portfolio-item .lunes-item .portfolio-caption .lunes-caption p {
+    margin: 0;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+#portfolio #lunes * {
+    z-index: 2;
+}
+
+@media(min-width:767px) {
+    #portfolio #lunes .lunes-item .portfolio-item {
+        margin: 0 0 30px;
+     }
+}
+
+@media(min-width:767px) {
+    .descriptionDescuento  {
+      min-width: 250px;
+      height: 90px;
+      text-align: center;
+      }
+  }

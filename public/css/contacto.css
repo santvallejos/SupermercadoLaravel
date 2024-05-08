@@ -1,0 +1,95 @@
+svg{
+    height: 50px; margin: 5%;
+}
+
+.volverAtras {
+    text-decoration: none;
+    color: #ffde59;
+    padding: 10px 15px;
+    border: 1px solid #004d29;
+    border-radius: 5px;
+    background-color: #004d29;
+    margin-left: 1%;
+}
+
+.volverAtras:hover {
+    background-color: #ffde59;
+    color: #004d29;
+}
+
+.contacto {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .filaContacto {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .columnaC {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .columna1Contacto {
+    flex: 0 0 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .columna2Contacto,
+  .columna3Contacto,
+  .columna4Contacto {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  /* Para ajustar el tamaño de las filas en caso de necesitarlo */
+  .fila:nth-child(1) {
+    height: 100px; /* Ajustar según sea necesario */
+  }
+  
+  .fila:nth-child(2) {
+    height: 150px; /* Ajustar según sea necesario */
+  }
+  
+  .fila:nth-child(3) {
+    height: 200px; /* Ajustar según sea necesario */
+  }
+  
+  .fila:nth-child(4) {
+    height: 250px; /* Ajustar según sea necesario */
+  }
+
+h3 {
+  font-weight: bold;
+  font-size: 15px;
+ align-items: center;
+}
+p{
+    margin: 7%;
+    align-items: center;
+}
+
+.numero{
+    color: #004d29;
+    font-weight: bold;
+}
+.iconoContacto{
+    display: block;
+}
+h4{
+   font-weight: bold;
+   font-size: 15px;
+   align-items: center;
+}
+.columna4Contacto {
+    justify-content: center;
+    align-items: center;
+}

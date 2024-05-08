@@ -1,0 +1,135 @@
+.atencionAlCliente{
+    background-color: #f2eeE4;
+   }
+.barraAC {
+       display: flex;
+       justify-content: center;
+       padding: 0;
+       list-style-type: none;
+     }
+     
+     .barraAC a {
+       text-decoration: none;
+       color:#ffde59 ;
+       padding: 10px 15px;
+       border: 1px solid #004d29;
+       border-radius: 5px;
+       margin-right: 100px;
+       /* Espacio entre  elementos */
+       background-color: #004d29;
+     }
+     
+     .barraAC a:last-child {
+       margin-right: 70px; /* Elimina el margen derecho del último elemento li */
+     }
+     
+     .barraAC a:hover {
+       background-color: #ffde59;
+       color: black;
+     }
+     .volverAtras {
+        text-decoration: none;
+        color: #ffde59;
+        padding: 10px 15px;
+        border: 1px solid #004d29;
+        border-radius: 5px;
+        background-color: #004d29;
+        margin-left: 1%;
+      }
+      .volverAtras:hover {
+        background-color: #ffde59; /* Cambio de color de fondo al pasar el mouse */
+        color: #004d29;
+      }
+      
+      @media (max-width: 576px) {
+        .barraAC {
+          flex-direction: column; /* Cambiar la dirección de los elementos a columna */
+          align-items: flex-start; /* Alinear los elementos a la izquierda */
+        }
+        .barraAC li {
+          padding: 3px 5px; /* Reducir el padding de los elementos li */
+          margin: 1%; /* Eliminar el margen derecho entre los elementos li */
+          margin-bottom: 2px; /* Agregar margen inferior entre los elementos li */
+        }
+        .barraAC a {
+          font-size: 20px; /* Reducir el tamaño de fuente de los elementos */
+          padding: 5px 10px; /* Reducir el padding de los elementos */
+        }
+      }
+      /*pantallas medianas*/   
+      @media only screen and (min-width: 577px) and (max-width: 768px) {
+        .barraAC {
+          flex-direction: column; /* Cambiar la dirección de los elementos a columna */
+          align-items: flex-start; /* Alinear los elementos a la izquierda */
+        }
+        .barraAC li {
+          padding: 5px 5px; /* Reducir el padding de los elementos li */
+          margin:2%;
+          margin-bottom: 2px; /* Agregar margen inferior entre los elementos li */
+        }
+        .barraAC a {
+          font-size: 20px; /* Reducir el tamaño de fuente de los elementos */
+          padding: 5px 10px; /* Reducir el padding de los elementos */
+        }
+      }
+        
+        /*pantallas grandes*/
+        @media only screen and (min-width: 769px) and (max-width: 900px) {
+          .barraAC {
+              flex-wrap: wrap; /* Permite que los elementos se envuelvan en filas */
+              justify-content: flex-start; /* Alinear los elementos a la izquierda */
+          }
+      
+          .barraAC li {
+              flex: 0 0 48%; /* Establece el ancho de los elementos li */
+              padding: 5px 5px; /* Ajusta el espaciado interno de los elementos li */
+              margin: 1%; /* Ajusta el margen entre los elementos li */
+              margin-bottom: 2px; /* Agrega margen inferior entre los elementos li */
+          }
+          
+          .barraAC a {
+              font-size: 20px; /* Reducir el tamaño de fuente de los elementos */
+              padding: 5px 10px; /* Reducir el padding de los elementos */
+          }
+        }
+       
+      /*Pantallas Extras*/  
+      @media only screen and (min-width: 901px) and (max-width: 1000px) {
+        .barraAC {
+            flex-direction: column; /* Cambiar la dirección de los elementos a columna */
+            align-items: flex-start; /* Alinear los elementos a la izquierda */
+        }
+    
+        .barraAC li {
+            padding: 3px 5px; /* Reducir el padding de los elementos li */
+            margin: 0; /* Eliminar el margen entre los elementos li */
+            margin-bottom: 2px; /* Agregar margen inferior entre los elementos li */
+            white-space: nowrap; /* Evitar que las palabras se rompan */
+        }
+    
+        .barraAC a {
+            font-size: 20px; /* Reducir el tamaño de fuente de los elementos */
+            padding: 5px 10px; /* Reducir el padding de los elementos */
+        }
+    }
+      
+    @media only screen and (min-width: 1001px) and (max-width: 1260px) {
+      .barraAC {
+          flex-direction: column; /* Cambiar la dirección de los elementos a columna */
+          align-items: flex-start; /* Alinear los elementos a la izquierda */
+      }
+  
+      .barraAC li {
+          padding: 3px 5px; /* Reducir el padding de los elementos li */
+          margin: 1%; /* Reducir el margen entre los elementos li */
+          margin-bottom: 2px; /* Agregar margen inferior entre los elementos li */
+          white-space: nowrap; /* Evitar que las palabras se rompan */
+      }
+  
+      .barraAC a {
+          font-size: 20px; /* Reducir el tamaño de fuente de los elementos */
+          padding: 5px 10px; /* Reducir el padding de los elementos */
+      }
+  }
+
+      

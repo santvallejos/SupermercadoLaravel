@@ -1,0 +1,289 @@
+.bodySN{
+    background-color: #f2EEE4;
+}
+/*Primer bloque de texto*/
+.textoSN1{
+    background-color: #004d29;
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right:10%;
+    padding: 2%;
+   font-size: 20px;
+   color: #f2EEE4;
+   }
+/*Bloque icono sobre nosotros*/
+.iconoSB{
+    text-align: center;
+    color: #000000;
+    font-size: 20px;
+}
+/*bloque de 2 columnas 1 con imagen
+ y otra con texto.*/
+
+.columna1 {
+    width: 30%;
+}
+
+.columna1 img{
+    width: 100%;
+   }
+.columna2 {
+    width: 30%;
+    height: 20%;
+    text-align: center;
+    margin: 3%;
+    background-color: #f2EEE4;
+}
+.contenedorImagen {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    font-size: 20px; 
+}
+/*Texto alado de la imagen*/
+.textoSN{
+    width: 80%;
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: center;
+    background-color: #f2EEE4 ;
+    font-size: 20px;
+}
+/*Bloque de contenedor con nuestras fotos
+ y con una alguna información sobre nuestros "puestos"*/
+.containerNosotros {
+    display: flex;
+    background-color: #ffde59;
+    justify-content: space-around;
+    }
+.column{
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+        display: flex;
+    justify-content: center;
+    align-items: center;   
+    border-left: 1px solid #004d29; 
+    border-right: 1px solid #004d29;     
+}
+.circle {
+    width: 300px; /* Ancho de tu imagen */
+    height: 300px; /* Alto de tu imagen */
+    border-radius: 50%;
+    overflow: hidden; /* Para ocultar cualquier parte de la imagen que se salga del círculo */
+    border-left: 5px solid #004d29; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2EEE4;
+   
+  }
+  .circle img {
+    width: 100%; /* Para que la imagen ocupe todo el espacio del contenedor circular */
+    height: auto; /* Para mantener la proporción de la imagen */
+    display: block; /* Para asegurarse de que la imagen se muestre como un bloque */
+    justify-content: center;
+    align-items: center;
+  }
+  .puestos {
+    width: 100%;
+    display: flex;
+}
+
+.box {
+    flex: 1;
+    height: 100px; /* Altura de cada sección, ajusta según necesites */
+    background-color: #ffde59; /* Color de fondo, puedes cambiarlo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px; /* Margen de 5px a cada lado */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto */
+    border-left: 1px solid #004d29; 
+    border-right: 1px solid #004d29; 
+}
+.volverAtras {
+    text-decoration: none;
+    color: #ffde59;
+    padding: 10px 15px;
+    border: 1px solid #004d29;
+    border-radius: 5px;
+    background-color: #004d29;
+    margin-left: 1%;
+  }
+  .volverAtras:hover {
+    background-color: #ffde59; /* Cambio de color de fondo al pasar el mouse */
+    color: #004d29;
+  }
+  
+
+   @media only screen and  (max-width: 575px) {
+    .circle {
+        width: 150px; /* Ancho más pequeño para el círculo en pantallas pequeñas */
+        height: 150px; /* Alto más pequeño para el círculo en pantallas pequeñas */
+        border-left: none; /* Elimina el borde izquierdo en pantallas pequeñas */
+    }
+    }
+   
+  @media only screen and (min-width: 574px) and (max-width: 768px){
+       /* Ajustes para el primer bloque de texto */
+    .textoSN1 {
+        font-size: 18px; /* Ajusta el tamaño del texto */
+        margin-left: 10%; /* Ajusta el margen izquierdo */
+        margin-right: 10%; /* Ajusta el margen derecho */
+        padding: 2%; /* Ajusta el padding */
+    }
+
+    /* Ajustes para el bloque de 2 columnas */
+    .columna1, .columna2 {
+        width: 45%; /* Cambia el ancho de las columnas */
+    }
+
+    /* Ajustes para el texto al lado de la imagen */
+    .textoSN {
+        font-size: 18px; /* Ajusta el tamaño del texto */
+        margin-left: 10%; /* Ajusta el margen izquierdo */
+        margin-right: 10%; /* Ajusta el margen derecho */
+    }
+
+    /* Ajustes para el contenedor con nuestras fotos */
+    .containerNosotros {
+        flex-direction: row; /* Cambia la dirección del flexbox a row */
+    }
+
+    /* Ajustes para las cajas de puestos */
+    .box {
+        height: 100px; /* Ajusta la altura de las cajas */
+        margin: 10px; /* Ajusta el margen */
+    }
+
+    /* Ajustes para el círculo */
+    .circle {
+        width: 150px; /* Ancho del círculo más pequeño */
+        height: 150px; /* Alto del círculo más pequeño */
+        border-width: 3px; /* Grosor del borde del círculo más pequeño */
+    }
+      }
+
+  
+@media (min-width: 768px) and (max-width: 992px) {
+    /* Ajustes para el primer bloque de texto */
+    .textoSN1 {
+        font-size: 18px; /* Ajusta el tamaño del texto */
+        margin-left: 10%; /* Ajusta el margen izquierdo */
+        margin-right: 10%; /* Ajusta el margen derecho */
+        padding: 2%; /* Ajusta el padding */
+    }
+
+    /* Ajustes para el bloque de 2 columnas */
+    .columna1, .columna2 {
+        width: 45%; /* Cambia el ancho de las columnas */
+    }
+
+    /* Ajustes para el texto al lado de la imagen */
+    .textoSN {
+        font-size: 18px; /* Ajusta el tamaño del texto */
+        margin-left: 10%; /* Ajusta el margen izquierdo */
+        margin-right: 10%; /* Ajusta el margen derecho */
+    }
+
+    /* Ajustes para el contenedor con nuestras fotos */
+    .containerNosotros {
+        flex-direction: row; /* Cambia la dirección del flexbox a row */
+    }
+
+    /* Ajustes para las cajas de puestos */
+    .box {
+        height: 100px; /* Ajusta la altura de las cajas */
+        margin: 10px; /* Ajusta el margen */
+    }
+    .circle {
+        width: 150px; /* Ancho del círculo más pequeño */
+        height: 150px; /* Alto del círculo más pequeño */
+        border-width: 3px; /* Grosor del borde del círculo más pequeño */
+    }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1260px){
+      /* Ajustes para el primer bloque de texto */
+    .textoSN1 {
+        font-size: 22px; /* Ajusta el tamaño del texto */
+        margin-left: 15%; /* Ajusta el margen izquierdo */
+        
+    
+margin-right: 15%; /* Ajusta el margen derecho */
+        padding: 3%; /* Ajusta el padding */
+    }
+
+    /* Ajustes para el bloque de 2 columnas */
+    .columna1, .columna2 {
+        width: 40%; /* Cambia el ancho de las columnas */
+    }
+
+    /* Ajustes para el texto al lado de la imagen */
+    .textoSN {
+        font-size: 22px; /* Ajusta el tamaño del texto */
+        margin-left: 15%; /* Ajusta el margen izquierdo */
+        margin-right: 15%; /* Ajusta el margen derecho */
+    }
+
+    /* Ajustes para el contenedor con nuestras fotos */
+    .containerNosotros {
+        flex-direction: row; /* Cambia la dirección del flexbox a row */
+    }
+
+    /* Ajustes para las cajas de puestos */
+    .box {
+        height: 120px; /* Ajusta la altura de las cajas */
+        margin: 15px; /* Ajusta el margen */
+    }
+
+    /* Ajustes para el círculo */
+    .circle {
+        width: 250px; /* Ancho del círculo */
+        height: 250px; /* Alto del círculo */
+        border-width: 5px; /* Grosor del borde del círculo */
+    } 
+      }
+@media only screen and (min-width: 1261px) and (max-width: 1690px){
+       /* Ajustes para el primer bloque de texto */
+    .textoSN1 {
+        font-size: 24px; /* Ajusta el tamaño del texto */
+        margin-left: 20%; /* Ajusta el margen izquierdo */
+        margin-right: 20%; /* Ajusta el margen derecho */
+        padding: 4%; /* Ajusta el padding */
+    }
+
+    /* Ajustes para el bloque de 2 columnas */
+    .columna1, .columna2 {
+        width: 35%; /* Cambia el ancho de las columnas */
+    }
+
+    /* Ajustes para el texto al lado de la imagen */
+    .textoSN {
+        font-size: 24px; /* Ajusta el tamaño del texto */
+        margin-left: 20%; /* Ajusta el margen izquierdo */
+        margin-right: 20%; /* Ajusta el margen derecho */
+    }
+
+    /* Ajustes para el contenedor con nuestras fotos */
+    .containerNosotros {
+        flex-direction: row; /* Cambia la dirección del flexbox a row */
+    }
+
+    /* Ajustes para las cajas de puestos */
+    .box {
+        height: 140px; /* Ajusta la altura de las cajas */
+        margin: 20px; /* Ajusta el margen */
+    }
+
+    /* Ajustes para el círculo */
+    .circle {
+        width: 300px; /* Ancho del círculo */
+        height: 300px; /* Alto del círculo */
+        border-width: 7px; /* Grosor del borde del círculo */
+    }
+      }

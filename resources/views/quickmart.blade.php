@@ -82,15 +82,19 @@
                     <div class="filaFooter">
                         <div class="columnaIzquierda">
                             <div class="logoFooter">
-                                <img src="../img/logo.jpeg" alt="logo">
+                                <a href="{{ url('/') }}">
+                                    <img src="../img/logo.jpeg" alt="logo">
+                                </a>
+                                
                                 <div class="otro">
-                                    <img class="logoMovilFooter" src="../img/2.png" alt="logoMovil">
+                                    <a href="{{ url('/') }}">
+                                    <img class="logoMovilFooter" src="../img/2.png" alt="logoMovil"></a>
                                 </div>
                             </div>
                             
                             <div class="textoColumnaIzquierda">
                                 <h2>Necesitas ayuda?</h2>
-                                <p>Visita <a href="">atencion al cliente</a>
+                                <p>Visita <a href="{{ url('atencionAlCliente')}}">atencion al cliente</a>
                                 para ayuda o llamanos al</p>
                                 <p>+54 3794 487562</p>
                             </div>
@@ -105,9 +109,9 @@
                         
                         <div class="columnaMedia">
                             <div class="infoFooter">
-                                <lu class="linksFooter"><a href="">Envios y devoluciones</a></lu>
-                                <lu class="linksFooter"><a href="">Términos y condiciones</a></lu>
-                                <lu class="linksFooter"><a href="">Metodos de pago</a></lu>
+                                <lu class="linksFooter"><a href="{{ url('retiro') }}">Retiro - Cambios/Devoluciones</a></lu>
+                                <lu class="linksFooter"><a href="{{ url('terminos') }}">Términos y condiciones</a></lu>
+                                <lu class="linksFooter"><a href="{{ url('metodosDePago') }}">Metodos de pago</a></lu>
                             </div>
 
                             <div class="formasPagoFooter">
@@ -128,9 +132,9 @@
                         <div class="columnaDerecha" >
                             <div class="tercerColumna">
                                 <h2>Info</h2>
-                                    <li class="info1"><a href="">Preguntas frecuentes</a></li>
-                                    <li class="info1"><a href="">Sobre nosotros</a></li>
-                                    <li class="info1"><a href="">Ubicaciones</a></li>
+                                    <li class="info1"><a href="{{ url('preguntasFrecuentes')}}">Preguntas frecuentes</a></li>
+                                    <li class="info1"><a href="{{ url('sobreNosotros') }}">Sobre nosotros</a></li>
+                                    <li class="info1"><a href="{{ url('sucursales') }}">Sucursales</a></li>
                             </div>
                         </div>
                     

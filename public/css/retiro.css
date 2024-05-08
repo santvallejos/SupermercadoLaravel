@@ -1,0 +1,41 @@
+.volverAtras {
+    text-decoration: none;
+    color: #ffde59;
+    padding: 10px 15px;
+    border: 1px solid #004d29;
+    border-radius: 5px;
+    background-color: #004d29;
+    margin-left: 1%;
+  }
+  .volverAtras:hover {
+    background-color: #ffde59; /* Cambio de color de fondo al pasar el mouse */
+    color: #004d29;
+  }
+
+.retiro{
+    background-color: #f2EEE4;
+}
+/*Primer bloque de texto*/
+.textoRetiro{
+    background-color: #004d29;
+    display: block;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right:10%;
+    padding: 2%;
+   font-size: 20px;
+   color: #f2EEE4;
+
+   }
+/*Bloque icono sobre nosotros*/
+.iconoRetiro svg{
+    width: 100px;
+    height: 10%;
+
+    align-items: center;
+}
+.iconoRetiro{
+    text-align: center;
+    color: #000000;
+    font-size: 20px;
+}
