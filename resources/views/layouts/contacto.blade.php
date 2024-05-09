@@ -2,7 +2,7 @@
 
 @section('title', 'Sucursales')
 
-<link rel="stylesheet" href="{{ asset('css/contacto.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/contacto.css') }}">
 
 @section('content')
 <br>

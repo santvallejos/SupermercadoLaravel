@@ -4,6 +4,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/preguntasFrecuentes.css') }}">
     <script src="{{asset('js/appPreguntasFrecuentes.js')}}"></script>
+    
 
 @section('content')
   <br>
@@ -59,7 +60,7 @@
                 <div class="content">  Podes consultar nuestras promociones vigentes acá</div>
             </div>
                 <hr>
-            <div class="cambios">
+            <div id="cambios">
                 <div class="container">
                     
                     <div class="label"> Cambios y devoluciones</div>

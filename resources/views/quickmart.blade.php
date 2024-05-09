@@ -78,7 +78,7 @@
         @yield('content'){{-- Contenido principal de cada vista --}}
 
         <footer>
-            <div class="contenido">
+            <div class="contenidoFoter">
                     <div class="filaFooter">
                         <div class="columnaIzquierda">
                             <div class="logoFooter">
