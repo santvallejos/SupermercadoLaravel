@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -8,9 +8,9 @@
 }
 
 /* Header */
-header{
-    background-color: #004D29;
-        /* Aplica la propieda fle al todo el heaer */
+header {
+    background-color: #004d29;
+    /* Aplica la propieda fle al todo el heaer */
     display: flex;
     /* Que me header distribuya los elementos para ocupar todo el espeacio con una misma medida */
     justify-content: space-between;
@@ -18,12 +18,12 @@ header{
     gap: 1rem;
 }
 
-header div{
+header div {
     display: flex;
     align-items: center;
 }
 
-a{
+a {
     /* Saca la decoracion de los links (subrayado) */
     text-decoration: none;
     color: white;
@@ -31,7 +31,7 @@ a{
 
 /* Menu de navegación */
 
-.navbar{
+.navbar {
     /* El menu completo pero sin ser visible para darle animacion con js */
     opacity: 0;
     visibility: hidden;
@@ -41,7 +41,7 @@ a{
     flex-direction: column;
     /* estaran al inicio (izquierda) */
     align-items: start;
-    background-color: #004D29;
+    background-color: #004d29;
     position: absolute;
     gap: 1rem;
     padding: 2rem 20px 2rem;
@@ -49,19 +49,19 @@ a{
     top: 0;
     bottom: 0;
     /* Su fondo sera mas oscuro */
-    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
     transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 1; /* Este elemento va a estar encima de todo */
 }
 
-.navbar.visible{
+.navbar.visible {
     /* menu visible que pisa los anteriores atributos con js */
     opacity: 1;
     visibility: visible;
 }
 
 .abrirMenu,
-.cerrarMenu{
+.cerrarMenu {
     display: block;
     border: none;
     background: none;
@@ -69,7 +69,7 @@ a{
     margin: 0;
 }
 
-.navbarList{
+.navbarList {
     /* Elimina los puntos de las listas */
     list-style-type: none;
     display: flex;
@@ -78,7 +78,7 @@ a{
     gap: 2rem;
 }
 
-.navbarList li a{
+.navbarList li a {
     color: white;
     font-size: 25px;
 }
@@ -90,13 +90,13 @@ a{
     display: block; /* Hacer que la imagen sea un bloque para que el contenedor se ajuste correctamente */
 }
 
-.logoHeader img{
+.logoHeader img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-.logoMovilHeader{
+.logoMovilHeader {
     display: none;
     visibility: hidden;
 }
@@ -121,7 +121,7 @@ a{
     border-radius: 5px 0 0 5px;
     outline: none;
     color: #000000;
-    background-color: #F2EEE4;
+    background-color: #f2eee4;
     font-size: 1rem;
 }
 
@@ -137,7 +137,7 @@ a{
     font-size: 20px;
 }
 /* Login y register de compras navbar */
-.cuenta{
+.cuenta {
     width: 20%;
     gap: 10px;
     color: white;
@@ -145,37 +145,38 @@ a{
     justify-content: end;
 }
 
-.cuenta a,.cuenta p{
+.cuenta a,
+.cuenta p {
     display: flex;
     font-size: 18px;
 }
 
 /* Carrito de compras navbar */
-.carritoCompras{
+.carritoCompras {
     padding-right: 10px;
 }
 
 /* diseño responsive */
-@media(max-width: 1246px){
-    .logoHeader{
+@media (max-width: 1246px) {
+    .logoHeader {
         width: 80%;
     }
 
-    .buscadorHeader{
+    .buscadorHeader {
         width: 75%;
     }
 }
 
-@media (max-width: 1110px){
-    .cuenta{
+@media (max-width: 1110px) {
+    .cuenta {
         display: none;
     }
 
-    .logoHeader{
+    .logoHeader {
         display: none;
     }
 
-    .logoMovilHeader{
+    .logoMovilHeader {
         display: flex;
         visibility: visible;
         max-width: 100%;
@@ -187,590 +188,736 @@ a{
 
 /* Carrusel de imagenes */
 
-.carrusel{
-  position: relative; /* Asegura que los elementos posicionados dentro de este div sean relativos a él */
-  width: 100%;
+.carrusel {
+    position: relative; /* Asegura que los elementos posicionados dentro de este div sean relativos a él */
+    width: 100%;
+    margin-bottom: 1rem;
 }
-.mySlides{
-  display: none;
+.mySlides {
+    display: none;
 }
-.mySlides img{
-  width: 100%;
-  height: 40rem;
+.mySlides img {
+    width: 100%;
+    height: 40rem;
 }
 .prev,
-.next{
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: auto;
-  margin-top: -22px;
-  padding: 1rem;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.5rem;
-  transition: 0.6 ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    margin-top: -22px;
+    padding: 1rem;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: 0.6 ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 }
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
 .prev:hover,
-.next:hover{
-  background-color: rgba(0, 0, 0, 0.8);
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-@media screen and (max-width:900px) {
-  .carrusel{
-      width: 100%;
-  }
+@media screen and (max-width: 900px) {
+    .carrusel {
+        width: 100%;
+    }
 }
-@media screen and (max-width:500px) {
-  .carrusel{
-      width: 100%;
-  }
-  .prev,
-  .next{
-      padding: 5px;
-  }
-}
-
-@media (max-width:700px){
-  .mySlides img{
-    height: 25rem;
-  }
+@media screen and (max-width: 500px) {
+    .carrusel {
+        width: 100%;
+    }
+    .prev,
+    .next {
+        padding: 5px;
+    }
 }
 
-@media (min-width:1600px){
-  .mySlides img{
-    height: 55rem;
-  }
+@media (max-width: 700px) {
+    .mySlides img {
+        height: 25rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .mySlides img {
+        height: 55rem;
+    }
+}
+
+/* Aliniacion de elementos en el home */
+
+.containerHome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 18rem;
+    flex-direction: column;
 }
 
 /* Info Home */
 
-.infoHome{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.3rem;
-  padding: 1.2rem;
-  gap: 1rem;
+.infoHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    padding: 1.2rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
-.infoHome h3 a{
-  color: #3f3f3f;
+.infoHome h3 a {
+    color: #3f3f3f;
 }
 
 /* Carrusel Categoria  */
 
-.carruselIcon{
-  display: flex;
-  padding: 2rem;
-  justify-content: center;
-  gap: 2rem;
+.containerCategorias {
+    width: 100%;
+    max-width: 964px;
+    position: relative;
+    margin: auto; /* Centrar horizontalmente */
+    text-align: center; /* Alinear contenido al centro */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
 }
 
-.tarjetaCarrusel {
-  box-sizing: border-box;
-  width: 190px;
-  height: 190px;
-  background: rgba(217, 217, 217, 0.58);
-  border: 1px solid white;
-  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-  backdrop-filter: blur(6px);
-  border-radius: 17px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.5s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  user-select: none;
-  font-weight: bolder;
-  color: black;
+.carruselCategorias {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
-.tarjetaCarrusel:hover {
-  border: 1px solid black;
-  transform: scale(1.05);
+.carruselCategorias::-webkit-scrollbar {
+    height: 0;
 }
 
-.tarjetaCarrusel:active {
-  transform: scale(0.95) rotateZ(1.7deg);
+.anteriorCategorias,
+.siguienteCategorias {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: #e7e7e7;
+    border: 2px solid;
+    padding: 8px;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
 }
 
-/* Bento Grid */
-
-.bentoGrid{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 700px;
-  padding: 3rem;
-  gap: 1rem;
+.anteriorCategorias {
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%); /* Centrar vertical y horizontalmente */
 }
 
-.bentoColumnaIzquierda{
-  flex: 2;
-  border-radius: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.siguienteCategorias {
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%); /* Centrar vertical y horizontalmente */
 }
 
-.bentoColumnaDerecha{
-  flex: 1;
-  border-radius: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.tarjetas {
+    display: grid;
+    grid-gap: 16px;
+    grid-auto-flow: column;
+    margin: auto;
+    box-sizing: border-box;
 }
 
-.filaBento{
-  flex: 1;
-  border: 2px solid red;
-  border-radius: 2rem;
+.item {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #ffde59;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    background: rgba(217, 217, 217, 0.58);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    user-select: none;
+    font-weight: bolder;
+    padding-top: 1rem;
 }
 
-.filaBento3{
-  display: flex;
-  border: none;
-  gap: 1rem;
+/* Mas eleguidos */
+
+.masEleguidos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0.6rem;
+    margin-bottom: 4rem;
 }
 
-.filaColumna{
-  flex: 1;
-  border: 2px solid red;
-  border-radius: 2rem;
+.productoMasEleguido {
+    background-color: #f3f2f2;
+    border: 3px solid #1b1b1b3f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
 }
 
-.banner{
-  background-image: url(../img/supermercadoApp.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 500px;
-  width: 100%;
-  margin: auto;
+.productoMasEleguido img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    width: 9rem;
+}
+
+.buttonMasEleguidos {
+    visibility: visible;
+    --width: 100px;
+    --height: 35px;
+    --tooltip-height: 35px;
+    --tooltip-width: 90px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #004d29;
+    --tooltip-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    text-align: center;
+    border-radius: 0.45em;
+    font-family: "Arial";
+    transition: background 0.3s;
+}
+
+.buttonMasEleguidos::after,
+.buttonMasEleguidos::before {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.texBotonMasEleguidos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-wrapper,
+.texBotonMasEleguidos,
+.carritoMasEleguidos {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff;
+}
+
+.texBotonMasEleguidos {
+    top: 0;
+}
+
+.texBotonMasEleguidos,
+.carritoMasEleguidos {
+    transition: top 0.5s;
+}
+
+.carritoMasEleguidos {
+    color: #fff;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carritoMasEleguidos svg {
+    width: 24px;
+    height: 24px;
+}
+
+.buttonMasEleguidos:hover {
+    background: #004d29;
+}
+
+.buttonMasEleguidos:hover .texBotonMasEleguidos {
+    top: -100%;
+}
+
+.buttonMasEleguidos:hover .carritoMasEleguidos {
+    top: 0;
+}
+
+.buttonMasEleguidos:hover:before,
+.buttonMasEleguidos:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.buttonMasEleguidos:hover:after {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.buttonMasEleguidos:hover:before {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+/* Bento Grid 1 */
+
+.containerBento1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    grid-gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.containerBento1 div {
+    border-radius: 10px; /* Aplica un borde redondeado de 10px a todos los divs dentro del contenedor */
+    overflow: hidden; /* Asegura que el contenido no se desborde del borde redondeado */
+}
+
+.containerBento1 div img{
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 100%;
+}
+
+.containerBento1 div:first-child{
+    grid-column: 1 / 4;
+}
+
+.containerBento1 div:last-child{
+    grid-column: 2 / 4;
+}
+
+/* Banner */
+
+.banner {
+    background-image: url(../img/supermercadoApp.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 500px;
+    width: 100%;
+    margin: auto;
 }
 
 /* Footer*/
-footer{
-  background-color: #004D29;
-  width: 100%;
-  margin: 0;
-  box-sizing: border-box;
-  padding: 0;
-  height: 40vh; /* Usar viewport height para hacerlo responsive en altura */  
-  /* position: absolute; */
+footer {
+    background-color: #004d29;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    height: 40vh; /* Usar viewport height para hacerlo responsive en altura */
+    /* position: absolute; */
 }
 
-footer a{
-  color: #000000;
+footer a {
+    color: #000000;
 }
 
 .derechosAutor {
-  background-color: #F2EEE4;
-  width: 100%;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1.5em; /* Usar unidades relativas */
-  text-align: center;
-  margin-top: 20px;
+    background-color: #f2eee4;
+    width: 100%;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.5em; /* Usar unidades relativas */
+    text-align: center;
+    margin-top: 20px;
 }
 
 /* Estilos para las columnas */
-.filaFooter { 
-   padding: 1%;
-  box-sizing: border-box;
-  height: 40vh;
-  width: 100%;  
-  display: flex;
-  flex-wrap: wrap;  
+.filaFooter {
+    padding: 1%;
+    box-sizing: border-box;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .column:last-child {
-   border-right: none;
-}
-  
-.columnaMedia{
-  width: 50%;    
+    border-right: none;
 }
 
-.columnaDerecha{
-  width: 25%;
-  float: left;
-  box-sizing: border-box; /* Esto incluye el borde en el ancho total */
-font-size: 1.5em;
+.columnaMedia {
+    width: 50%;
+}
 
+.columnaDerecha {
+    width: 25%;
+    float: left;
+    box-sizing: border-box; /* Esto incluye el borde en el ancho total */
+    font-size: 1.5em;
 }
 
 .columnaIzquierda {
-  width: 24%;
-  float: left;
-  box-sizing: border-box; /* Esto incluye el borde en el ancho total */
+    width: 24%;
+    float: left;
+    box-sizing: border-box; /* Esto incluye el borde en el ancho total */
 }
 .redesFooter {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .redesFooter img {
-  margin-right: 15px;
-  width: 50px; /* Tamaño máximo para imágenes de redes sociales */
-  height: 50%;
+    margin-right: 15px;
+    width: 50px; /* Tamaño máximo para imágenes de redes sociales */
+    height: 50%;
 }
 
 .infoFooter {
-  text-align: center;
-  font-size: 1.5em; /* Usar unidades relativas */
-  padding: 1em;
+    text-align: center;
+    font-size: 1.5em; /* Usar unidades relativas */
+    padding: 1em;
 }
 
 .linksFooter {
-  text-align: center;
-  margin: 25px;
+    text-align: center;
+    margin: 25px;
 }
 
 /* Estilos para hacer el logo responsive y alineado a la izquierda */
 .logoFooter {
-width: 50%; /* El logo se ajustará al tamaño del contenedor */
-height: 20%;
-display: flex;
-justify-content: flex-start; /* Alinea el contenido al principio del contenedor */
-margin-bottom: 0.5em; /* Añade un margen inferior más pequeño */
+    width: 50%; /* El logo se ajustará al tamaño del contenedor */
+    height: 20%;
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenido al principio del contenedor */
+    margin-bottom: 0.5em; /* Añade un margen inferior más pequeño */
 }
 
-.tituloFooter{
-  text-align: center;
+.tituloFooter {
+    text-align: center;
 }
 
-.formasPagoFooter{
-display: flex;
-flex-direction: column;
-align-items: center; /* Centra horizontalmente los elementos */
-text-align: center;
+.formasPagoFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente los elementos */
+    text-align: center;
 
-display: inline;
-justify-content: center;
+    display: inline;
+    justify-content: center;
 }
 
-.formasPagoFooter ul{
-display:inline ;
-justify-content: center;
+.formasPagoFooter ul {
+    display: inline;
+    justify-content: center;
 }
 
 /*pantallas chicas*/
 @media (max-width: 576px) {
-footer{
-  font-size: 10px;
-}
-.logoFooter img{
-width: 10vh;
-height: 15vw;
-}
-.textoColumnaIzquierda{
-  align-self: flex-end;
-  width: 100%;
-  height: auto;
-  margin-top: 30px;
-}
+    footer {
+        font-size: 10px;
+    }
+    .logoFooter img {
+        width: 10vh;
+        height: 15vw;
+    }
+    .textoColumnaIzquierda {
+        align-self: flex-end;
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+    }
 
-.columnaIzquierda {
-  width: 25%;
-  height: auto;
-  font-size: 8px;
-}
-.columnaDerecha {
-width: 25%;
-font-size: 10px;
-}
-.columnaMedia{
-width: 50%;
-font-size: 30px;
+    .columnaIzquierda {
+        width: 25%;
+        height: auto;
+        font-size: 8px;
+    }
+    .columnaDerecha {
+        width: 25%;
+        font-size: 10px;
+    }
+    .columnaMedia {
+        width: 50%;
+        font-size: 30px;
+    }
+    .redesFooter {
+        margin: 1%; /* Reducir el margen en pantallas pequeñas */
+        zoom: 40%;
+    }
+    .redesFooter img {
+        width: 10vw; /* Tamaño relativo más grande para imágenes de redes sociales */
+    }
 
-}
-.redesFooter {
-margin: 1%; /* Reducir el margen en pantallas pequeñas */
-zoom:40%;
-}
-.redesFooter img {
-width: 10vw; /* Tamaño relativo más grande para imágenes de redes sociales */
-}
+    .formasPagoFooter ul li {
+        margin: 0 5px; /* Reducir el espacio entre los elementos de la lista */
+    }
 
-.formasPagoFooter ul li {
-margin: 0 5px; /* Reducir el espacio entre los elementos de la lista */
-}
+    .infoFooter {
+        font-size: 10px; /* Reducir el tamaño de fuente */
+        display: flex;
+        justify-content: center;
+    }
 
-.infoFooter {
-font-size: 10px; /* Reducir el tamaño de fuente */
-display: flex;
-justify-content: center;
+    .linksFooter {
+        margin: 10px; /* Reducir el margen */
+    }
+    .formasPagoFooter h2 {
+        font-size: 15px;
+    }
 
-}
+    .metodosPagoFooter img {
+        width: 30%;
+    }
 
-.linksFooter {
-margin: 10px; /* Reducir el margen */
-}
-.formasPagoFooter h2{
-font-size:15px ;
-}
-
-.metodosPagoFooter img {
-width: 30%;
-}
-
-.tercerColumna{
-margin-left: 10px;
-}
+    .tercerColumna {
+        margin-left: 10px;
+    }
 }
 
 /*pantallas medianas*/
 @media only screen and (min-width: 577px) and (max-width: 768px) {
+    .logoFooter img {
+        width: 95%;
+        height: 95%;
+    }
 
-.logoFooter img{
-  width: 95%;
-  height:95%;
-}
+    .textoColumnaIzquierda {
+        width: 100%;
+        font-size: small;
+    }
 
-.textoColumnaIzquierda{
-  width: 100%;
-  font-size: small;
-}
+    .columnaIzquierda {
+        width: 25%;
+        height: auto;
+        font-size: 8px;
+    }
+    .columnaDerecha {
+        width: 25%;
+        font-size: 15px;
+    }
+    .columnaMedia {
+        width: 50%;
+        font-size: 10px;
+    }
+    .redesFooter {
+        margin: 1%; /* Reducir el margen en pantallas pequeñas */
+        zoom: 40%;
+    }
+    .redesFooter img {
+        width: 10vw; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
+    }
 
-.columnaIzquierda {
-width: 25%;
-height: auto;
-font-size: 8px;
-}
-.columnaDerecha {
-width: 25%;
-font-size: 15px;
-}
-.columnaMedia{
-width: 50%;
-font-size: 10px;
+    .formasPagoFooter ul li {
+        margin: 0 5px; /* Reducir el espacio entre los elementos de la lista */
+    }
 
-}
-.redesFooter {
-margin: 1%; /* Reducir el margen en pantallas pequeñas */
-zoom:40%;
-}
-.redesFooter img {
-width: 10vw; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
-}
+    .infoFooter {
+        font-size: 15px; /* Reducir el tamaño de fuente */
+        display: flex;
+        justify-content: center;
+    }
+    .linksFooter {
+        margin: 10px; /* Reducir el margen */
+    }
+    .formasPagoFooter h2 {
+        font-size: 15px;
+    }
 
-.formasPagoFooter ul li {
-margin: 0 5px; /* Reducir el espacio entre los elementos de la lista */
-}
+    .metodosPagoFooter img {
+        width: 20%;
+        margin-bottom: 10%;
+    }
 
-.infoFooter {
-  font-size: 15px; /* Reducir el tamaño de fuente */
-  display: flex;
-  justify-content: center;
-}
-.linksFooter {
-  margin: 10px; /* Reducir el margen */
-  }
-  .formasPagoFooter h2{
-  font-size:15px ;
-  }
-  
-  .metodosPagoFooter img {
-  width: 20%;
-  margin-bottom: 10%;
-  }
-  
-  .tercerColumna{
-  margin-left: 20px;
-  }
- 
-
+    .tercerColumna {
+        margin-left: 20px;
+    }
 }
 /*pantallas grandes*/
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-.logoFooter img{
-    width: 100px;
-    height:100px;
-  }
-  
-.textoColumnaIzquierda{
-    width: 100%;
-    font-size: small;
-      margin-top: 20%;
+    .logoFooter img {
+        width: 100px;
+        height: 100px;
     }
-  
-.columnaIzquierda {
-  width: 25%;
-  height: auto;
-  font-size: 8px;
-}
-.columnaDerecha {
-  width: 25%;
-  font-size: 15px;
-  }
-.columnaMedia{
-  width: 50%;
-  font-size: 50px;
-  
-}
-.redesFooter {
-margin: 1%; /* Reducir el margen en pantallas pequeñas */
-zoom:40%;
-}
-.redesFooter img {
-  width: 10vw; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
-}
-  
-.formasPagoFooter ul li {
-  margin: 0 5px; /* Reducir el espacio entre los elementos de la lista */
-  }
-  
-  .infoFooter {
-    font-size: 20px; /* Reducir el tamaño de fuente */
-    display: flex;
-    justify-content: center;
-  }
-  .linksFooter {
-    margin: 10px; /* Reducir el margen */
-    }
-    .formasPagoFooter h2{
-    font-size:  20px;
-    }
-    
-    .metodosPagoFooter img {
-    width: 25%;
-    margin-bottom: 10%;
-    }
-    
-    .tercerColumna{
-    margin-left: 20px;
-    }
-}
-/*Pantallas Extras*/  
-@media only screen and (min-width: 992px) and (max-width: 1260px) {
 
-  .logoFooter img{
-      width: 100px;
-      height:100px;
+    .textoColumnaIzquierda {
+        width: 100%;
+        font-size: small;
+        margin-top: 20%;
     }
-    
-  .textoColumnaIzquierda{
-      width: 100%;
-      font-size: small;
-      margin-top: 15%;
-       
+
+    .columnaIzquierda {
+        width: 25%;
+        height: auto;
+        font-size: 8px;
     }
-    
-  .columnaIzquierda {
-    width: 25%;
-    height: auto;
-    font-size: 8px;
-  }
-  .columnaDerecha {
-    width: 25%;
-    font-size: 15px;
+    .columnaDerecha {
+        width: 25%;
+        font-size: 15px;
     }
-  .columnaMedia{
-    width: 50%;
-    font-size: 50px;
-    
-  }
-  .redesFooter {
-  margin: 1%; /* Reducir el margen en pantallas pequeñas */
-  zoom:40%;
-  }
-  .redesFooter img {
-    width: 10vw; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
-  }
-    
-  .formasPagoFooter ul li {
-    margin: 0 5px; /* Reducir el espacio entre los elementos de la lista */
+    .columnaMedia {
+        width: 50%;
+        font-size: 50px;
     }
-    
+    .redesFooter {
+        margin: 1%; /* Reducir el margen en pantallas pequeñas */
+        zoom: 40%;
+    }
+    .redesFooter img {
+        width: 10vw; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
+    }
+
+    .formasPagoFooter ul li {
+        margin: 0 5px; /* Reducir el espacio entre los elementos de la lista */
+    }
+
     .infoFooter {
-      font-size: 20px; /* Reducir el tamaño de fuente */
-      display: flex;
-      justify-content: center;
+        font-size: 20px; /* Reducir el tamaño de fuente */
+        display: flex;
+        justify-content: center;
     }
     .linksFooter {
-      margin: 10px; /* Reducir el margen */
-      }
-      .formasPagoFooter h2{
-      font-size:  20px;
-      }
-      
-      .metodosPagoFooter img {
-      width: 25%;
-      margin-bottom: 10%;
-      }
-      
-      .tercerColumna{
-      margin-left: 20px;
-      }
-  }
-/*ver*/
-  @media only screen and (min-width: 1262px) and (max-width: 1690px) {
-    
-    .logoFooter img{
+        margin: 10px; /* Reducir el margen */
+    }
+    .formasPagoFooter h2 {
+        font-size: 20px;
+    }
+
+    .metodosPagoFooter img {
+        width: 25%;
+        margin-bottom: 10%;
+    }
+
+    .tercerColumna {
+        margin-left: 20px;
+    }
+}
+/*Pantallas Extras*/
+@media only screen and (min-width: 992px) and (max-width: 1260px) {
+    .logoFooter img {
         width: 100px;
-        height:100px;
-      }
-      
-    .textoColumnaIzquierda{
+        height: 100px;
+    }
+
+    .textoColumnaIzquierda {
         width: 100%;
         font-size: small;
         margin-top: 15%;
     }
-      
+
     .columnaIzquierda {
-      width: 25%;
-      height: auto;
-      font-size: 8px;
+        width: 25%;
+        height: auto;
+        font-size: 8px;
     }
     .columnaDerecha {
-      width: 25%;
-      font-size: 15px;
-      }
-    .columnaMedia{
-      width: 50%;
-      font-size: 50px;
-      
+        width: 25%;
+        font-size: 15px;
+    }
+    .columnaMedia {
+        width: 50%;
+        font-size: 50px;
     }
     .redesFooter {
-    margin: 1%; /* Reducir el margen en pantallas pequeñas */
-    zoom:30%;
+        margin: 1%; /* Reducir el margen en pantallas pequeñas */
+        zoom: 40%;
     }
     .redesFooter img {
-      width: 10vw; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
+        width: 10vw; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
     }
-      
+
     .formasPagoFooter ul li {
-      margin: 0 5px; /* Reducir el espacio entre los elementos de la lista */
-      }
-      
-      .infoFooter {
+        margin: 0 5px; /* Reducir el espacio entre los elementos de la lista */
+    }
+
+    .infoFooter {
         font-size: 20px; /* Reducir el tamaño de fuente */
         display: flex;
         justify-content: center;
-      }
-      .linksFooter {
+    }
+    .linksFooter {
         margin: 10px; /* Reducir el margen */
-        }
-        .formasPagoFooter h2{
-        font-size:  30px;
-        }
-        
-        .metodosPagoFooter img {
+    }
+    .formasPagoFooter h2 {
+        font-size: 20px;
+    }
+
+    .metodosPagoFooter img {
+        width: 25%;
+        margin-bottom: 10%;
+    }
+
+    .tercerColumna {
+        margin-left: 20px;
+    }
+}
+/*ver*/
+@media only screen and (min-width: 1262px) and (max-width: 1690px) {
+    .logoFooter img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .textoColumnaIzquierda {
+        width: 100%;
+        font-size: small;
+        margin-top: 15%;
+    }
+
+    .columnaIzquierda {
+        width: 25%;
+        height: auto;
+        font-size: 8px;
+    }
+    .columnaDerecha {
+        width: 25%;
+        font-size: 15px;
+    }
+    .columnaMedia {
+        width: 50%;
+        font-size: 50px;
+    }
+    .redesFooter {
+        margin: 1%; /* Reducir el margen en pantallas pequeñas */
+        zoom: 30%;
+    }
+    .redesFooter img {
+        width: 10vw; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
+    }
+
+    .formasPagoFooter ul li {
+        margin: 0 5px; /* Reducir el espacio entre los elementos de la lista */
+    }
+
+    .infoFooter {
+        font-size: 20px; /* Reducir el tamaño de fuente */
+        display: flex;
+        justify-content: center;
+    }
+    .linksFooter {
+        margin: 10px; /* Reducir el margen */
+    }
+    .formasPagoFooter h2 {
+        font-size: 30px;
+    }
+
+    .metodosPagoFooter img {
         width: 20%;
         margin-bottom: 10%;
-        }
-        
-        .tercerColumna{
+    }
+
+    .tercerColumna {
         margin-left: 20px;
         font-size: 20px;
-        }
     }
+}
