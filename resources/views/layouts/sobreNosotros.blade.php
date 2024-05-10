@@ -67,9 +67,9 @@
             
             </div>
             <br> <div class="puestos">
-                    <div class="box">1</div>
-                    <div class="box">2</div>
-                    <div class="box">3</div>
+                    <div class="boxSN">1</div>
+                    <div class="boxSN">2</div>
+                    <div class="boxSN">3</div>
                 </div>
             <br>    
             <hr>           

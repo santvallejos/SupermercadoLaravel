@@ -1,14 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
-body {
-  background-color: #F7F7F7;
-  font-family: 'rubik', sans-serif;
-}
-
-h1 {
+.pFTitulo {
   text-align: center;
   margin: 40px 0;
   color: #F2EEE4;
+  font-size: 25px;
+  font-style: bold;
 }
 
 /*toda la seccion del box de preguntas*/
@@ -21,23 +18,22 @@ h1 {
 }
 
 /*seccion de preguntas*/
-.accordion .container {
+.accordion .containerPF {
   position: relative;
   margin: 10px 10px;
   
 }
 
 /*Seccion de preguntas*/
-.accordion .label {
+.accordion .labelP {
   position: relative;
   padding: 10px 0;
-  font-size: 30px;
-  
+  font-size: 20px;
   cursor: pointer;color: #F7F7F7;
 }
 
 /*mas y menos*/
-.accordion .label::before {
+.accordion .labelP::before {
   content: '+';
   color: black;
   position: absolute;
@@ -65,11 +61,11 @@ h1 {
   border: 1px solid grey;
 }
 
-.accordion .container.active .content {
+.accordion .containerPF.active .content {
   max-height: 150px;
  }
 
-.accordion .container.active .label::before {
+.accordion .containerPF.active .labelP::before {
   content: '-';
   font-size: 30px;
 }

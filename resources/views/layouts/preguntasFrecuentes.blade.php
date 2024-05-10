@@ -1,6 +1,6 @@
 @extends('quickmart')
 
-@section('title , Preguntas Frecuentes')
+@section('title' , 'Preguntas Frecuentes')
 
     <link rel="stylesheet" href="{{ asset('css/preguntasFrecuentes.css') }}">
     <script src="{{asset('js/appPreguntasFrecuentes.js')}}"></script>
@@ -17,35 +17,35 @@
     </script>
     <div class="accordion-body">
             <div class="accordion">
-            <h1>Preguntas Frecuentes</h1>
+            <h2 class="pFTitulo">Preguntas Frecuentes</h2>
             <hr>
-            <div class="container">
-                <div class="label">Cuál es el mínimo de compra?</div>
+            <div class="containerPF">
+                <div class="labelP">Cuál es el mínimo de compra?</div>
                 <div class="content">El mínimo de compras es de $4000 en compras por la web.</div>
             </div>
             <hr>
-            <div class="container">
-                <div class="label"> ¿Qué pasa si un producto deja de estar disponible mientras estoy realizando mi compra?</div>
+            <div class="containerPF">
+                <div class="labelP"> ¿Qué pasa si un producto deja de estar disponible mientras compro?</div>
                 <div class="content">El stock de los productos se actualiza constantemente de manera automática, es por eso que tal vez cuando llegues a finalizar el pedido puede que algún producto se haya quedado sin stock. Sólo tenes que eliminarlo para poder continuar con la compra.
             </div>
             </div>
             <hr>
-            <div class="container">
-                <div class="label"> ¿Tengo que ingresar los datos de mi tarjeta en el sitio?</div>
+            <div class="containerPF">
+                <div class="labelP"> ¿Tengo que ingresar los datos de mi tarjeta en el sitio?</div>
                 <div class="content"> Si decidiste abonar con medio de pago "tarjeta de crédito/debito" deberás ingresar los datos de la tarjeta.
                 Si tu medio de pago seleccionado es "Pago en tienda" no se solicitará ingresar ninguna otra información.
                 No te preocupes, ¡tus datos están protegidos!</div>
             </div>
             <hr>
-            <div class="container">
-                <div class="label"> Compra Segura</div>
+            <div class="containerPF">
+                <div class="labelP"> Compra Segura</div>
                 <div class="content"> Tenemos un equipo que estará verificando los datos de pago y, por medidas de seguridad tu pedido puede estar sujeto a una aprobación adicional. Te contactaremos a los medios de comunicación declarados al registrarte y necesitaremos de tu colaboración para verificar tus datos. No te preocupes, esto es para prevenir posibles fraudes.
                 Tené en cuenta que en ningún momento se te solicitará la numeración completa de tu tarjeta de crédito ni código de seguridad.
                 Haremos varios intentos para contactarte dentro del plazo de 24 horas posteriores a la realización del pedido. Si no logramos verificar tus datos, procederemos a la cancelación de tu compra. </div>
             </div>
             <hr>
-            <div class="container">
-                <div class="label"> ¿Cuáles son los medios de pago habilitados?</div>
+            <div class="containerPF">
+                <div class="labelP"> ¿Cuáles son los medios de pago habilitados?</div>
                 <div class="content">  Podes pagar online o en la tienda con tarjetas prepagas, tarjetas de débito y tarjetas de crédito, Mercado Pago y Modo*.
 
                 No aceptamos pagos en efectivo.
@@ -55,15 +55,15 @@
                 *Modo solo aplica a compras con Pago en Tienda.</div>
             </div>
             <hr>
-            <div class="container">
-                <div class="label">  ¿Cuáles son las promociones bancarias vigentes?</div>
+            <div class="containerPF">
+                <div class="labelP">  ¿Cuáles son las promociones bancarias vigentes?</div>
                 <div class="content">  Podes consultar nuestras promociones vigentes acá</div>
             </div>
                 <hr>
             <div id="cambios">
-                <div class="container">
+                <div class="containerPF">
                     
-                    <div class="label"> Cambios y devoluciones</div>
+                    <div class="labelP"> Cambios y devoluciones</div>
                     <div class="content">
                             QuikMart S.R.L
 
@@ -81,8 +81,8 @@
                     </div>
             </div>
             <hr>
-            <div class="container">
-                <div class="label">¿CÓMO GESTIONAR UN CAMBIO, UNA DEVOLUCIÓN O CANCELAR TU PEDIDO?</div>
+            <div class="containerPF">
+                <div class="labelP">¿CÓMO GESTIONAR UN CAMBIO, UNA DEVOLUCIÓN O CANCELAR TU PEDIDO?</div>
                     <div class="content">
                     Si necesitas gestionar un cambio o devolución, deberás comunicarte con nuestro Centro de Atención al cliente (0800-1044-956) para coordinar el proceso. Se podrá cancelar la compra o gestionar la devolución del producto, hasta 10 días corridos computados desde la entrega del pedido. En caso de que el pedido aún no hubiera sido entregado, también se podrá gestionar la cancelación del mismo seleccionando el “botón de arrepentimiento” disponible en la página principal de nuestra web.
 
@@ -103,8 +103,8 @@
                     </div>
             </div>
             <hr>
-            <div class="container">
-                <div class="label">  CAMBIOS INDUMENTARIA</div>
+            <div class="containerPF">
+                <div class="labelP">  CAMBIOS INDUMENTARIA</div>
                     <div class="content">  
                         Si tu compra incluye productos de indumentaria, podrás realizar el cambio de estos por cualquier motivo, dentro de los treinta (30) días de recibido, siempre que la prenda se encuentre en las mismas condiciones que se recibió, con la etiqueta puesta y que no haya sido utilizada.
 
@@ -118,8 +118,8 @@
                         </div>
             </div>
             <hr>
-            <div class="container">
-                <div class="label">  DEVOLUCIONES</div>
+            <div class="containerPF">
+                <div class="labelP">  DEVOLUCIONES</div>
                     <div class="content"> 
                         Conforme a la normativa vigente contas con diez (10) días corridos desde realizada la compra y/o recibido el producto, para cancelar/devolver la compra, siempre que la prenda se encuentre en las mismas condiciones que se recibió y no haya sido utilizada.
 
@@ -133,8 +133,8 @@
                     </div>
             </div>
             <hr>
-                <div class="container">
-                <div class="label"> GARANTIA</div>
+                <div class="containerPF">
+                <div class="labelP"> GARANTIA</div>
                 <div class="content"> 
                     Los productos tienen garantía de SEIS (6) meses por defectos de fabricación. El producto no deberá presentar signos de mal uso, conservación y/o lavado.
                     Para gestionar la garantía podrás acercarte a la tienda que seleccionaste al realizar la compra, con el ticket y el número de pedido, o bien comunicarte con atención al cliente al 0800-1044-956. 

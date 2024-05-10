@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('quickmart')
 
-@section('title , Preguntas Frecuentes')
+@section('title', 'Terminos y condiciones')
 
 @section('content')
 

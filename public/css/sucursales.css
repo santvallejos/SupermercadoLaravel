@@ -71,12 +71,12 @@
     background-color: #004d29;
     margin-left: 1%;
   }
-  .volverAtras:hover {
+.volverAtras:hover {
     background-color: #ffde59; /* Cambio de color de fondo al pasar el mouse */
     color: #004d29;
   }
 
-
+/*Mapa*/
   @media only screen and (max-width: 575px) {
     iframe {
         width: 100%; /* Porcentaje del ancho del contenedor padre */
@@ -89,20 +89,20 @@
           }
       }
 
-      @media only screen and (min-width: 769px) and (max-width: 992px){
+  @media only screen and (min-width: 769px) and (max-width: 992px){
         iframe {
             width: 200px; /* Porcentaje del ancho del contenedor padre */
             height: 100%; /* Porcentaje del alto de la ventana del navegador */
           }
       }
 
-      @media only screen and (min-width: 993px) and (max-width: 1260px){
+  @media only screen and (min-width: 993px) and (max-width: 1260px){
         iframe {
             width: 300px; /* Porcentaje del ancho del contenedor padre */
             height: 100%; /* Porcentaje del alto de la ventana del navegador */
           }
       }
-      @media only screen and (min-width: 1261px) and (max-width: 1690px){
+  @media only screen and (min-width: 1261px) and (max-width: 1690px){
         iframe {
             width: 380px; /* Porcentaje del ancho del contenedor padre */
             height: 100%; /* Porcentaje del alto de la ventana del navegador */

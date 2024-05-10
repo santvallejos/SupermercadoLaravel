@@ -8,7 +8,6 @@
 <div class="retiro"> 
     <br>
             <button class="volverAtras" onclick="goBack()">Atrás</button>
-
         <script>
         function goBack() {
         window.history.back();
