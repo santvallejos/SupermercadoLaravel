@@ -118,7 +118,7 @@
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="terminos" id="terminos" required>
                                 <label class="form-check-label" for="terminos">
-                                 <a href={{ url('terminosycondiciones') }} target="_blank" >{{ __('Acepta los terminos y condiciones') }} </a> 
+                                 <a href={{ url('terminos') }} target="_blank" >{{ __('Acepta los terminos y condiciones') }} </a> 
                                 </label>
                                 @error('terminos')
                                     <span class="invalid-feedback" role="alert">
