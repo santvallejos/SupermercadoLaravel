@@ -16,7 +16,7 @@
     }
     </script>
         <div class="encabezadoAC">
-          <h1>imagen</h1>
+          <img src="https://i.postimg.cc/3xKP9kn6/Atencion-Al-Cliente.png" alt="atencionAlCliente">
         </div>
         <br>
         <div class="barraAC">

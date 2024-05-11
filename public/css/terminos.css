@@ -26,7 +26,7 @@
         font-weight: 400;
     }
   
-    .botonesT .bTerminos {
+    .botonesT .bTerminos{
         display: flex; /* Usamos flexbox para alinear los botones en línea */
         justify-content: end; /* Centramos los botones horizontalmente */
     }
@@ -36,8 +36,25 @@
     }
     
     /* Si quieres que los botones se muestren uno al lado del otro incluso en pantallas pequeñas */
-   
-    
+   .volver{
+    display: flex;
+    justify-content: flex-end;
+   }
+    .atras {
+        text-decoration: none;
+        color: #ffde59;
+        padding: 10px 15px;
+        border: 1px solid #004d29;
+        border-radius: 5px;
+        background-color: #004d29;
+        margin-left: 1%;
+      }
+      
+      .atras:hover {
+        background-color: #ffde59; /* Cambio de color de fondo al pasar el mouse */
+        color: #004d29;
+      }
+      
     .subirBoton, .paginaPBoton {
         text-decoration: none;
         color: #ffde59;

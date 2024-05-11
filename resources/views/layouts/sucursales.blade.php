@@ -14,7 +14,7 @@
 <body class="sucursales">
     <br>
     <div class="iconoSucursales">
-        <img  src="../img/location.png" alt="sucursales">
+        <img  src="https://i.postimg.cc/YqgpTLNC/location.png " alt="sucursales">
         <br>
         <br>
         <h2>Nuestra cobertura en la capital</h2>
@@ -35,7 +35,7 @@
         <br>
         <div class="sucursal1">
             <br>
-                <div class="imagen"> <img src="../img/location_535239.png" alt="ubicacion"></div>
+                <div class="imagen"> <img src="https://i.postimg.cc/T1z4rwhk/location-535239.png" alt="ubicacion"></div>
                 <br>
                 <h2>Centro Comercial Corrientes Sur</h2>
                 <p> Ubicado en el centro de la ciudad, cerca de la plaza principal y rodeado de edificios residenciales y comerciales. Esta ubicación atraería a muchos clientes locales y turistas que visitan la zona.</p>
@@ -48,7 +48,7 @@
         </div>
         <div class="sucursal2">
             <br>     
-                <div class="imagen"> <img src="../img/location_535239.png" alt="ubicacion"></div>
+                <div class="imagen"> <img src="https://i.postimg.cc/T1z4rwhk/location-535239.png" alt="ubicacion"></div>
                  <br>
                  <h2>Avenida Costanera "Río Paraná"</h2>
                  <p>Una ubicación con vista al río Paraná, que atraería a residentes locales y turistas que disfrutan de paseos por la costanera. Sería conveniente para quienes buscan hacer compras después de un día al aire libre.
@@ -62,7 +62,7 @@
         </div>
         <div class="sucursal3">
             <br>
-             <div class="imagen"> <img src="../img/location_535239.png" alt="ubicacion"></div>
+             <div class="imagen"> <img src="https://i.postimg.cc/T1z4rwhk/location-535239.png" alt="ubicacion"></div>
             <br>
            <h2>Barrio Universitario "Campus Norte"</h2>
            <p>Cerca de las universidades y centros educativos, esta ubicación sería ideal para los estudiantes y residentes cercanos que buscan conveniencia y variedad en sus compras diarias.

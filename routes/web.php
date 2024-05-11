@@ -41,7 +41,6 @@ Route::get('/terminos', function() {
     return view('layouts.terminos');
 });
 
-
 Route::get('/preguntasFrecuentes', function() {
     return view('layouts.preguntasFrecuentes');
 });
@@ -60,7 +59,6 @@ Route::get('/contacto', function () {
 Route::get('/retiro', function () {
     return view('layouts.retiro');
 });
-
 
 Auth::routes();
 

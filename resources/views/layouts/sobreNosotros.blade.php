@@ -17,7 +17,7 @@
             </script>
         <br>
             <div class="iconoSB">
-                <img  src="../img/group_921347 (1).png" alt="sobreNosotros">
+                <img  src="https://i.postimg.cc/T38zbkDR/group-921347-1.png" alt="sobreNosotros">
                 <h2>Sobre Nosotros</h2>
                 <h3>Somos un grupo de empresarios de amplia trayectoria en el mercado.</h3>
             </div>
@@ -34,7 +34,7 @@
             <br>
                 <div class="contenedorImagen">
                     <div class="columna1">
-                        <img src="../img/81603.jpg" alt="hombreSupermercado">
+                        <img src="https://i.postimg.cc/1zS1kWmW/81603.jpg" alt="hombreSupermercado">
                     </div>
                     <div class="columna2">
                         <p>
