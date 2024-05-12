@@ -492,13 +492,14 @@ a {
 }
 
 .containerBento1 div img{
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
     display: block;
     object-fit: cover;
-    height: 100%;
 }
 
 .containerBento1 div:first-child{
+    height: 350px;
     grid-column: 1 / 4;
 }
 
