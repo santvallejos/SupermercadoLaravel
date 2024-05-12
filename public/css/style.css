@@ -167,15 +167,369 @@ a {
     }
 }
 
-/* Footer*/
-footer {
-    background-color: #004d29;
+@media (max-width: 1110px){
+    .cuenta{
+        display: none;
+    }
+
+    .logoHeader{
+        display: none;
+    }
+
+    .logoMovilHeader{
+        display: flex;
+        visibility: visible;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        width: 5rem;
+    }
+}
+
+/* Carrusel de imagenes */
+
+.carrusel {
+    position: relative; /* Asegura que los elementos posicionados dentro de este div sean relativos a él */
     width: 100%;
-    margin: 0;
+    margin-bottom: 1rem;
+}
+.mySlides {
+    display: none;
+}
+.mySlides img {
+    width: 100%;
+    height: 40rem;
+}
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    margin-top: -22px;
+    padding: 1rem;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: 0.6 ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 900px) {
+    .carrusel {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .carrusel {
+        width: 100%;
+    }
+    .prev,
+    .next {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 700px) {
+    .mySlides img {
+        height: 25rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .mySlides img {
+        height: 55rem;
+    }
+}
+
+/* Aliniacion de elementos en el home */
+
+.containerHome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 18rem;
+    flex-direction: column;
+}
+
+/* Info Home */
+
+.infoHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    padding: 1.2rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.infoHome h3 a {
+    color: #3f3f3f;
+}
+
+/* Carrusel Categoria  */
+
+.containerCategorias {
+    width: 100%;
+    max-width: 964px;
+    position: relative;
+    margin: auto; /* Centrar horizontalmente */
+    text-align: center; /* Alinear contenido al centro */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.carruselCategorias {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carruselCategorias::-webkit-scrollbar {
+    height: 0;
+}
+
+.anteriorCategorias,
+.siguienteCategorias {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: #e7e7e7;
+    border: 2px solid;
+    padding: 8px;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+}
+
+.anteriorCategorias {
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%); /* Centrar vertical y horizontalmente */
+}
+
+.siguienteCategorias {
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%); /* Centrar vertical y horizontalmente */
+}
+
+.tarjetas {
+    display: grid;
+    grid-gap: 16px;
+    grid-auto-flow: column;
+    margin: auto;
     box-sizing: border-box;
-    padding: 0;
-    height: 40vh; /* Usar viewport height para hacerlo responsive en altura */
-    /* position: absolute; */
+}
+
+.item {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #ffde59;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    background: rgba(217, 217, 217, 0.58);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    user-select: none;
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+
+/* Mas eleguidos */
+
+.masEleguidos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0.6rem;
+    margin-bottom: 4rem;
+}
+
+.productoMasEleguido {
+    background-color: #f3f2f2;
+    border: 3px solid #1b1b1b3f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.productoMasEleguido img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    width: 9rem;
+}
+
+.buttonMasEleguidos {
+    visibility: visible;
+    --width: 100px;
+    --height: 35px;
+    --tooltip-height: 35px;
+    --tooltip-width: 90px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #004d29;
+    --tooltip-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    text-align: center;
+    border-radius: 0.45em;
+    font-family: "Arial";
+    transition: background 0.3s;
+}
+
+.buttonMasEleguidos::after,
+.buttonMasEleguidos::before {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.texBotonMasEleguidos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-wrapper,
+.texBotonMasEleguidos,
+.carritoMasEleguidos {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff;
+}
+
+.texBotonMasEleguidos {
+    top: 0;
+}
+
+.texBotonMasEleguidos,
+.carritoMasEleguidos {
+    transition: top 0.5s;
+}
+
+.carritoMasEleguidos {
+    color: #fff;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carritoMasEleguidos svg {
+    width: 24px;
+    height: 24px;
+}
+
+.buttonMasEleguidos:hover {
+    background: #004d29;
+}
+
+.buttonMasEleguidos:hover .texBotonMasEleguidos {
+    top: -100%;
+}
+
+.buttonMasEleguidos:hover .carritoMasEleguidos {
+    top: 0;
+}
+
+.buttonMasEleguidos:hover:before,
+.buttonMasEleguidos:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.buttonMasEleguidos:hover:after {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.buttonMasEleguidos:hover:before {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+/* Bento Grid 1 */
+
+.containerBento1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    grid-gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.containerBento1 div {
+    border-radius: 10px; /* Aplica un borde redondeado de 10px a todos los divs dentro del contenedor */
+    overflow: hidden; /* Asegura que el contenido no se desborde del borde redondeado */
+}
+
+.containerBento1 div img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.containerBento1 div:first-child{
+    height: 350px;
+    grid-column: 1 / 4;
+}
+
+.containerBento1 div:last-child{
+    grid-column: 2 / 4;
+}
+
+/* Banner */
+
+.banner {
+    background-image: url(../img/supermercadoApp.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 500px;
+    width: 100%;
+    margin: auto;
+}
+
+/* Footer*/
+footer{
+  background-color: #004D29;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+   height: 40vh; /* Usar viewport height para hacerlo responsive en altura */  
+  /* position: absolute; */
+    font-family: "Tenor Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
 }
 
 footer a {
@@ -183,22 +537,22 @@ footer a {
 }
 
 .derechosAutor {
-    background-color: #f2eee4;
-    width: 100%;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 1.5em; /* Usar unidades relativas */
-    text-align: center;
-    margin-top: 20px;
+  background-color: #F2EEE4;
+  width: 100%;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5em; /* Usar unidades relativas */
+  text-align: center;
+  height: 20%;
 }
 
 /* Estilos para las columnas */
-.filaFooter {
-    padding: 1%;
-    box-sizing: border-box;
-    height: 40vh;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+.filaFooter { 
+   padding: 1%;
+  box-sizing: border-box;
+  height: 28vh;
+  width: 100%;  
+  display: flex;
+  flex-wrap: wrap;  
 }
 
 .column:last-child {
@@ -209,11 +563,11 @@ footer a {
     width: 50%;
 }
 
-.columnaDerecha {
-    width: 25%;
-    float: left;
-    box-sizing: border-box; /* Esto incluye el borde en el ancho total */
-    font-size: 1.5em;
+.columnaDerecha{
+  width: 25%;
+  float: left;
+  box-sizing: border-box; /* Esto incluye el borde en el ancho total */
+font-size: 1.5em;
 }
 
 .columnaIzquierda {
@@ -222,14 +576,8 @@ footer a {
     box-sizing: border-box; /* Esto incluye el borde en el ancho total */
 }
 .redesFooter {
-    display: flex;
-    justify-content: center;
-}
-
-.redesFooter img {
-    margin-right: 15px;
-    width: 50px; /* Tamaño máximo para imágenes de redes sociales */
-    height: 50%;
+  display: flex;
+  text-align: center;
 }
 
 .infoFooter {
@@ -262,8 +610,9 @@ footer a {
     align-items: center; /* Centra horizontalmente los elementos */
     text-align: center;
 
-    display: inline;
-    justify-content: center;
+display: inline;
+justify-content: center;
+
 }
 
 .formasPagoFooter ul {
@@ -271,302 +620,330 @@ footer a {
     justify-content: center;
 }
 
+.metodosPagoFooter svg{
+  margin: 5%;
+}
+
+.otro img{
+  display: none;
+  visibility: hidden;
+}
+.textoColumnaIzquierda a{
+  text-decoration: underline;
+  color: black;
+}
+.columnaMedia a{
+  text-decoration: underline;
+  color: black;
+}
+.tercerColumna a{ text-decoration: underline;
+  color: black;}
+
 /*pantallas chicas*/
 @media (max-width: 576px) {
-    footer {
-        font-size: 10px;
-    }
-    .logoFooter img {
-        width: 10vh;
-        height: 15vw;
-    }
-    .textoColumnaIzquierda {
-        align-self: flex-end;
-        width: 100%;
-        height: auto;
-        margin-top: 30px;
-    }
+footer{
+  font-size: 10px;
+  height: 25vh;
+}
 
-    .columnaIzquierda {
-        width: 25%;
-        height: auto;
-        font-size: 8px;
-    }
-    .columnaDerecha {
-        width: 25%;
-        font-size: 10px;
-    }
-    .columnaMedia {
-        width: 50%;
-        font-size: 30px;
-    }
-    .redesFooter {
-        margin: 1%; /* Reducir el margen en pantallas pequeñas */
-        zoom: 40%;
-    }
-    .redesFooter img {
-        width: 10vw; /* Tamaño relativo más grande para imágenes de redes sociales */
-    }
+.logoFooter img{
+  display: none;
+  visibility: hidden;
+}
 
-    .formasPagoFooter ul li {
-        margin: 0 5px; /* Reducir el espacio entre los elementos de la lista */
-    }
+.otro img{
+   display: flex;
+  visibility: visible;
+  height: 100%;
+}
 
-    .infoFooter {
-        font-size: 10px; /* Reducir el tamaño de fuente */
-        display: flex;
-        justify-content: center;
-    }
+.textoColumnaIzquierda{
+  width: 90%;
+  display: contents;
+  justify-content: center;
+  font-size: 12px;
+}
+.textoColumnaIzquierda a{
+  text-decoration: underline;
+  color: black;
+}
+.columnaIzquierda {
+  width: 25%;
+  height: 24vh;
+  font-size: 12px;
+}
+.columnaDerecha {
+  width: 25%;
+  height: 24vh;
+  font-size: 12px;
+}
+.columnaMedia{
+width: 50%;
+height: 24vh;
+font-size: 45px;
+}
+.redesFooter svg{
+  width: 25%;
+}
+.metodosPagoFooter svg{
+  width: 15%;
+}
 
-    .linksFooter {
-        margin: 10px; /* Reducir el margen */
-    }
-    .formasPagoFooter h2 {
-        font-size: 15px;
-    }
+.infoFooter {
+font-size: 12px; /* Reducir el tamaño de fuente */
+align-items: center;
+width: 100%;
+}
 
-    .metodosPagoFooter img {
-        width: 30%;
-    }
+.linksFooter {
+margin: 5px; /* Reducir el margen */
+text-decoration: underline;
+color: black; /* Puedes elegir el color que desees */
+}
 
-    .tercerColumna {
-        margin-left: 10px;
-    }
+.formasPagoFooter h2{
+  width: 90%;
+  align-items: center;
+  font-size:15px;
+}
+
+.tercerColumna{
+  margin-top: 10px;
+margin-left: 10px;
+}
+.tercerColumna a{
+  text-decoration: underline;
+  color: black;
+}
+
 }
 
 /*pantallas medianas*/
 @media only screen and (min-width: 577px) and (max-width: 768px) {
-    .logoFooter img {
-        width: 95%;
-        height: 95%;
-    }
+footer{font-size: 10px;
+height: 25vh;}
 
-    .textoColumnaIzquierda {
-        width: 100%;
-        font-size: small;
-    }
-
-    .columnaIzquierda {
-        width: 25%;
-        height: auto;
-        font-size: 8px;
-    }
-    .columnaDerecha {
-        width: 25%;
-        font-size: 15px;
-    }
-    .columnaMedia {
-        width: 50%;
-        font-size: 10px;
-    }
-    .redesFooter {
-        margin: 1%; /* Reducir el margen en pantallas pequeñas */
-        zoom: 40%;
-    }
-    .redesFooter img {
-        width: 10vw; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
-    }
-
-    .formasPagoFooter ul li {
-        margin: 0 5px; /* Reducir el espacio entre los elementos de la lista */
-    }
-
-    .infoFooter {
-        font-size: 15px; /* Reducir el tamaño de fuente */
-        display: flex;
-        justify-content: center;
-    }
-    .linksFooter {
-        margin: 10px; /* Reducir el margen */
-    }
-    .formasPagoFooter h2 {
-        font-size: 15px;
-    }
-
-    .metodosPagoFooter img {
-        width: 20%;
-        margin-bottom: 10%;
-    }
-
-    .tercerColumna {
-        margin-left: 20px;
-    }
+.logoFooter img{
+  width: 140%;
 }
+
+.logoFooter{
+  width: 70%;
+  visibility: visible;
+}
+.logoMovilFooter{
+  display: none;
+  visibility: hidden;
+}
+
+.textoColumnaIzquierda{
+  width: 100%;
+  font-size: 12px;
+}
+
+.columnaIzquierda {
+width: 25%;
+height: auto;
+font-size: 8px;
+}
+.columnaDerecha {
+width: 25%;
+font-size: 15px;
+}
+.columnaMedia{
+width: 50%;
+font-size: 11px;
+
+}
+.redesFooter {
+margin: 10%; /* Reducir el margen en pantallas pequeñas */
+} 
+.redesFooter svg {
+   width: 50%; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
+  height: 20%;
+}
+.metodosPagoFooter svg{
+  width: 15%;
+  height: 10%;
+}
+.infoFooter {
+  font-size: 15px; /* Reducir el tamaño de fuente */
+  display: flex;
+  justify-content: center;
+}
+.linksFooter {
+  margin: 10px; /* Reducir el margen */
+  }
+.formasPagoFooter h2{
+  font-size:15px ;
+  }
+.tercerColumna{
+  margin-left: 20px;
+  }
+
+}
+
 /*pantallas grandes*/
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-    .logoFooter img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .textoColumnaIzquierda {
-        width: 100%;
-        font-size: small;
-        margin-top: 20%;
-    }
-
-    .columnaIzquierda {
-        width: 25%;
-        height: auto;
-        font-size: 8px;
-    }
-    .columnaDerecha {
-        width: 25%;
-        font-size: 15px;
-    }
-    .columnaMedia {
-        width: 50%;
-        font-size: 50px;
-    }
-    .redesFooter {
-        margin: 1%; /* Reducir el margen en pantallas pequeñas */
-        zoom: 40%;
-    }
-    .redesFooter img {
-        width: 10vw; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
-    }
-
-    .formasPagoFooter ul li {
-        margin: 0 5px; /* Reducir el espacio entre los elementos de la lista */
-    }
-
-    .infoFooter {
-        font-size: 20px; /* Reducir el tamaño de fuente */
-        display: flex;
-        justify-content: center;
-    }
-    .linksFooter {
-        margin: 10px; /* Reducir el margen */
-    }
-    .formasPagoFooter h2 {
-        font-size: 20px;
-    }
-
-    .metodosPagoFooter img {
-        width: 25%;
-        margin-bottom: 10%;
-    }
-
-    .tercerColumna {
-        margin-left: 20px;
-    }
+footer{
+  height: 30vh;
 }
-/*Pantallas Extras*/
-@media only screen and (min-width: 992px) and (max-width: 1260px) {
-    .logoFooter img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .textoColumnaIzquierda {
-        width: 100%;
-        font-size: small;
-        margin-top: 15%;
-    }
-
-    .columnaIzquierda {
-        width: 25%;
-        height: auto;
-        font-size: 8px;
-    }
-    .columnaDerecha {
-        width: 25%;
-        font-size: 15px;
-    }
-    .columnaMedia {
-        width: 50%;
-        font-size: 50px;
-    }
-    .redesFooter {
-        margin: 1%; /* Reducir el margen en pantallas pequeñas */
-        zoom: 40%;
-    }
-    .redesFooter img {
-        width: 10vw; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
-    }
-
-    .formasPagoFooter ul li {
-        margin: 0 5px; /* Reducir el espacio entre los elementos de la lista */
-    }
-
-    .infoFooter {
-        font-size: 20px; /* Reducir el tamaño de fuente */
-        display: flex;
-        justify-content: center;
-    }
-    .linksFooter {
-        margin: 10px; /* Reducir el margen */
-    }
-    .formasPagoFooter h2 {
-        font-size: 20px;
-    }
-
-    .metodosPagoFooter img {
-        width: 25%;
-        margin-bottom: 10%;
-    }
-
-    .tercerColumna {
-        margin-left: 20px;
-    }
+.filaFooter{
+ height: 30vh;
 }
+.logoFooter img{
+    width: 160px;
+    height:100%;
+   }
+  
+.columnaIzquierda {
+  width: 25%;
+ }
+.columnaDerecha {
+  width: 25%;
+  font-size: 15px;
+  }
+.columnaMedia{
+  width: 50%;
+  font-size: 50px;
+}
+.textoColumnaIzquierda{
+  font-size: 15px;
+}
+.redesFooter {
+margin: 10%; /* Reducir el margen en pantallas pequeñas */
+width: 100%;
+}
+.redesFooter svg {
+  width: 25%; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
+}
+.infoFooter {
+  font-size: 20px; /* Reducir el tamaño de fuente */
+  display: flex;
+  justify-content: center;
+  }
+.linksFooter {
+  margin: 10px; /* Reducir el margen */
+    }
+.formasPagoFooter h2{
+  font-size:  20px;
+ }
+
+.metodosPagoFooter svg{
+    width: 10%;
+}   
+.tercerColumna{
+  margin-left: 25px;
+  font-size: 18px;
+  }
+}
+/*Pantallas Extras*/  
+@media only screen and (min-width: 993px) and (max-width: 1260px) {
+footer{
+   height: 30vh;
+  
+  }
+.derechosAutor{
+  margin:20px;
+ }
+.logoFooter img{
+  width:200px;
+  height: 100%;
+}
+.textoColumnaIzquierda{
+      width: 100%;
+      font-size: 15px;
+  }
+    
+.columnaIzquierda {
+  width: 25%;
+  height: auto;
+ }
+.columnaDerecha {
+  width: 25%;
+  font-size: 15px;
+  }
+.columnaMedia{
+  width: 50%;
+   }
+  .redesFooter {
+  margin: 1%; /* Reducir el margen en pantallas pequeñas */
+  width: 100%;
+  }
+  .redesFooter svg {
+    margin-top: 5%;
+    width: 25%; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
+  }
+  .metodosPagoFooter svg{
+    margin: 5%;
+  } 
+    
+  .infoFooter {
+      font-size: 18px; /* Reducir el tamaño de fuente */
+      justify-content: center;
+      
+    }
+   .linksFooter {
+      margin: 5px; /* Reducir el margen */
+      }
+      .formasPagoFooter h2{
+      font-size:  20px;
+      }
+       
+      .tercerColumna{
+      margin-left: 20px;
+      }
+  }
 /*ver*/
-@media only screen and (min-width: 1262px) and (max-width: 1690px) {
-    .logoFooter img {
-        width: 100px;
-        height: 100px;
-    }
+  @media only screen and (min-width: 1262px) and (max-width: 1690px) {
+    footer{
+      height: 35vh;
+     }
+     .filaFooter{
+      height: 35vh;
+     }
 
-    .textoColumnaIzquierda {
+    .logoFooter img{
+       width: 300px;
+       height: 70px;
+      }
+      
+    .textoColumnaIzquierda{
         width: 100%;
-        font-size: small;
-        margin-top: 15%;
+        font-size: 15px;
+        margin-top: 10%;
     }
 
     .columnaIzquierda {
-        width: 25%;
-        height: auto;
-        font-size: 8px;
-    }
+      width: 25%;
+      }
     .columnaDerecha {
-        width: 25%;
-        font-size: 15px;
-    }
-    .columnaMedia {
-        width: 50%;
-        font-size: 50px;
+      width: 25%;
+      }
+    .columnaMedia{
+      width: 50%;   
     }
     .redesFooter {
-        margin: 1%; /* Reducir el margen en pantallas pequeñas */
-        zoom: 30%;
+    margin: 8%; /* Reducir el margen en pantallas pequeñas */
+    width: 100%;
     }
     .redesFooter img {
-        width: 10vw; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
+      width: 15%; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
     }
-
-    .formasPagoFooter ul li {
-        margin: 0 5px; /* Reducir el espacio entre los elementos de la lista */
+      
+  .infoFooter {
+     font-size: 20px; /* Reducir el tamaño de fuente */
+     display: flex;
+     justify-content: center;
+  }
+  .linksFooter {
+    margin: 10px; /* Reducir el margen */
+  }
+  .formasPagoFooter h2{
+    font-size:  25px;
     }
-
-    .infoFooter {
-        font-size: 20px; /* Reducir el tamaño de fuente */
-        display: flex;
-        justify-content: center;
+ .tercerColumna{
+    margin-left: 20px;
+    font-size: 20px;
+        }
     }
-    .linksFooter {
-        margin: 10px; /* Reducir el margen */
-    }
-    .formasPagoFooter h2 {
-        font-size: 30px;
-    }
-
-    .metodosPagoFooter img {
-        width: 20%;
-        margin-bottom: 10%;
-    }
-
-    .tercerColumna {
-        margin-left: 20px;
-        font-size: 20px;
-    }
-}

@@ -37,6 +37,29 @@ Route::get('/sobreNosotros', function () {
     return view('layouts.sobreNosotros');
 });
 
+Route::get('/terminos', function() {
+    return view('layouts.terminos');
+});
+
+Route::get('/preguntasFrecuentes', function() {
+    return view('layouts.preguntasFrecuentes');
+});
+
+Route::get('/atencionAlCliente', function() {
+    return view('layouts.atencionAlCliente');
+});
+
+Route::get('/metodosDePago', function() {
+    return view('layouts.metodosDePago');
+});
+
+Route::get('/contacto', function () {
+    return view('layouts.contacto');
+});
+Route::get('/retiro', function () {
+    return view('layouts.retiro');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

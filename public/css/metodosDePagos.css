@@ -1,0 +1,164 @@
+#page-top {
+    overflow-x: hidden;
+    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+   font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+ }
+
+.page-scroll {
+          color: #004d29;
+          font-weight: 400;
+          text-decoration: none;
+          font-size: 25px;
+          }
+        
+        #metodosDePago {
+            text-align: center;
+            padding: 5px;      
+        }
+        
+        .botonMetodoDePago {
+            display: inline-block;
+            margin: 5px;
+          font-size: 14px;
+          font-weight: bold;
+          width: 110px;
+            padding: 10px 20px;
+            background-color: #004d29;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .botonMetodoDePago:hover {
+            background-color: #fff;
+            color: #004d29;
+            border: 1px solid #004d29;
+        }
+ .botonSubir {
+            display: inline-block;
+            left: 50%;
+            margin: 5px;
+          font-size: 14px;
+          font-weight: bold;
+          width: 170px;
+            padding: 10px 20px;
+            background-color: #004d29;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+   text-decoration: none;
+   text-align: center;
+        }
+        .botonSubir:hover {
+            background-color: #fff;
+            color: #004d29;
+            border: 1px solid #004d29;
+        }
+        
+        .contenido {
+            display: none;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        .visible {
+            display: block;
+        }
+
+.contenidoPromocionPorDia{
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+
+.cardPromocionBanco {
+ width: 190px;
+ height: 310px;
+ background: #fff;
+ border-radius: 15px;
+  border: 1px solid #004d29;
+ box-shadow: 1px 5px 60px 0px #100a886b;
+  margin: 10px;
+}
+
+.cardPromocionBanco .cardPromocionBanco-border-top {
+ width: 70%;
+ height: 3%;
+ background: #004d29;
+ margin: auto;
+ border-radius: 0px 0px 15px 15px;
+}
+
+.descuentoCardPromocionBanco {
+ font-weight: bold;
+ color: red;
+ text-align: center;
+ display: block;
+ padding-top: 10px;
+ font-size: 16px;
+}
+
+.topeCardPromocionBanco {
+  font-weight: bold;
+  color: red;
+  display: block;
+  text-align: center;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  font-size: 12px;
+}
+
+.imgCardPromocionBanco {
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.descriptionDescuentoCardPromocionBanco {
+  font-size: 12px;
+  text-align:center;
+}
+
+.botonCardPromocionBanco {
+ padding: 8px 25px;
+ display: block;
+ margin: auto;
+ border-radius: 8px;
+ border: none;
+ margin-top: 60px;
+ background: #004d29;
+ color: white;
+ font-weight: 600;
+}
+
+.botonCardPromocionBanco:hover {
+  background: #fff;
+  color: #004d29;
+  border-radius: 8px ;
+  border: 1px solid #004d29;
+}
+.volverAtras {
+  text-decoration: none;
+  color: #ffde59;
+  padding: 10px 15px;
+  border: 1px solid #004d29;
+  border-radius: 5px;
+  background-color: #004d29;
+  margin-left: 1%;
+}
+.volverAtras:hover {
+  background-color: #ffde59; /* Cambio de color de fondo al pasar el mouse */
+  color: #004d29;
+}
