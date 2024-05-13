@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
+use App\Http\Controllers\Auth\ForgotPasswordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,6 +59,10 @@ Route::get('/contacto', function () {
 });
 Route::get('/retiro', function () {
     return view('layouts.retiro');
+});
+
+Route::get('/terminosycondiciones', function () {
+    return view('terminosycondiciones');
 });
 
 Auth::routes();
