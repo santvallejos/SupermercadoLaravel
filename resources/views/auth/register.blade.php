@@ -61,6 +61,24 @@
                             </div>
                         </div>
 
+<<<<<<< HEAD
+=======
+                        <!-- Boton de aceptar terminos y condiciones, esta campo es requerido para enviar el formulario -->
+                        <div class="col-md-6 offset-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="terminos" id="terminos" required>
+                                <label class="form-check-label" for="terminos">
+                                 <a href={{ url('terminos') }} target="_blank" >{{ __('Acepta los terminos y condiciones') }} </a> 
+                                </label>
+                                @error('terminos')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+    </div>
+</div>
+>>>>>>> 17593675831d306a3fbe8df948075d1dfbce29cf
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

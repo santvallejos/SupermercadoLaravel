@@ -1,0 +1,110 @@
+.sucursales{
+    background-color: #f2EEE4;
+}
+
+/*Bloque icono sobre nosotros*/
+.iconoSucursales{
+    text-align: center;
+    color: #000000;
+    font-size: 20px;
+}
+.textoSucursales p{
+    background-color: #004d29;
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right:10%;
+    padding: 2%;
+   font-size: 20px;
+   color: #f2EEE4;
+   height: 10%;
+   }
+
+.sectionSucursales {
+    display: flex;
+    justify-content: space-around; /* Para distribuir las sucursales de forma equitativa */
+    align-items: center; /* Para centrar verticalmente */
+    flex-wrap: wrap; /* Para que las sucursales se ajusten al tamaño del contenedor */
+}
+
+.sucursal1 {
+    text-align: center;
+    margin: 10px;
+    width: 30%;
+    background-color: #004d29;
+    color: #ffde59;
+}
+.sucursal2 {
+    text-align: center;
+    margin: 10px;
+    width: 30%;
+    background-color: #004d29;
+    color: #ffde59;
+}
+.sucursal3 {
+    text-align: center;
+    margin: 10px;
+    width: 30%;
+    background-color: #004d29;
+    color: #ffde59;
+}
+
+.sucursal1 img{
+  width: 10%;
+}
+.sucursal2 img{
+    width: 10%;
+}
+.sucursal3 img{
+    width: 10%;
+}
+
+.tituloSu{
+    font-weight: bold;
+}
+.volverAtras {
+    text-decoration: none;
+    color: #ffde59;
+    padding: 10px 15px;
+    border: 1px solid #004d29;
+    border-radius: 5px;
+    background-color: #004d29;
+    margin-left: 1%;
+  }
+.volverAtras:hover {
+    background-color: #ffde59; /* Cambio de color de fondo al pasar el mouse */
+    color: #004d29;
+  }
+
+/*Mapa*/
+  @media only screen and (max-width: 575px) {
+    iframe {
+        width: 100%; /* Porcentaje del ancho del contenedor padre */
+        height: 100%; /* Porcentaje del alto de la ventana del navegador */
+      }}
+  @media only screen and (min-width: 577px) and (max-width: 768px){
+        iframe {
+            width: 150px; /* Porcentaje del ancho del contenedor padre */
+            height: 100%; /* Porcentaje del alto de la ventana del navegador */
+          }
+      }
+
+  @media only screen and (min-width: 769px) and (max-width: 992px){
+        iframe {
+            width: 200px; /* Porcentaje del ancho del contenedor padre */
+            height: 100%; /* Porcentaje del alto de la ventana del navegador */
+          }
+      }
+
+  @media only screen and (min-width: 993px) and (max-width: 1260px){
+        iframe {
+            width: 300px; /* Porcentaje del ancho del contenedor padre */
+            height: 100%; /* Porcentaje del alto de la ventana del navegador */
+          }
+      }
+  @media only screen and (min-width: 1261px) and (max-width: 1690px){
+        iframe {
+            width: 380px; /* Porcentaje del ancho del contenedor padre */
+            height: 100%; /* Porcentaje del alto de la ventana del navegador */
+          }
+      }
