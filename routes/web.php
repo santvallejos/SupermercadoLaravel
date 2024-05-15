@@ -25,6 +25,10 @@ Route::get('/ofertas', function () {
     return view('layouts.ofertas');
 });
 
+Route::get('/categorias', function () {
+    return view('layouts.categorias');
+});
+
 Route::get('/sucursales', function () {
     return view('layouts.sucursales');
 });
@@ -57,12 +61,9 @@ Route::get('/metodosDePago', function() {
 Route::get('/contacto', function () {
     return view('layouts.contacto');
 });
+
 Route::get('/retiro', function () {
     return view('layouts.retiro');
-});
-
-Route::get('/terminosycondiciones', function () {
-    return view('terminosycondiciones');
 });
 
 Auth::routes();
