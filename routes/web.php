@@ -1,12 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
-=======
 use Illuminate\Support\Facades\Auth;
 
 use App\Http\Controllers\Auth\ForgotPasswordController;
->>>>>>> 17593675831d306a3fbe8df948075d1dfbce29cf
 
 /*
 |--------------------------------------------------------------------------
@@ -24,8 +21,6 @@ Route::get('/', function () {
     return view('layouts.inicio');
 });
 
-<<<<<<< HEAD
-=======
 Route::get('/ofertas', function () {
     return view('layouts.ofertas');
 });
@@ -71,7 +66,6 @@ Route::get('/retiro', function () {
     return view('layouts.retiro');
 });
 
->>>>>>> 17593675831d306a3fbe8df948075d1dfbce29cf
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
