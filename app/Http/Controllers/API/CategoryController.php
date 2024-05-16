@@ -4,7 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Category; 
+use App\Models\Category; 
 
 
 class CategoryController extends Controller
@@ -16,12 +16,12 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $cat = new Category();
+       /* $cat = new Category();
         $cat->nombre        ='Bebidas';
         $cat->slug          ='Bebidas';
         $cat->descripcion   ='Agua sin gas';
-        $cat->save();
-        return $cat;  
+        $cat->save(); */
+        return Category::all();  
 
     }
 
@@ -43,9 +43,13 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        if (Category::where ('slug',$slug)->first()){
+            return 'slug existe';
+        } else {
+            return 'slug disponible';
+        }
     }
 
     /**
