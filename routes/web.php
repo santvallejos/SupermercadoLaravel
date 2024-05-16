@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Product;
+use App\Models\Category;
 
 use App\Http\Controllers\Auth\ForgotPasswordController;
 
@@ -18,7 +20,9 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 
 //Por cada ruta que se genera, se mostra su vista respectiva
 Route::get('/', function () {
-    return view('layouts.inicio');
+    /* return view('layouts.inicio'); */
+    $cat = Category::find(2)->products;
+    return $cat;
 });
 
 Route::get('/ofertas', function () {
