@@ -726,7 +726,7 @@ eval("/* module decorator */ module = __webpack_require__.nmd(module);\nvar __WE
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy9hcHAuc2NzcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Fzcy9hcHAuc2Nzcz9hODBiIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxuZXhwb3J0IHt9OyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/sass/app.scss\n");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy9hcHAuc2NzcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Fzcy9hcHAuc2Nzcz9jN2U0Il0sInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxuZXhwb3J0IHt9OyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/sass/app.scss\n");
 
 /***/ }),
 
@@ -920,79 +920,3 @@ eval("/* provided dependency */ var Buffer = __webpack_require__(/*! buffer */ \
 /******/ 	
 /******/ })()
 ;
-
-//creación de constantes
-const navbar = document.querySelector("#navbar");
-const abrirMenu = document.querySelector("#abrirMenu");
-const cerrarMenu = document.querySelector("#cerrarMenu");
-const body = document.body;
-
-//Cuando se haga click en el boton sucedere el evento
-abrirMenu.addEventListener("click", () => {
-    //En este caso hacer visible el navbar
-    navbar.classList.add("visible");
-    body.style.overflow = "hidden";
-});
-
-cerrarMenu.addEventListener("click", () => {
-    //removir la visibilidad del navbar
-    navbar.classList.remove("visible");
-    body.style.overflow = "auto";
-});
-
-/* Carrusel de imagenes */
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-    showSlides((slideIndex += n));
-}
-
-function currentSlide(n) {
-    showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-    let i;
-    let slides = document.querySelectorAll(".mySlides");
-
-    if (n > slides.length) slideIndex = 1;
-    if (n < 1) slideIndex = slides.length;
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = "block";
-}
-
-/* Carrusel de categorias */
-
-const gap = 16;
-
-const carrusel = document.getElementById("carrusel"),
-    tarjetas = document.getElementById("tarjetas"),
-    siguiente = document.getElementById("siguiente"),
-    anterior = document.getElementById("anterior");
-
-siguiente.addEventListener("click", (e) => {
-    carrusel.scrollBy(width + gap, 0);
-    if (carrusel.scrollWidth !== 0) {
-        anterior.style.display = "flex";
-    }
-    if (tarjetas.scrollWidth - width - gap <= carrusel.scrollLeft + width) {
-        siguiente.style.display = "none";
-    }
-});
-
-anterior.addEventListener("click", (e) => {
-    carrusel.scrollBy(-(width + gap), 0);
-    if (carrusel.scrollLeft - width - gap <= 0) {
-        anterior.style.display = "none";
-    }
-    if (!tarjetas.scrollWidth - width - gap <= carrusel.scrollLeft + width) {
-        siguiente.style.display = "flex";
-    }
-});
-
-let width = carrusel.offsetWidth;
-window.addEventListener("resize", (e) => (width = carrusel.offsetWidth));
