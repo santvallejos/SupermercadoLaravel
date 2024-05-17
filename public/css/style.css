@@ -1,237 +1,572 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: normal;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 /* Header */
-header{
-    background-color: #004D29;
-        /* Aplica la propieda fle al todo el heaer */
-    display: flex;
-    /* Que me header distribuya los elementos para ocupar todo el espeacio con una misma medida */
-    justify-content: space-between;
-    padding: 1rem;
-    gap: 1rem;
+header {
+  background-color: #004d29;
+  /* Aplica la propieda fle al todo el heaer */
+  display: flex;
+  /* Que me header distribuya los elementos para ocupar todo el espeacio con una misma medida */
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 1rem;
 }
 
-header div{
-    display: flex;
-    align-items: center;
+header div {
+  display: flex;
+  align-items: center;
 }
 
-a{
-    /* Saca la decoracion de los links (subrayado) */
-    text-decoration: none;
-    color: white;
+a {
+  /* Saca la decoracion de los links (subrayado) */
+  text-decoration: none;
+  color: white;
 }
 
 /* Menu de navegación */
 
-.navbar{
-    /* El menu completo pero sin ser visible para darle animacion con js */
-    opacity: 0;
-    visibility: hidden;
+.navbar {
+  /* El menu completo pero sin ser visible para darle animacion con js */
+  opacity: 0;
+  visibility: hidden;
 
-    display: flex;
-    /* Los elementos estaran en columna */
-    flex-direction: column;
-    /* estaran al inicio (izquierda) */
-    align-items: start;
-    background-color: #004D29;
-    position: absolute;
-    gap: 1rem;
-    padding: 2rem 20px 2rem;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    /* Su fondo sera mas oscuro */
-    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+  display: flex;
+  /* Los elementos estaran en columna */
+  flex-direction: column;
+  /* estaran al inicio (izquierda) */
+  align-items: start;
+  background-color: #004d29;
+  position: absolute;
+  gap: 1rem;
+  padding: 2rem 20px 2rem;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  /* Su fondo sera mas oscuro */
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1; /* Este elemento va a estar encima de todo */
 }
 
-.navbar.visible{
-    /* menu visible que pisa los anteriores atributos con js */
-    opacity: 1;
-    visibility: visible;
+.navbar.visible {
+  /* menu visible que pisa los anteriores atributos con js */
+  opacity: 1;
+  visibility: visible;
 }
 
 .abrirMenu,
-.cerrarMenu{
-    display: block;
-    border: none;
-    background: none;
-    padding: 0;
-    margin: 0;
+.cerrarMenu {
+  display: block;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
 }
 
-.navbarList{
-    /* Elimina los puntos de las listas */
-    list-style-type: none;
-    display: flex;
-    /* Para que mi menu quede en columnas */
-    flex-direction: column;
-    gap: 2rem;
+.navbarList {
+  /* Elimina los puntos de las listas */
+  list-style-type: none;
+  display: flex;
+  /* Para que mi menu quede en columnas */
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.navbarList li a{
-    color: white;
-    font-size: 25px;
+.navbarList li a {
+  color: white;
+  font-size: 25px;
 }
 
 /* Logo del Navbar */
 .logoHeader {
-    max-width: 100%;
-    height: auto;
-    display: block; /* Hacer que la imagen sea un bloque para que el contenedor se ajuste correctamente */
+  max-width: 100%;
+  height: auto;
+  display: block; /* Hacer que la imagen sea un bloque para que el contenedor se ajuste correctamente */
 }
 
-.logoHeader img{
-    max-width: 100%;
-    height: auto;
-    display: block;
+.logoHeader img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-.logoMovilHeader{
-    display: none;
-    visibility: hidden;
+.logoMovilHeader {
+  display: none;
+  visibility: hidden;
 }
 
 /* Search del navbar */
 
 .buscadorHeader {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding-left: 2rem;
-    justify-content: center;
-    padding: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  justify-content: center;
+  padding: 0;
 }
 
 .searchTerm {
-    width: 70%;
-    border: 2px solid #7e7e7e;
-    border-right: none;
-    padding: 16px;
-    height: 40px;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-    color: #000000;
-    background-color: #F2EEE4;
-    font-size: 1rem;
+  width: 70%;
+  border: 2px solid #7e7e7e;
+  border-right: none;
+  padding: 16px;
+  height: 40px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #000000;
+  background-color: #f2eee4;
+  font-size: 1rem;
 }
 
 .searchButton {
-    width: 40px;
-    height: 40px;
-    border: 2px solid #7e7e7e;
-    background: #7e7e7e;
-    text-align: center;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #7e7e7e;
+  background: #7e7e7e;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
 }
 /* Login y register de compras navbar */
-.cuenta{
-    width: 20%;
-    gap: 10px;
-    color: white;
-    display: flex;
-    justify-content: end;
+.cuenta {
+  width: 20%;
+  gap: 10px;
+  color: white;
+  display: flex;
+  justify-content: end;
 }
 
-.cuenta a,.cuenta p{
-    display: flex;
-    font-size: 18px;
+.cuenta a,
+.cuenta p {
+  display: flex;
+  font-size: 18px;
 }
 
 /* Carrito de compras navbar */
-.carritoCompras{
-    padding-right: 10px;
+.carritoCompras {
+  padding-right: 10px;
 }
 
 /* diseño responsive */
-@media(max-width: 1246px){
-    .logoHeader{
-        width: 80%;
-    }
+@media (max-width: 1246px) {
+  .logoHeader {
+      width: 80%;
+  }
 
-    .buscadorHeader{
-        width: 75%;
-    }
+  .buscadorHeader {
+      width: 75%;
+  }
 }
 
 @media (max-width: 1110px){
-    .cuenta{
-        display: none;
-    }
+  .cuenta{
+      display: none;
+  }
 
-    .logoHeader{
-        display: none;
-    }
+  .logoHeader{
+      display: none;
+  }
 
-    .logoMovilHeader{
-        display: flex;
-        visibility: visible;
-        max-width: 100%;
-        height: auto;
-        display: block;
-        width: 5rem;
-    }
+  .logoMovilHeader{
+      display: flex;
+      visibility: visible;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      width: 5rem;
+  }
+}
+
+/* Carrusel de imagenes */
+
+.carrusel {
+  position: relative; /* Asegura que los elementos posicionados dentro de este div sean relativos a él */
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.mySlides {
+  display: none;
+}
+.mySlides img {
+  width: 100%;
+  height: 40rem;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  margin-top: -22px;
+  padding: 1rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: 0.6 ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 900px) {
+  .carrusel {
+      width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .carrusel {
+      width: 100%;
+  }
+  .prev,
+  .next {
+      padding: 5px;
+  }
+}
+
+@media (max-width: 700px) {
+  .mySlides img {
+      height: 25rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .mySlides img {
+      height: 55rem;
+  }
+}
+
+/* Aliniacion de elementos en el home */
+
+.containerHome{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 18rem;
+  flex-direction: column;
+}
+
+/* Info Home */
+
+.infoHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  padding: 1.2rem;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.infoHome h3 a {
+  color: #3f3f3f;
+}
+
+/* Carrusel Categoria  */
+
+.containerCategorias {
+  width: 100%;
+  max-width: 964px;
+  position: relative;
+  margin: auto; /* Centrar horizontalmente */
+  text-align: center; /* Alinear contenido al centro */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.carruselCategorias {
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.carruselCategorias::-webkit-scrollbar {
+  height: 0;
+}
+
+.anteriorCategorias,
+.siguienteCategorias {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: #e7e7e7;
+  border: 2px solid;
+  padding: 8px;
+  border-radius: 50%;
+  outline: 0;
+  cursor: pointer;
+  position: absolute;
+}
+
+.anteriorCategorias {
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%); /* Centrar vertical y horizontalmente */
+}
+
+.siguienteCategorias {
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%); /* Centrar vertical y horizontalmente */
+}
+
+.tarjetas {
+  display: grid;
+  grid-gap: 16px;
+  grid-auto-flow: column;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.item {
+  width: 150px;
+  height: 150px;
+  border: 3px solid #ffde59;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  background: rgba(217, 217, 217, 0.58);
+  backdrop-filter: blur(6px);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  user-select: none;
+  font-weight: bolder;
+  padding-top: 1rem;
+}
+
+/* Mas eleguidos */
+
+.masEleguidos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 0.6rem;
+  margin-bottom: 4rem;
+}
+
+.productoMasEleguido {
+  background-color: #f3f2f2;
+  border: 3px solid #1b1b1b3f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.productoMasEleguido img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  width: 9rem;
+}
+
+.buttonMasEleguidos {
+  visibility: visible;
+  --width: 100px;
+  --height: 35px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #004d29;
+  --tooltip-color: #fff;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: relative;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: background 0.3s;
+}
+
+.buttonMasEleguidos::after,
+.buttonMasEleguidos::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.texBotonMasEleguidos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-wrapper,
+.texBotonMasEleguidos,
+.carritoMasEleguidos {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.texBotonMasEleguidos {
+  top: 0;
+}
+
+.texBotonMasEleguidos,
+.carritoMasEleguidos {
+  transition: top 0.5s;
+}
+
+.carritoMasEleguidos {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carritoMasEleguidos svg {
+  width: 24px;
+  height: 24px;
+}
+
+.buttonMasEleguidos:hover {
+  background: #004d29;
+}
+
+.buttonMasEleguidos:hover .texBotonMasEleguidos {
+  top: -100%;
+}
+
+.buttonMasEleguidos:hover .carritoMasEleguidos {
+  top: 0;
+}
+
+.buttonMasEleguidos:hover:before,
+.buttonMasEleguidos:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.buttonMasEleguidos:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.buttonMasEleguidos:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+/* Bento Grid 1 */
+
+.containerBento1{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  grid-gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.containerBento1 div {
+  border-radius: 10px; /* Aplica un borde redondeado de 10px a todos los divs dentro del contenedor */
+  overflow: hidden; /* Asegura que el contenido no se desborde del borde redondeado */
+}
+
+.containerBento1 div img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.containerBento1 div:first-child{
+  height: 350px;
+  grid-column: 1 / 4;
+}
+
+.containerBento1 div:last-child{
+  grid-column: 2 / 4;
+}
+
+/* Banner */
+
+.banner {
+  background-image: url(../img/supermercadoApp.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 500px;
+  width: 100%;
+  margin: auto;
 }
 
 /* Footer*/
 footer{
-  background-color: #004D29;
-  width: 100%;
-  margin: 0;
-  box-sizing: border-box;
-   height: 40vh; /* Usar viewport height para hacerlo responsive en altura */  
-  /* position: absolute; */
-    font-family: "Tenor Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal; 
+background-color: #004D29;
+width: 100%;
+margin: 0;
+box-sizing: border-box;
+ height: 40vh; /* Usar viewport height para hacerlo responsive en altura */  
+/* position: absolute; */
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal; 
 }
 
-footer a{
+footer a {
   color: #000000;
 }
 
 .derechosAutor {
-  background-color: #F2EEE4;
-  width: 100%;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1.5em; /* Usar unidades relativas */
-  text-align: center;
-  height: 20%;
+background-color: #F2EEE4;
+width: 100%;
+font-family: 'Courier New', Courier, monospace;
+font-size: 1.5em; /* Usar unidades relativas */
+text-align: center;
+height: 20%;
 }
 
 /* Estilos para las columnas */
 .filaFooter { 
-   padding: 1%;
-  box-sizing: border-box;
-  height: 28vh;
-  width: 100%;  
-  display: flex;
-  flex-wrap: wrap;  
+ padding: 1%;
+box-sizing: border-box;
+height: 28vh;
+width: 100%;  
+display: flex;
+flex-wrap: wrap;  
 }
 
 .column:last-child {
-   border-right: none;
+  border-right: none;
 }
-  
-.columnaMedia{
-  width: 50%;    
+
+.columnaMedia {
+  width: 50%;
 }
 
 .columnaDerecha{
-  width: 25%;
-  float: left;
-  box-sizing: border-box; /* Esto incluye el borde en el ancho total */
+width: 25%;
+float: left;
+box-sizing: border-box; /* Esto incluye el borde en el ancho total */
 font-size: 1.5em;
 }
 
@@ -241,8 +576,8 @@ font-size: 1.5em;
   box-sizing: border-box; /* Esto incluye el borde en el ancho total */
 }
 .redesFooter {
-  display: flex;
-  text-align: center;
+display: flex;
+text-align: center;
 }
 
 .infoFooter {
@@ -258,89 +593,89 @@ font-size: 1.5em;
 
 /* Estilos para hacer el logo responsive y alineado a la izquierda */
 .logoFooter {
-width: 50%; /* El logo se ajustará al tamaño del contenedor */
-height: 20%;
-display: flex;
-justify-content: flex-start; /* Alinea el contenido al principio del contenedor */
-margin-bottom: 0.5em; /* Añade un margen inferior más pequeño */
+  width: 50%; /* El logo se ajustará al tamaño del contenedor */
+  height: 20%;
+  display: flex;
+  justify-content: flex-start; /* Alinea el contenido al principio del contenedor */
+  margin-bottom: 0.5em; /* Añade un margen inferior más pequeño */
 }
 
-.tituloFooter{
+.tituloFooter {
   text-align: center;
 }
 
-.formasPagoFooter{
-display: flex;
-flex-direction: column;
-align-items: center; /* Centra horizontalmente los elementos */
-text-align: center;
+.formasPagoFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente los elementos */
+  text-align: center;
 
 display: inline;
 justify-content: center;
 
 }
 
-.formasPagoFooter ul{
-display:inline ;
-justify-content: center;
+.formasPagoFooter ul {
+  display: inline;
+  justify-content: center;
 }
 
 .metodosPagoFooter svg{
-  margin: 5%;
+margin: 5%;
 }
 
 .otro img{
-  display: none;
-  visibility: hidden;
+display: none;
+visibility: hidden;
 }
 .textoColumnaIzquierda a{
-  text-decoration: underline;
-  color: black;
+text-decoration: underline;
+color: black;
 }
 .columnaMedia a{
-  text-decoration: underline;
-  color: black;
+text-decoration: underline;
+color: black;
 }
 .tercerColumna a{ text-decoration: underline;
-  color: black;}
+color: black;}
 
 /*pantallas chicas*/
 @media (max-width: 576px) {
 footer{
-  font-size: 10px;
-  height: 25vh;
+font-size: 10px;
+height: 25vh;
 }
 
 .logoFooter img{
-  display: none;
-  visibility: hidden;
+display: none;
+visibility: hidden;
 }
 
 .otro img{
-   display: flex;
-  visibility: visible;
-  height: 100%;
+ display: flex;
+visibility: visible;
+height: 100%;
 }
 
 .textoColumnaIzquierda{
-  width: 90%;
-  display: contents;
-  justify-content: center;
-  font-size: 12px;
+width: 90%;
+display: contents;
+justify-content: center;
+font-size: 12px;
 }
 .textoColumnaIzquierda a{
-  text-decoration: underline;
-  color: black;
+text-decoration: underline;
+color: black;
 }
 .columnaIzquierda {
-  width: 25%;
-  height: 24vh;
-  font-size: 12px;
+width: 25%;
+height: 24vh;
+font-size: 12px;
 }
 .columnaDerecha {
-  width: 25%;
-  height: 24vh;
-  font-size: 12px;
+width: 25%;
+height: 24vh;
+font-size: 12px;
 }
 .columnaMedia{
 width: 50%;
@@ -348,10 +683,10 @@ height: 24vh;
 font-size: 45px;
 }
 .redesFooter svg{
-  width: 25%;
+width: 25%;
 }
 .metodosPagoFooter svg{
-  width: 15%;
+width: 15%;
 }
 
 .infoFooter {
@@ -367,18 +702,18 @@ color: black; /* Puedes elegir el color que desees */
 }
 
 .formasPagoFooter h2{
-  width: 90%;
-  align-items: center;
-  font-size:15px;
+width: 90%;
+align-items: center;
+font-size:15px;
 }
 
 .tercerColumna{
-  margin-top: 10px;
+margin-top: 10px;
 margin-left: 10px;
 }
 .tercerColumna a{
-  text-decoration: underline;
-  color: black;
+text-decoration: underline;
+color: black;
 }
 
 }
@@ -389,21 +724,21 @@ footer{font-size: 10px;
 height: 25vh;}
 
 .logoFooter img{
-  width: 140%;
+width: 140%;
 }
 
 .logoFooter{
-  width: 70%;
-  visibility: visible;
+width: 70%;
+visibility: visible;
 }
 .logoMovilFooter{
-  display: none;
-  visibility: hidden;
+display: none;
+visibility: hidden;
 }
 
 .textoColumnaIzquierda{
-  width: 100%;
-  font-size: 12px;
+width: 100%;
+font-size: 12px;
 }
 
 .columnaIzquierda {
@@ -424,191 +759,191 @@ font-size: 11px;
 margin: 10%; /* Reducir el margen en pantallas pequeñas */
 } 
 .redesFooter svg {
-   width: 50%; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
-  height: 20%;
+ width: 50%; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
+height: 20%;
 }
 .metodosPagoFooter svg{
-  width: 15%;
-  height: 10%;
+width: 15%;
+height: 10%;
 }
 .infoFooter {
-  font-size: 15px; /* Reducir el tamaño de fuente */
-  display: flex;
-  justify-content: center;
+font-size: 15px; /* Reducir el tamaño de fuente */
+display: flex;
+justify-content: center;
 }
 .linksFooter {
-  margin: 10px; /* Reducir el margen */
-  }
+margin: 10px; /* Reducir el margen */
+}
 .formasPagoFooter h2{
-  font-size:15px ;
-  }
+font-size:15px ;
+}
 .tercerColumna{
-  margin-left: 20px;
-  }
+margin-left: 20px;
+}
 
 }
 
 /*pantallas grandes*/
 @media only screen and (min-width: 769px) and (max-width: 992px) {
 footer{
-  height: 30vh;
+height: 30vh;
 }
 .filaFooter{
- height: 30vh;
+height: 30vh;
 }
 .logoFooter img{
-    width: 160px;
-    height:100%;
-   }
-  
-.columnaIzquierda {
-  width: 25%;
+  width: 160px;
+  height:100%;
  }
+
+.columnaIzquierda {
+width: 25%;
+}
 .columnaDerecha {
-  width: 25%;
-  font-size: 15px;
-  }
+width: 25%;
+font-size: 15px;
+}
 .columnaMedia{
-  width: 50%;
-  font-size: 50px;
+width: 50%;
+font-size: 50px;
 }
 .textoColumnaIzquierda{
-  font-size: 15px;
+font-size: 15px;
 }
 .redesFooter {
 margin: 10%; /* Reducir el margen en pantallas pequeñas */
 width: 100%;
 }
 .redesFooter svg {
-  width: 25%; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
+width: 25%; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
 }
 .infoFooter {
-  font-size: 20px; /* Reducir el tamaño de fuente */
-  display: flex;
-  justify-content: center;
-  }
+font-size: 20px; /* Reducir el tamaño de fuente */
+display: flex;
+justify-content: center;
+}
 .linksFooter {
-  margin: 10px; /* Reducir el margen */
-    }
+margin: 10px; /* Reducir el margen */
+  }
 .formasPagoFooter h2{
-  font-size:  20px;
- }
+font-size:  20px;
+}
 
 .metodosPagoFooter svg{
-    width: 10%;
+  width: 10%;
 }   
 .tercerColumna{
-  margin-left: 25px;
-  font-size: 18px;
-  }
+margin-left: 25px;
+font-size: 18px;
+}
 }
 /*Pantallas Extras*/  
 @media only screen and (min-width: 993px) and (max-width: 1260px) {
 footer{
-   height: 30vh;
-  
-  }
+ height: 30vh;
+
+}
 .derechosAutor{
-  margin:20px;
- }
+margin:20px;
+}
 .logoFooter img{
-  width:200px;
-  height: 100%;
+width:200px;
+height: 100%;
 }
 .textoColumnaIzquierda{
+    width: 100%;
+    font-size: 15px;
+}
+  
+.columnaIzquierda {
+width: 25%;
+height: auto;
+}
+.columnaDerecha {
+width: 25%;
+font-size: 15px;
+}
+.columnaMedia{
+width: 50%;
+ }
+.redesFooter {
+margin: 1%; /* Reducir el margen en pantallas pequeñas */
+width: 100%;
+}
+.redesFooter svg {
+  margin-top: 5%;
+  width: 25%; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
+}
+.metodosPagoFooter svg{
+  margin: 5%;
+} 
+  
+.infoFooter {
+    font-size: 18px; /* Reducir el tamaño de fuente */
+    justify-content: center;
+    
+  }
+ .linksFooter {
+    margin: 5px; /* Reducir el margen */
+    }
+    .formasPagoFooter h2{
+    font-size:  20px;
+    }
+     
+    .tercerColumna{
+    margin-left: 20px;
+    }
+}
+/*ver*/
+@media only screen and (min-width: 1262px) and (max-width: 1690px) {
+  footer{
+    height: 35vh;
+   }
+   .filaFooter{
+    height: 35vh;
+   }
+
+  .logoFooter img{
+     width: 300px;
+     height: 70px;
+    }
+    
+  .textoColumnaIzquierda{
       width: 100%;
       font-size: 15px;
+      margin-top: 10%;
   }
-    
-.columnaIzquierda {
-  width: 25%;
-  height: auto;
- }
-.columnaDerecha {
-  width: 25%;
-  font-size: 15px;
+
+  .columnaIzquierda {
+    width: 25%;
+    }
+  .columnaDerecha {
+    width: 25%;
+    }
+  .columnaMedia{
+    width: 50%;   
   }
-.columnaMedia{
-  width: 50%;
-   }
   .redesFooter {
-  margin: 1%; /* Reducir el margen en pantallas pequeñas */
+  margin: 8%; /* Reducir el margen en pantallas pequeñas */
   width: 100%;
   }
-  .redesFooter svg {
-    margin-top: 5%;
-    width: 25%; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
+  .redesFooter img {
+    width: 15%; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
   }
-  .metodosPagoFooter svg{
-    margin: 5%;
-  } 
     
-  .infoFooter {
-      font-size: 18px; /* Reducir el tamaño de fuente */
-      justify-content: center;
-      
-    }
-   .linksFooter {
-      margin: 5px; /* Reducir el margen */
-      }
-      .formasPagoFooter h2{
-      font-size:  20px;
-      }
-       
-      .tercerColumna{
-      margin-left: 20px;
+.infoFooter {
+   font-size: 20px; /* Reducir el tamaño de fuente */
+   display: flex;
+   justify-content: center;
+}
+.linksFooter {
+  margin: 10px; /* Reducir el margen */
+}
+.formasPagoFooter h2{
+  font-size:  25px;
+  }
+.tercerColumna{
+  margin-left: 20px;
+  font-size: 20px;
       }
   }
-/*ver*/
-  @media only screen and (min-width: 1262px) and (max-width: 1690px) {
-    footer{
-      height: 35vh;
-     }
-     .filaFooter{
-      height: 35vh;
-     }
-
-    .logoFooter img{
-       width: 300px;
-       height: 70px;
-      }
-      
-    .textoColumnaIzquierda{
-        width: 100%;
-        font-size: 15px;
-        margin-top: 10%;
-    }
-      
-    .columnaIzquierda {
-      width: 25%;
-      }
-    .columnaDerecha {
-      width: 25%;
-      }
-    .columnaMedia{
-      width: 50%;   
-    }
-    .redesFooter {
-    margin: 8%; /* Reducir el margen en pantallas pequeñas */
-    width: 100%;
-    }
-    .redesFooter img {
-      width: 15%; /* Tamaño relativo más grande para imágenes de redesFooter sociales */
-    }
-      
-  .infoFooter {
-     font-size: 20px; /* Reducir el tamaño de fuente */
-     display: flex;
-     justify-content: center;
-  }
-  .linksFooter {
-    margin: 10px; /* Reducir el margen */
-  }
-  .formasPagoFooter h2{
-    font-size:  25px;
-    }
- .tercerColumna{
-    margin-left: 20px;
-    font-size: 20px;
-        }
-    }

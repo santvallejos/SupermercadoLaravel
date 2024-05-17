@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
-
-
+@charset "UTF-8";
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
@@ -488,12 +487,9 @@ select:disabled {
 button,
 [type=button],
 [type=reset],
-input[type="file"] {
-  font: inherit;
+[type=submit] {
   -webkit-appearance: button;
-  appearance: button; /* Propiedad estándar para compatibilidad */
 }
-
 button:not(:disabled),
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
@@ -548,10 +544,9 @@ legend + * {
   height: auto;
 }
 
-input[type="file"] {
-  font: inherit;
-  -webkit-appearance: button;
-  appearance: button; /* Propiedad estándar para compatibilidad */
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
 }
 
 /* rtl:raw:
@@ -569,11 +564,12 @@ input[type="file"] {
 ::-webkit-color-swatch-wrapper {
   padding: 0;
 }
-input[type="file"] {
+
+::file-selector-button {
   font: inherit;
   -webkit-appearance: button;
-  appearance: button; /* Propiedad estándar para compatibilidad */
 }
+
 output {
   display: inline-block;
 }
