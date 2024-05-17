@@ -18,8 +18,8 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 
 //Por cada ruta que se genera, se mostra su vista respectiva
 Route::get('/', function () {
-    return view('layouts.inicio');
-   /*  return view('layouts.adminlte');*/
+   /* return view('layouts.inicio'); */
+   return view('layouts.adminlte');
 });
 
 Route::get('/ofertas', function () {
@@ -67,10 +67,30 @@ Route::get('/retiro', function () {
     return view('layouts.retiro');
 });
 
+
+Route::get('/user/create', function () {
+    return view('layouts.user.create');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+/* Rutas para el envio de mail tanto para reseteo como para actualizacion de contraseña */ 
 Route::get('password/reset/{token}', [App\Http\Controllers\Auth\ForgotPasswordController::class, 'passwordReset'])->name('password.reset');
+Route::post('password/reset', [App\Http\Controllers\Auth\ForgotPasswordController::class, 'passwordUpdate'])->name('password.update');
 /* Route::get('password/reset/{token}', 'Auth\ForgotPasswordController@passwordReset')->name('password.reset'); */
 /* Route::post('password/reset', 'Auth\ForgotPasswordController@passwordUpdate')->name('password.update');  */
-Route::post('password/reset', [App\Http\Controllers\Auth\ForgotPasswordController::class, 'passwordUpdate'])->name('password.update');
+
+/* Rutas de las vistas del admin para crear, eliminar, listar usuarios 
+Route::group([
+    'middleware'    => 'auth',
+    'prefix'        => 'user'           Indica que a todos las vistas le agrega el prefijo user
+],function(){
+    Route::get('create',        [App\Http\Controllers\UserController::class, 'create'])->name('user.create');
+    Route::get('list',          [App\Http\Controllers\UserController::class, 'index'])->name('user.index');
+    Route::get('{user}/edit',   [App\Http\Controllers\UserController::class, 'edit'])->name('user.edit');
+    Route::get('search',        [App\Http\Controllers\UserController::class, 'searchUser'])->name('user.search');
+    Route::get('{user}/update', [App\Http\Controllers\UserController::class, 'update'])->name('user.update');
+});*/
+Route::post('store', [App\Http\Controllers\UserController::class, 'store'])->name('user.store');
