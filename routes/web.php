@@ -18,8 +18,8 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 
 //Por cada ruta que se genera, se mostra su vista respectiva
 Route::get('/', function () {
-   /* return view('layouts.inicio'); */
-   return view('layouts.adminlte');
+   return view('layouts.inicio'); 
+   /*return view('layouts.adminlte');*/
 });
 
 Route::get('/ofertas', function () {

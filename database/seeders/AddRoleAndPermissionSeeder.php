@@ -36,12 +36,12 @@ class AddRolePermission extends Seeder
             'users.destroy',
         ]);
         $user = User::create([
-            'name'=> 'maxis',
-            'username'=> 'maxis',
-            'fechadenacimiento'=> 12/12/1212,
-            'sexo'=> 'femenino',
-            'email'=> 'maxis@gmail.com',
-            'password'=> bcrypt ('12345678'),
+            'name'              => 'admin',
+            'username'          => 'admin',
+            'fechadenacimiento' => 17/05/2024,
+            'sexo'              => 'masculino',
+            'email'             => 'admin@gmail.com',
+            'password'          =>  bcrypt ('12345678'),
         ]);
         $user->assignRole('Admin');
     }

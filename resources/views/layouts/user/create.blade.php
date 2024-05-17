@@ -46,64 +46,11 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="post" action="{{ route('user.store') }} ">
-                <div class="card-body">
-                    <div class="form-group">
-                        <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
-                        <input id="name" type="text" class="form-control" placeholder="Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="username" class="col-md-4 col-form-label text-md-end">{{ __('Userame') }}</label>
-                        <input id="username" type="text" class="form-control" placeholder="Username">
-                    </div>
-                    <div class="form-group">
-                        <label for="fechadenacimiento" class="col-md-4 col-form-label text-md-end">{{ __('Fecha de nacimiento') }}</label>
-                        <input id="fechadenacimiento" type="date" class="form-control" placeholder="fechadenacimiento">
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-4 col-form-label text-md-end">{{ __('Sexo') }}</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="sexo_femenino" name="sexo" value="Femenino" required>
-                                <label class="form-check-label" for="sexo_femenino">
-                                    Femenino
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="sexo_masculino" name="sexo" value="Masculino" required>
-                                <label class="form-check-label" for="sexo_masculino">
-                                    Masculino
-                                </label>
-                            </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Rol</label>
-                        <select>
-                            <option value="Admin">Administrador</option>
-                            <option value="User">User</option>
-                            <option value="Cliente">Cliente</option>
-                        </select>
-                      </div>
-    
-                  <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email">
-                  </div>
-                  <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password">
-                  </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                  </div>
-                </div>
-                <!-- /.card-body -->
-
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-              </form>
-            </div>
+              <form method="post" action="{{ route('user.store') }}" onsubmit="return validateForm();" enctype="multipart/form-data" autocomplete="off">
+                @csrf
+                @include('layouts/user.partials.form')
+              </form>           
+         </div>
             <!-- /.card -->
 
 
