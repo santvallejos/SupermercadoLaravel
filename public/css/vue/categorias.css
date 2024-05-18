@@ -13,6 +13,7 @@
 .galeriaProductos {
     width: 70%; /* 70% del ancho del contenedor */
     background-color: lightgreen;
+   display: block;
 }
 
 /*SECCION GALERIA*/

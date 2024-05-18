@@ -71,7 +71,7 @@
                             <path d="M21 10v10l-3 -1l-3 2l-3 -3l-3 2v-10" />
                             <path d="M6 10h.01" />
                         </svg>
-                        <a href="/categorias"><p>Lacteos</p></a>
+                        <p>lacteos</p>
                     </div>
                     <div class="item">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"

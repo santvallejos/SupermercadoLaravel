@@ -2,7 +2,7 @@
 <template>
     <div>
       <h1>Esta es la página de lácteos</h1>
-      <categorias/>
+     
     </div>
   </template>
   
@@ -13,7 +13,8 @@
     name: 'CarruselCategorias',  // Definimos un nombre para el componente
     mounted() {
       console.log('Carrusel de Categorías montado.');
-  }}
+  }
+};
   </script>
   
 

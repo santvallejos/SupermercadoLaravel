@@ -4,6 +4,7 @@ import Vue from 'vue';
 import homecategorias from './components/homecategorias.vue';
 import vistaproductos from './components/vistaproductos.vue';
 import lacteos from './components/lacteos.vue'; // Asegúrate de tener la ruta correcta aquí
+import productos from './components/productos.vue';
 
 // Crea una instancia de Vue y registra los componentes
 const app = new Vue({
@@ -11,6 +12,11 @@ const app = new Vue({
   components: {
     homecategorias,
     vistaproductos,
-    lacteos
+    lacteos,
+    productos,
   }
 });
+const routes = [
+    { path: '/lacteos', component: lacteos }
+];
+

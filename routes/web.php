@@ -68,6 +68,9 @@ Route::get('/categoria', function () {
     return view('layouts.categoriasVuejs.categoria');
 });
 
+Route::get('/productos', function () {
+    return view('layouts.categoriasVuejs.productos');
+});
 
 Auth::routes();
 
