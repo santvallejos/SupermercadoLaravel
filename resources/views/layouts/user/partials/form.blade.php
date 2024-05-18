@@ -52,6 +52,30 @@
         </div>
     </div>
     
+
+     <div class="form-group">
+        <label class="role">Role</label>
+        <select class="form-control" name="role" data-dropdown-css-class="select2-secondary" id="role" style="width: 100%;"  {{ !empty($user) ? 'disabled' : ''}}>
+            <option selected="selected" disabled>Select</option>
+             @foreach ($roles as $role)
+                @if (!empty($user) && !empty($user->roles[0]))
+                    <!-- Option para determinar si el rol existe y que lo traiga seleccionado -->
+                    <option value="{{$role->id}}" {{ ($user->roles[0]->id === $role->id ? 'selected' : '') ? 'selected':''}}> {{$role->name}}</option>
+                @else
+                    <!-- Option si no tiene rol asignado que este el campo disponible para seleccionar -->
+                    <option value="{{$role->id}}">{{ $role->name }}</option>
+                @endif
+                @endforeach
+                {{--
+                <option value="1">Admin</option>
+                <option value="2">Client</option>
+                <option value="3">User</option>--}}
+        </select>
+        @if($errors->has('role'))
+            <p class="text-danger">{{ $errors->first('role') }}</p>
+        @endif
+    </div>
+    
     <div class="row mb-3">
         <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
         <input type="email" class="form-control" name="email" id="email" placeholder="Email" onblur="validateEmail(this.value)" {{-- onchange="searchUsername(this.value)" --}}  value="{{ !empty($user) ? $user->email : '' }}" {{ !empty($user) ? 'disabled' : ''}}>
@@ -60,26 +84,6 @@
         @endif
     </div>
 
-     <div class="form-group">
-        <label class="role">Role</label>
-        <select class="form-control" name="role" data-dropdown-css-class="select2-secondary" id="role" style="width: 100%;"  {{ !empty($user) ? 'disabled' : ''}}>
-            <option selected="selected" disabled>Select</option>
-               @foreach ($roles as $key->$role)
-                @if (!empty($user) && !empty($user->roles[0]))
-                <option value="{{$role->id}}" {{ ($user->roles[0]->id === $role->id ? 'selected' : '') ? 'selected':''}}> {{$role->name}}</option>
-                @else
-                <option value="{{$role->id}}">{{ $role->name }}</option>
-                @endif
-                @endforeach
-           {{-- <option value="1">Admin</option>
-                <option value="2">Client</option>
-                <option value="3">User</option> --}}
-        </select>
-        @if($errors->has('role'))
-            <p class="text-danger">{{ $errors->first('role') }}</p>
-        @endif
-    </div>
-    
 
    <div class="form-group">
     <label for="password">Password</label>

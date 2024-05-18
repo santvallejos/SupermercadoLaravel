@@ -45,4 +45,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+ /**
+     * Get the userdata associated with the userdata
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function userdata()
+    {
+        /* Metodo "hasOne" indica que el modelo User se relaciona con un solo elemento de la tabla useerdata */
+                            /* tabla        ,  llave foranea, llave local */
+        return $this->hasOne(UserData::class, 'user_id', 'id');
+    }
 }
