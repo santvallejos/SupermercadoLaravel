@@ -10,14 +10,6 @@
 <body class="hold-transition sidebar-mini">
   <!-- Main Sidebar Container -->
     <!-- Brand Logo -->
-    <nav class="navbar navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/home">
-          <img src="{{asset('image\logo.jpeg')}}" alt="" width="100%" height="100%" class="d-inline-block align-text-top">
-          Panel Principal
-        </a>
-      </div>
-    </nav>
     <a href="/home" class="brand-link">
       <img src="{{asset('image\logo.jpeg')}}  " alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8" width="100%">
       <span class="brand-text font-weight-light">Panel Principal</span>
@@ -89,18 +81,6 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-   
-    </div>
-   
-  </footer>
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
 

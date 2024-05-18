@@ -24,8 +24,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::with('userdata')->get();   
-         /* $users = User::with('userdata')->where('id','!=',Auth::user()->id)->get(); "with" es para traer las relaciones entre tablas */
+         $users = User::with('userdata')->get();   
+        /*$users = User::with('userdata')->where('id','!=',Auth::user()->id)->get(); /* "with" es para traer las relaciones entre tablas */
         return view('layouts.user.list',compact('users'));
     }
 
@@ -57,6 +57,12 @@ class UserController extends Controller
                                                             Si todo se ejecuto bien hace un DB::commit().
                                                             Si algo sale mal se ejecuta un catch.
                                                              */                 
+                                                            $validator = Validator::make($request->all(), [
+                                                                'email'             => 'required|between:3,64|email',
+                                                            ]);
+                                                            if ($validator->fails()) {
+                                                                return redirect()->back()->withInput();
+                                                            }
 
             $role = Role::where('id', $request->role)->first();
             $user = User::create([
@@ -68,14 +74,13 @@ class UserController extends Controller
                 'password'              => Hash::make($request->password),                
             ]);
             $userData = UserData::create([
-                'user_id'               =>  $user->id,
+                'user_id'               => $user->id,
                 'name'                  => $request->name,
                 'username'              => $request->username,
                 'fechadenacimiento'     => $request->fechadenacimiento,
                 'sexo'                  => $request->sexo,
                 'email'                 => $request->email,
-                'password'              => Hash::make($request->password),                
-            ]);
+                ]);
 
 
 
@@ -84,12 +89,12 @@ class UserController extends Controller
                 DB::commit();
                 $notification = Notification::Notification('User Successfully Created', 'success'); /* Notification es un helpers, que usamos para dar notificaciones */
                                                            /* Mensaje a mostrar       , estilo a mostrar */   
-                return redirect('user/list')->with('notification', $notification);
+                return redirect('user/index')->with('notification', $notification);
             }
 
 
-        } catch (Exception $e) {
-            /* dd($e); */
+        } catch (\Exception $e) {
+            dd($e);
             DB::rollBack();
             $notification = Notification::Notification('Error', 'error');
             return redirect('user/create')->with('notification', $notification);
@@ -171,9 +176,16 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        $user = User::find($request->userId);
+        if(!is_null($user)){
+            $userData = UserData::where('user_id',$user->id)->first();
+            if(!is_null($userData)) $userData->delete();
+            $user->delete();
+            return ['status' => 200];
+        }
+       return ['status' => 400];
     }
 
      /**

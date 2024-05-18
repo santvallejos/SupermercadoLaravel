@@ -125,11 +125,19 @@
                                               {{-- <button type="button" onclick="showUser({{$user->id}})"></button> --}}
                                               <form action="{{$user->id}}/edit" method="GET">
                                                   <button type="submit" class="btn" data-title="Edit">
-                                                      <i class="far fa-edit"></i>
+                                                    <svg width="1.2em" height="1.2em" viewBox="0 0 16 16" class="bi bi-eye-fill" fill="#4099D4" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                                        <path fill-rule="evenodd" d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                                                    </svg>
+  
                                                   </button>
                                               </form>
                                               <button type="button" class="btn paddBto" onclick="deleteUser({{$user->id}})" data-title="Delete">
-                                                  <i class="fas fa-trash-alt" style="color:red"></i>
+                                                                                                   <svg width="1.2em" height="1.2em" viewBox="0 0 16 16" class="bi bi-eye-fill" fill="#4099D4" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                                    <path fill-rule="evenodd" d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                                                </svg>
+
                                               </button>
   
                                           </div>
@@ -139,17 +147,6 @@
                               @endforeach
                           </tbody>
                           <tfoot>
-                              <thead>
-                                  <tr>
-                                      <th style="width:15%; text-align:center">Avatar</th>
-                                      <th style="width:15%; text-align:center">Name</th>
-                                      <th style="width:15%; text-align:center">UserName</th>
-                                      <th style="width:10%; text-align:center">Type</th>
-                                      <th style="width:15%; text-align:center">Email</th>
-                                      <th style="width:20%; text-align:center">Fechadenacimiento</th>
-                                      <th style="text-align:center">Actions</th>
-                                  </tr>
-                              </thead>
                           </tfoot>
                       </table>
                   </div>

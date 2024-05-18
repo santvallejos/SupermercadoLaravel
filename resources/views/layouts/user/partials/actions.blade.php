@@ -33,39 +33,10 @@
                         <input type="text" class="form-control" value="{{ !empty($user->roles[0]) ? $user->roles[0]->name : ''}}" disabled>
                     </div>
 
-                    <div class="form-group">
-                        <label>First Name</label>
-                        <input type="text" class="form-control" value="{{ !empty($user->userdata) ? $user->userdata->first_name : '' }}" disabled>
-                    </div>
-                    <div class="form-group">
-                        <label>Last Name</label>
-                        <input type="text" class="form-control" value="{{ !empty($user->userdata) ? $user->userdata->last_name : '' }}" disabled>
-                    </div>
-                    <div class="form-group">
-                      <label>DNI</label>
-                      <input type="text" class="form-control maskDNI" data-inputmask='"mask": "99.999.999"' data-mask  value="{{ !empty($user->userdata) ? $user->userdata->dni : '' }}" disabled>
-                    </div>
-                    <div class="form-group">
-                        <label>Avatar</label>
-                        <img src="{{ !empty($user->userdata) ? url($user->userdata->avatar) : asset('dist/img/user2-160x160.jpg') }}" class="elevation-2 userImage" alt="User Image">
-                    </div>
-                    <div class="form-group">
-                      <label>Address</label>
-                      <input type="text" class="form-control" value="{{ !empty($user->userdata) ? $user->userdata->address : '' }}" disabled>
-                    </div>
-                    <div class="form-group">
-                        <label>Mobile</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                            </div>
-                            <input type="text" class="form-control" data-inputmask='"mask": "(999) 999-9999"' data-mask  value="{{ !empty($user->userdata) ? $user->userdata->mobile : '' }}" disabled>
-                        </div>
-                    </div>
 
                     <div class="form-group">
                       <label>Date of birth</label>
-                      <input type="date" class="form-control" name="date_of_birth" id="date_of_birth" placeholder="date_of_birth"  value="{{ !empty($user->userdata) ? $user->userdata->date_of_birth : '' }}" disabled>
+                      <input type="date" class="form-control" name="fechadenacimiento" id="fechadenacimiento" placeholder="fechadenacimiento"  value="{{ !empty($user->userdata) ? $user->userdata->fechadenacimiento : '' }}" disabled>
                     </div>
 
 
