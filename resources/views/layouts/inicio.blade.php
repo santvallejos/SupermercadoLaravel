@@ -2,10 +2,10 @@
 
 {{-- Titulo --}}
 @section('title', 'Inicio')
-
+            <script src="{{asset('js/app.js')}}"></script>
 {{-- Contenido principal de la pagina --}}
 @section('content')
-
+<br><br>
     <section class="carrusel">
         <div class="mySlides">
             <img src="{{ asset('img/carruselImg1.jpg') }}" alt="imagen-1">

@@ -1,0 +1,56 @@
+/* Carrusel Categoria  */
+.containerCategorias {
+    width: 100%;
+    overflow-x: hidden; /* Deshabilita la barra de desplazamiento horizontal */
+  }
+  
+  .carruselCategorias {
+    display: flex;
+    white-space: nowrap; /* Asegura que los elementos estén en una línea */
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+  }
+  
+  .carruselCategorias .tarjetas {
+    display: flex;
+    flex-wrap: nowrap; /* Asegura que los elementos estén en una línea */
+  }
+  
+  .item {
+    flex: 0 0 auto; /* Evita que los elementos cambien de tamaño */
+    width: calc(100% / 7); /* Ajusta el ancho de los elementos según el número de categorías */
+    max-width: calc(100% / 7); /* Establece un ancho máximo para los elementos */
+  }
+  
+  .tarjetas { 
+      display: grid;
+      grid-gap: 5px;
+      grid-auto-flow: column; 
+      margin: auto;
+      box-sizing: border-box;
+      width: 100%; 
+      /* height: 10%; */
+      display: flex;
+      justify-content: center;
+    
+  } 
+  .item { 
+     width: 8%;
+       border: 3px solid #ffde59;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size:15px;
+      box-sizing: border-box;
+      background: rgba(217, 217, 217, 0.58);
+      backdrop-filter: blur(6px);
+      text-align: center;
+      cursor: pointer;
+       user-select: none;
+      font-weight: bolder;
+      padding-top: 1rem;
+  }
+  
+ 
+  

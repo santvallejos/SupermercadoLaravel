@@ -60,6 +60,15 @@ Route::get('/retiro', function () {
     return view('layouts.retiro');
 });
 
+Route::get('/homeCategorias', function () {
+    return view('layouts.categoriasVuejs.homeCategorias');
+});
+
+Route::get('/categoria', function () {
+    return view('layouts.categoriasVuejs.categoria');
+});
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

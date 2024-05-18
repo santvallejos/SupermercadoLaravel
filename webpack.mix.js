@@ -18,3 +18,6 @@ mix.js('resources/js/app.js', 'public/js')
     /*end add*/
     .sass('resources/sass/app.scss', 'public/css')
     .sourceMaps();
+    
+   
+ 
