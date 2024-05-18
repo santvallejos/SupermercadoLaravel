@@ -58,8 +58,6 @@ class UserController extends Controller
                                                             Si algo sale mal se ejecuta un catch.
                                                              */                 
 
-
-           dd('stop');
             $role = Role::where('id', $request->role)->first();
             $user = User::create([
                 'name'                  => $request->name,
@@ -154,11 +152,11 @@ class UserController extends Controller
      */
     public function searchUser(Request $request)
     {
-        $user = User::where('email', $request->email)->first();
+        $user = User::where('email', $request->email)->first();     /* Esta consulta eloquent es cuando recibe la $request->email que busque la primera coincidencia */
         if (is_null($user)) {
-            return ['status' => 200];
+            return ['status' => 200];                               /* La consulta devolvio que el email esta disponible */
         } else {
-            return ['status' => 400];
+            return ['status' => 400];                               /* La consulta devolvio que el email esta ocupadp */
         }
     }
 }

@@ -7,7 +7,7 @@ use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use App\Models\User;
 
-class AddRolePermission extends Seeder
+class AddRoleAndPermissionSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -38,7 +38,7 @@ class AddRolePermission extends Seeder
         $user = User::create([
             'name'              => 'admin',
             'username'          => 'admin',
-            'fechadenacimiento' => 17/05/2024,
+            'fechadenacimiento' => 05/05/2024,
             'sexo'              => 'masculino',
             'email'             => 'admin@gmail.com',
             'password'          =>  bcrypt ('12345678'),

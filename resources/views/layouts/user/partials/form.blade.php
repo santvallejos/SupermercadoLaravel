@@ -58,7 +58,7 @@
         <select class="form-control" name="role" data-dropdown-css-class="select2-secondary" id="role" style="width: 100%;"  {{ !empty($user) ? 'disabled' : ''}}>
             <option selected="selected" disabled>Select</option>
              @foreach ($roles as $role)
-                @if (!empty($user) && !empty($user->roles[0]))
+                @if (!empty($user) && !empty($user->roles[0]))  <!-- Es para determinar si un usuario tiene rol  -->
                     <!-- Option para determinar si el rol existe y que lo traiga seleccionado -->
                     <option value="{{$role->id}}" {{ ($user->roles[0]->id === $role->id ? 'selected' : '') ? 'selected':''}}> {{$role->name}}</option>
                 @else
@@ -78,7 +78,8 @@
     
     <div class="row mb-3">
         <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-        <input type="email" class="form-control" name="email" id="email" placeholder="Email" onblur="validateEmail(this.value)" {{-- onchange="searchUsername(this.value)" --}}  value="{{ !empty($user) ? $user->email : '' }}" {{ !empty($user) ? 'disabled' : ''}}>
+        {{-- {{ !empty($user) ? 'disabled' : ''}}> se utiliza para que no se pueda modificar --}}
+        <input type="email" class="form-control" name="email" id="email" placeholder="Email" onblur="validateEmail(this.value)" onchange="searchUsername(this.value)" value="{{ !empty($user) ? $user->email : '' }}" {{ !empty($user) ? 'disabled' : ''}}>
         @if($errors->has('email'))
             <p class="text-danger">{{ $errors->first('email') }}</p>
         @endif
