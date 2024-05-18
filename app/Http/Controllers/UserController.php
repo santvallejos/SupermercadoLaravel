@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Role;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
@@ -40,7 +43,14 @@ class UserController extends Controller
     public function store(Request $request)
     {
         try {
-            DB::beginTransaction();                                         
+            DB::beginTransaction();                         /* Se utiliza para advertir que se va a realizar una transaccion,
+                                                            esa transaccion puede ser eliminar, actualizar o crear registros.
+                                                            Sirve para que no se creen datos de mala manera, sin beginTransaction
+                                                            se puede crear o modificar datos pero pueden estar mal cargados y 
+                                                            dara errores.
+                                                            Si todo se ejecuto bien hace un DB::commit().
+                                                            Si algo sale mal se ejecuta un catch.
+                                                             */                 
 
 
             $validator = Validator::make($request->all(), [
@@ -51,15 +61,16 @@ class UserController extends Controller
             if ($validator->fails()) {
                 return redirect()->back()->withInput();
             }
-
+            
            /*  echo "mobile --->  ".$request->mobile; */
-            $arrayRemove = array(" " , "(" ,")" , "-");
-            $mobile = str_replace($arrayRemove,"",$request->mobile);
-    /*         echo "<br> mobile --->  ".$mobile;
-            echo '<br> dni: '.$request->dni; */
-            $dni = str_replace(".","",$request->dni);
+           $arrayRemove = array(" " , "(" ,")" , "-");
+           $mobile = str_replace($arrayRemove,"",$request->mobile);
+           /*         echo "<br> mobile --->  ".$mobile;
+           echo '<br> dni: '.$request->dni; */
+           $dni = str_replace(".","",$request->dni);
            /*  echo '<br> dni: '.$dni;
-            dd('stop'); */
+           dd('stop'); */
+           dd('stop');
             $role = Role::where('id', $request->role)->first();
             $user = User::create([
                 'name'                  => $request->name,
