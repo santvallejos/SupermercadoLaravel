@@ -69,7 +69,7 @@ Route::get('/categoria', function () {
 });
 
 Route::get('/productos', function () {
-    return view('layouts.categoriasVuejs.productos');
+    return view('layouts.categoriasVuejs.producto');
 });
 
 Auth::routes();

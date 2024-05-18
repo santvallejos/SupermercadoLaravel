@@ -19,11 +19,12 @@
                 <h3>galeriaProductos</h3>
             <vistaproductos></vistaproductos> <!-- Vista de productos en la primera línea -->
             <vistaproductos></vistaproductos> <!-- Vista de productos en la segunda línea -->
+            <vistaproductos></vistaproductos> <!-- Vista de productos en la segunda línea -->
             </div>
         </div>
         {{-- <productos/> BORRAR Y --}} 
     </div>
-        
+        <a href="/productos">Productos</a>
     <!-- Incluye el archivo app.js donde se encuentra la configuración de Vue -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 @endsection

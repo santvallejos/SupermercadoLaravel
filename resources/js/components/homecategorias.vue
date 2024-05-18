@@ -2,170 +2,57 @@
     <div>
         <div class="tarjetas" id="tarjetas">
                     <div class="item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-meat">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M13.62 8.382l1.966 -1.967a2 2 0 1 1 3.414 -1.415a2 2 0 1 1 -1.413 3.414l-1.82 1.821" />
-                            <path
-                                d="M5.904 18.596c2.733 2.734 5.9 4 7.07 2.829c1.172 -1.172 -.094 -4.338 -2.828 -7.071c-2.733 -2.734 -5.9 -4 -7.07 -2.829c-1.172 1.172 .094 4.338 2.828 7.071z" />
-                            <path d="M7.5 16l1 1" />
-                            <path
-                                d="M12.975 21.425c3.905 -3.906 4.855 -9.288 2.121 -12.021c-2.733 -2.734 -8.115 -1.784 -12.02 2.121" />
+                          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+                          <path d="m19.111,9.227l-1.633-4.188c-.317-.814-.479-1.67-.479-2.544v-.495h1V0H6v2h1v.495c0,.874-.161,1.729-.479,2.544l-1.633,4.188c-.59,1.512-.889,3.101-.889,4.723v10.051h16v-10.051c0-1.622-.299-3.211-.889-4.723Zm-5.111,4.773v3H6v-3h8Zm4,8H6v-3h10v-7H6.177c.125-.696.315-1.381.575-2.047l1.633-4.188c.408-1.047.615-2.147.615-3.271v-.495h6v.495c0,1.123.207,2.224.615,3.271l1.633,4.188c.499,1.279.752,2.624.752,3.996v8.051Z"/>
                         </svg>
-                        <p>Carne</p>
+                        <a href="/categoria">Almacen</a>
                     </div>
-                    <div class="item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dog">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M11 5h2" />
-                            <path d="M19 12c-.667 5.333 -2.333 8 -5 8h-4c-2.667 0 -4.333 -2.667 -5 -8" />
-                            <path d="M11 16c0 .667 .333 1 1 1s1 -.333 1 -1h-2z" />
-                            <path d="M12 18v2" />
-                            <path d="M10 11v.01" />
-                            <path d="M14 11v.01" />
-                            <path
-                                d="M5 4l6 .97l-6.238 6.688a1.021 1.021 0 0 1 -1.41 .111a.953 .953 0 0 1 -.327 -.954l1.975 -6.815z" />
-                            <path
-                                d="M19 4l-6 .97l6.238 6.688c.358 .408 .989 .458 1.41 .111a.953 .953 0 0 0 .327 -.954l-1.975 -6.815z" />
-                        </svg>
-                        <p>Mascotas</p>
-                    </div>
-                    <div class="item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-carrot">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path
-                                d="M3 21s9.834 -3.489 12.684 -6.34a4.487 4.487 0 0 0 0 -6.344a4.483 4.483 0 0 0 -6.342 0c-2.86 2.861 -6.347 12.689 -6.347 12.689z" />
-                            <path d="M9 13l-1.5 -1.5" />
-                            <path d="M16 14l-2 -2" />
-                            <path d="M22 8s-1.14 -2 -3 -2c-1.406 0 -3 2 -3 2s1.14 2 3 2s3 -2 3 -2z" />
-                            <path d="M16 2s-2 1.14 -2 3s2 3 2 3s2 -1.577 2 -3c0 -1.86 -2 -3 -2 -3z" />
-                        </svg>
-                        <p>Verduras</p>
-                    </div>
-                    <div class="item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-fish">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M16.69 7.44a6.973 6.973 0 0 0 -1.69 4.56c0 1.747 .64 3.345 1.699 4.571" />
-                            <path d="M2 9.504c7.715 8.647 14.75 10.265 20 2.498c-5.25 -7.761 -12.285 -6.142 -20 2.504" />
-                            <path d="M18 11v.01" />
-                            <path d="M11.5 10.5c-.667 1 -.667 2 0 3" />
-                        </svg>
-                        <p>Mariscos</p>
-                    </div>
-                    <div class="item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="icon icon-tabler icons-tabler-outline icon-tabler-toilet-paper">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M6 10m-3 0a3 7 0 1 0 6 0a3 7 0 1 0 -6 0" />
-                            <path d="M21 10c0 -3.866 -1.343 -7 -3 -7" />
-                            <path d="M6 3h12" />
-                            <path d="M21 10v10l-3 -1l-3 2l-3 -3l-3 2v-10" />
-                            <path d="M6 10h.01" />
-                        </svg>
-                        <p>lacteos</p>
-                    </div>
-                    <div class="item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="icon icon-tabler icons-tabler-outline icon-tabler-toilet-paper">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M6 10m-3 0a3 7 0 1 0 6 0a3 7 0 1 0 -6 0" />
-                            <path d="M21 10c0 -3.866 -1.343 -7 -3 -7" />
-                            <path d="M6 3h12" />
-                            <path d="M21 10v10l-3 -1l-3 2l-3 -3l-3 2v-10" />
-                            <path d="M6 10h.01" />
-                        </svg>
-                        <p>Mascotas</p>
+                    <div class="item" href="/categoria">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1"  width="50" height="50" viewBox="0 0 24 24"><path d="M21.832,11.445C20.89,10.032,20,8.7,20,7V6h1V4H20V3a3,3,0,0,0-3-3H15a3,3,0,0,0-3,3V4H11V6h1V7c0,1.7-.89,3.032-1.832,4.445A9.854,9.854,0,0,0,8,17c0,2.949,2.058,6.374,2.145,6.519l.292.481H21.562l.292-.481C21.942,23.374,24,19.949,24,17A9.847,9.847,0,0,0,21.832,11.445ZM14,3a1,1,0,0,1,1-1h2a1,1,0,0,1,1,1V4H14Zm4,3V7a7.908,7.908,0,0,0,1.184,4H12.816A7.908,7.908,0,0,0,14,7V6Zm2.415,16h-8.83A12.263,12.263,0,0,1,10,17a7.239,7.239,0,0,1,1.537-4h8.927A7.246,7.246,0,0,1,22,17,12.248,12.248,0,0,1,20.415,22ZM18,19a1,1,0,1,1-1-1A1,1,0,0,1,18,19Zm-2-3a1,1,0,1,1-1-1A1,1,0,0,1,16,16Zm4,0a1,1,0,1,1-1-1A1,1,0,0,1,20,16ZM7.162,22a21.873,21.873,0,0,0,.956,2H2.437l-.292-.481C2.058,23.374,0,19.949,0,17a9.854,9.854,0,0,1,2.168-5.555C3.11,10.032,4,8.7,4,7V6H3V4H4V3A3,3,0,0,1,7,0H9a2.981,2.981,0,0,1,1.685.52A4.936,4.936,0,0,0,10.1,2H7A1,1,0,0,0,6,3V4H9V6H6V7a7.9,7.9,0,0,1-1.189,4H8.065a16.777,16.777,0,0,0-1.131,2h-3.4A7.244,7.244,0,0,0,2,17a12.263,12.263,0,0,0,1.585,5Z"/></svg>
 
+                        <a href="/categoria">Bebidas</a>
+                    </div>
+                    <div class="item" href="/categoria">width="50" height="50" viewBox="0 0 24 24"
+                        <a href="/categoria">Congelados</a>
+                    </div>
+                    <div class="item" href="/categoria">
+                       
+                        <a href="/categoria">lacteos</a>
+                    </div>
+                    <div class="item" href="/categoria">
+                        
+                        <a href="/categoria">Frutas y Verduras</a>
+
+                     </div>
+                     <div class="item" href="/categoria">
+
+                        <a href="/categoria">Pescados</a>
+                    </div>
+                    <div class="item" href="/categoria">
+                       
+                         <a href="/categoria">Limpieza</a>
+                    </div>
+                    <div class="item" href="/categoria">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg"  width="50" height="50" viewBox="0 0 24 24"><path d="M23.861,8H13V2a1.959,1.959,0,0,1,2-2C15.083,0,22.746.1,23.861,8ZM6.505,10,4.244,7.457C3.462,6.449.284,4.946,0,7A1,1,0,0,0,1,8a2.34,2.34,0,0,1,1.749.786L4,10.193V11a5.006,5.006,0,0,0,5,5h2.865L9.257,19.129C5.576,18.113,4.685,23.824,8.5,24a2.506,2.506,0,0,0,2.261-3.551L14,16.562l3.239,3.887A2.506,2.506,0,0,0,19.5,24c3.816-.177,2.923-5.887-.757-4.871L16.135,16H19a5.006,5.006,0,0,0,5-5V10Z"/></svg>
+
+                        <a href="/categoria">Niños y Bebes </a>
+                    </div>
+                    <div class="item" href="/categoria">
+                            <svg xmlns="http://www.w3.org/2000/svg"  width="50" height="50" viewBox="0 0 24 24"><path d="M7.5,24c-.93,0-1.83-.28-2.6-.83-.82-.58-1.42-1.42-1.7-2.37-.95-.29-1.79-.89-2.37-1.7-.73-1.03-.99-2.29-.73-3.55,.36-1.75,1.79-3.15,3.56-3.48,1.16-.21,2.33,.02,3.3,.65l5.81-5.74c-.67-1-.9-2.18-.69-3.34,.32-1.77,1.72-3.2,3.48-3.56,1.25-.26,2.52,0,3.55,.73,.82,.58,1.42,1.42,1.7,2.37,.95,.29,1.79,.89,2.37,1.7,.73,1.03,.99,2.29,.73,3.55-.36,1.75-1.79,3.15-3.56,3.48-1.16,.21-2.33-.02-3.3-.65l-5.81,5.74c.67,1,.9,2.18,.69,3.34-.32,1.77-1.72,3.2-3.48,3.56-.32,.07-.64,.1-.95,.1Zm-3-10c-.16,0-.32,.01-.48,.04-.96,.18-1.76,.96-1.96,1.91-.15,.71,0,1.41,.4,1.99,.4,.57,1.02,.94,1.71,1.03,.45,.06,.8,.41,.86,.86,.09,.68,.47,1.3,1.03,1.7,.57,.41,1.28,.55,1.99,.4,.95-.2,1.74-1,1.91-1.96,.12-.65,0-1.31-.36-1.85-.54-.83-.45-1.87,.22-2.54l5.78-5.78c.67-.67,1.72-.76,2.54-.22,.54,.35,1.2,.48,1.85,.36,.96-.18,1.76-.96,1.96-1.91,.15-.71,0-1.41-.4-1.99-.4-.57-1.02-.94-1.71-1.03-.45-.06-.8-.41-.86-.86-.09-.68-.47-1.3-1.03-1.7-.57-.41-1.28-.55-1.99-.4-.95,.2-1.74,1-1.91,1.96-.12,.65,0,1.31,.36,1.85,.54,.83,.45,1.87-.22,2.54l-5.78,5.78c-.67,.67-1.72,.76-2.54,.22-.41-.27-.88-.4-1.37-.4Z"/></svg>
+
+                        <a href="/categoria">Mascotas</a>
                     </div>
                     <div class="item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dog">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M11 5h2" />
-                            <path d="M19 12c-.667 5.333 -2.333 8 -5 8h-4c-2.667 0 -4.333 -2.667 -5 -8" />
-                            <path d="M11 16c0 .667 .333 1 1 1s1 -.333 1 -1h-2z" />
-                            <path d="M12 18v2" />
-                            <path d="M10 11v.01" />
-                            <path d="M14 11v.01" />
-                            <path
-                                d="M5 4l6 .97l-6.238 6.688a1.021 1.021 0 0 1 -1.41 .111a.953 .953 0 0 1 -.327 -.954l1.975 -6.815z" />
-                            <path
-                                d="M19 4l-6 .97l6.238 6.688c.358 .408 .989 .458 1.41 .111a.953 .953 0 0 0 .327 -.954l-1.975 -6.815z" />
-                        </svg>
-                        <p>Mascotas</p>
-                    </div>
-                    <div class="item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dog">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M11 5h2" />
-                            <path d="M19 12c-.667 5.333 -2.333 8 -5 8h-4c-2.667 0 -4.333 -2.667 -5 -8" />
-                            <path d="M11 16c0 .667 .333 1 1 1s1 -.333 1 -1h-2z" />
-                            <path d="M12 18v2" />
-                            <path d="M10 11v.01" />
-                            <path d="M14 11v.01" />
-                            <path
-                                d="M5 4l6 .97l-6.238 6.688a1.021 1.021 0 0 1 -1.41 .111a.953 .953 0 0 1 -.327 -.954l1.975 -6.815z" />
-                            <path
-                                d="M19 4l-6 .97l6.238 6.688c.358 .408 .989 .458 1.41 .111a.953 .953 0 0 0 .327 -.954l-1.975 -6.815z" />
-                        </svg>
-                        <p>Mascotas</p>
-                    </div>
-                    <div class="item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dog">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M11 5h2" />
-                            <path d="M19 12c-.667 5.333 -2.333 8 -5 8h-4c-2.667 0 -4.333 -2.667 -5 -8" />
-                            <path d="M11 16c0 .667 .333 1 1 1s1 -.333 1 -1h-2z" />
-                            <path d="M12 18v2" />
-                            <path d="M10 11v.01" />
-                            <path d="M14 11v.01" />
-                            <path
-                                d="M5 4l6 .97l-6.238 6.688a1.021 1.021 0 0 1 -1.41 .111a.953 .953 0 0 1 -.327 -.954l1.975 -6.815z" />
-                            <path
-                                d="M19 4l-6 .97l6.238 6.688c.358 .408 .989 .458 1.41 .111a.953 .953 0 0 0 .327 -.954l-1.975 -6.815z" />
-                        </svg>
-                        <p>Mascotas</p>
-                    </div>
-                    <div class="item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dog">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M11 5h2" />
-                            <path d="M19 12c-.667 5.333 -2.333 8 -5 8h-4c-2.667 0 -4.333 -2.667 -5 -8" />
-                            <path d="M11 16c0 .667 .333 1 1 1s1 -.333 1 -1h-2z" />
-                            <path d="M12 18v2" />
-                            <path d="M10 11v.01" />
-                            <path d="M14 11v.01" />
-                            <path
-                                d="M5 4l6 .97l-6.238 6.688a1.021 1.021 0 0 1 -1.41 .111a.953 .953 0 0 1 -.327 -.954l1.975 -6.815z" />
-                            <path
-                                d="M19 4l-6 .97l6.238 6.688c.358 .408 .989 .458 1.41 .111a.953 .953 0 0 0 .327 -.954l-1.975 -6.815z" />
-                        </svg>
-                        <p>Mascotas</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path d="m15 2v2h2v3h-10v-3h2v-1a3 3 0 0 1 3-3h8v2zm1 14h-8v2h8zm6 1v7h-20v-7a8.942 8.942 0 0 1 4.928-8h10.144a8.942 8.942 0 0 1 4.928 8zm-4-3h-12v6h12z"/></svg> 
+                        <a href="/categoria">Perfumeria</a>
                     </div>
                 </div>
     </div>
 </template>
 
-<script>
 
+<script>
 export default {
   name: 'CarruselCategorias',  // Definimos un nombre para el componente
   mounted() {

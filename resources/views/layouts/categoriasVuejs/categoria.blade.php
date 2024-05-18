@@ -1,11 +1,11 @@
 @extends('quickmart')
 
-@section('title', 'Lacteos')
+@section('title', 'Categorias')
 
 @section('content')
     <br>
     <div id="app">
-        <lacteos></lacteos>
+        <categoria></categoria>
     
         
     </div>

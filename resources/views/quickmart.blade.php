@@ -32,7 +32,7 @@
                 {{-- Lista del menú --}}
                 <ul class="navbarList">
                     <li><a href="{{ url('ofertas') }}">Ofertas</a></li>
-                    <li><a href="{{ url('categoriasVue/homeCategorias') }}">Categorias</a></li>
+                    <li><a href="">Categorias</a></li>
                     <li><a href="{{ url('sucursales') }}">Sucursales</a></li>
                     <li><a href="{{ url('comoComprar') }}">Como comprar?</a></li>
                     <li><a href="{{ url('sobreNosotros') }}">Sobre nosotros</a></li>
@@ -112,7 +112,6 @@
                                 <lu class="linksFooter"><a href="{{ url('retiro') }}">Retiro - Cambios/Devoluciones</a></lu>
                                 <lu class="linksFooter"><a href="{{ url('terminos') }}">Términos y condiciones</a></lu>
                                 <lu class="linksFooter"><a href="{{ url('metodosDePago') }}">Metodos de pago</a></lu>
-                                <lu class="linksFooter"><a href="{{ url('homeCategorias') }}">Categorias</a></lu>
                             </div>
 
                             <div class="formasPagoFooter">
@@ -136,7 +135,8 @@
                                     <li class="info1"><a href="{{ url('preguntasFrecuentes')}}">Preguntas frecuentes</a></li>
                                     <li class="info1"><a href="{{ url('sobreNosotros') }}">Sobre nosotros</a></li>
                                     <li class="info1"><a href="{{ url('sucursales') }}">Sucursales</a></li>
-                            </div>
+                                    <li class="info1"><a href="{{ url('homeCategorias') }}">Categorias</a></li>
+                                </div>
                         </div>
                     
                 </div>  <span class="derechosAutor">
@@ -148,4 +148,3 @@
         <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
-
