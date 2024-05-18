@@ -66,6 +66,13 @@ Route::get('/retiro', function () {
     return view('layouts.retiro');
 });
 
+Route::get('/productos', [App\Http\Controllers\FrontController::class, 'index']);
+
+Route::post('carrito/add', [App\Http\Controllers\CartController::class, 'add'])->name('add');
+Route::get('carrito/checkout', [App\Http\Controllers\CartController::class, 'checkout'])->name('checkout');
+Route::get('carrito/clear', [App\Http\Controllers\CartController::class, 'clear'])->name('clear');
+Route::post('carrito/removeitem', [App\Http\Controllers\CartController::class, 'removeItem'])->name('removeItem');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
