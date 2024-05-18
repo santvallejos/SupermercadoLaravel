@@ -60,25 +60,30 @@
       <div class="container-fluid">
         <div class="row">
           <!-- left column -->
-          <div class="col-md-6">
+          <div class="col-md-12">
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Editar Usuario</h3>
+                <h3 class="card-title">Create User</h3>
               </div>
               <!-- /.card-header -->
+
               <!-- form start -->
-              <form method="POST" action="{{ route('user.update', $user->id) }} " onsubmit="return validateform();" enctype="multipart/form-data" autocomplete="off">
-                @method('PUT')
-                @csrf                                       <!-- Incluimos un token en el formulario -->
-                @include('layouts/user/partials/form')      <!-- Incluimos la vista del formulario -->
-              
-            </form>
+              <form method="POST" action="{{ route('user.update',$user->id) }}" onsubmit="return validateForm();" enctype="multipart/form-data" autocomplete="off">
+                    @method('PUT')
+                    @csrf
+                    @include('layouts.user.partials.form')
+              </form>
             </div>
             <!-- /.card -->
 
 
+
           </div>
+          <!--/.col (left) -->
+
+        </div>
+        <!-- /.row -->
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
@@ -98,7 +103,7 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-
+<script src="{{ asset('js/modules/user/form.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>

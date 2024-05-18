@@ -24,9 +24,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::with('userdata')->get();    /* "with" es para traer las relaciones entre tablas */
-        $roles = Role::all();                 
-        return view('layouts.user.list' ,compact('users','roles'));
+        $users = User::with('userdata')->get();   
+         /* $users = User::with('userdata')->where('id','!=',Auth::user()->id)->get(); "with" es para traer las relaciones entre tablas */
+        return view('layouts.user.list',compact('users'));
     }
 
     /**
@@ -88,7 +88,7 @@ class UserController extends Controller
             }
 
 
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             /* dd($e); */
             DB::rollBack();
             $notification = Notification::Notification('Error', 'error');
@@ -104,9 +104,16 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
-        //
+        $user = User::where('id', $request->id)->with('userdata','roles')->first();
+        return [
+            'status'                =>  200,
+            'name'                  =>  $user->name,
+            'username'              =>  $user->username,
+            'fechadenacimiento'     =>  $user->fechadenacimiento,
+            'sexo'                  =>  $user->sexo,
+        ];
     }
 
     /**
@@ -129,10 +136,34 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UserFormRequest $request, User $user)
     {
-        //
+        try {
+            DB::beginTransaction();
+
+            $user->name = $request->name;
+            $user->username = $request->username;
+            $user->password = Hash::make($request->password);
+            $user->save();
+            $userData = UserData::where('user_id',$user->id)->first();
+            $userData->fechadenacimiento = $request->fechadenacimiento;
+            $userData->save();
+
+            if (!is_null($user && $userData)) {
+                DB::commit();
+                $notification = Notification::Notification('User Successfully Updated', 'success');
+                return redirect('user/list')->with('notification', $notification);
+            }
+
+
+        } catch (Exception $e) {
+            dd($e);
+            DB::rollBack();
+            $notification = Notification::Notification('Error', 'error');
+            return redirect('user/list')->with('notification', $notification);
+        }
     }
+
 
     /**
      * Remove the specified resource from storage.
