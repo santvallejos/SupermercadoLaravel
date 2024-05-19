@@ -8,10 +8,12 @@
     <div id="app">
         <productos></productos>
 
-    
-        
     </div>
-
+{{-- @foreach ($products as $product) --}}
+    
+{{-- @endforeach --}}
+    
+{{-- <h4>{{ $products->nombre }}</h4>  --}}
     <!-- Incluye el archivo app.js donde se encuentra la configuración de Vue -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 @endsection
