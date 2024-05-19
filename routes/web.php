@@ -2,9 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-
-
-/*
+use App\Models\Product;
+use App\Models\Category;
+use Carbon\Carbon;
+/* 
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -16,9 +17,30 @@ use Illuminate\Support\Facades\Auth;
 */
 
 //Por cada ruta que se genera, se mostra su vista respectiva
+//  Route::get('/', function () {
+//     return view('layouts.inicio');
+//  });
+
 Route::get('/', function () {
-    return view('layouts.inicio');
+
+    //  $prod = new Product();
+    //  $prod->nombre = 'Producto 1';
+    //  $prod->categoria_id ='5';
+    //  $prod->cantidad='2';
+    //  $prod->slug = 'Producto 1';
+    //  $prod->imagen_product='descarga.jpg';
+    //  $prod->descripcion = 'Producto 1';
+    //  $prod->precio= '1000';
+    //  $prod->created_at = Carbon::now(); // Establecer la fecha de creación
+    // $prod->updated_at = Carbon::now(); // Establecer la fecha de actualización
+
+    //  $prod-> save();
+    //  return $prod; //cargar productos rapido
+    $cat = Category::find(5)->products;//me muestra los productos de cat5
+    // $prod = Product::find(5)->category;
+    return $cat;
 });
+
 
 Route::get('/ofertas', function () {
     return view('layouts.ofertas');
