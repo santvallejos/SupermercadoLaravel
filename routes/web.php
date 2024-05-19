@@ -34,11 +34,11 @@ Route::get('/', function () {
     //  $prod->created_at = Carbon::now(); // Establecer la fecha de creación
     // $prod->updated_at = Carbon::now(); // Establecer la fecha de actualización
 
-    //  $prod-> save();
-    //  return $prod; //cargar productos rapido
-    $cat = Category::find(5)->products;//me muestra los productos de cat5
-    // $prod = Product::find(5)->category;
-    return $cat;
+    // $prod-> save();
+    // return $prod; //cargar productos rapido
+    // $cat = Category::find(5)->products;//me muestra los productos de cat5
+    // // $prod = Product::find(5)->category;
+    // return $cat;
 });
 
 
