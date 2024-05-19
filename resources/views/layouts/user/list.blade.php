@@ -66,10 +66,10 @@
   
                           <thead>
                               <tr>
-                                  <th style="width:15%; text-align:center">Sexo</th>
                                   <th style="width:15%; text-align:center">Name</th>
-                                  <th style="width:15%; text-align:center">UserName</th>
-                                  <th style="width:10%; text-align:center">Type</th>
+                                  <th style="width:15%; text-align:center">Username</th>
+                                  <th style="width:15%; text-align:center">Role</th>
+                                  <th style="width:10%; text-align:center">Email</th>
                                   <th style="width:15%; text-align:center">Email</th>
                                   <th style="width:20%; text-align:center">Fechadenacimiento</th>
                                   <th style="text-align:center">Actions</th>
@@ -78,13 +78,6 @@
                           <tbody>
                               @foreach ($users as $user)
                                   <tr id='userId_{{$user->id}}'>
-                                      <td style="text-align: center">
-                                          @if(!empty($user->userdata))
-                                              <img src="{{ url($user->userdata->avatar) }}" class="elevation-2 userImage" alt="User Image">
-                                          @else
-                                              <img src="{{ asset('/dist/img/user2-160x160.jpg') }}" class="elevation-2 userImage" alt="User Image">
-                                          @endif
-                                      </td>
                                       <td>
                                           @if(($user) && ($user->name))
                                               <span class="textFirstName"> {{ $user->name }}</span>
@@ -111,7 +104,7 @@
                                       </td>
                                       <td style=" text-align:center">
                                           @if(!empty($user->userdata))
-                                          <span class="textFirstName">{{ $user->userdata->fechadenacimiento }}</span>, <span class="textLastName">{{ $user->userdata->last_name }}</span>
+                                          <span class="textFirstName">{{ $user->userdata->date_of_birth }}</span>, <span class="textLastName">{{ $user->userdata->last_name }}</span>
                                           @endif
                                       </td>
                                       <td>

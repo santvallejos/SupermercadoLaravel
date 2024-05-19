@@ -57,29 +57,32 @@ class UserController extends Controller
                                                             Si todo se ejecuto bien hace un DB::commit().
                                                             Si algo sale mal se ejecuta un catch.
                                                              */                 
-                                                            $validator = Validator::make($request->all(), [
-                                                                'email'             => 'required|between:3,64|email',
-                                                            ]);
-                                                            if ($validator->fails()) {
-                                                                return redirect()->back()->withInput();
-                                                            }
+             
+                                                             /*  echo "mobile --->  ".$request->mobile; */
+            $arrayRemove = array(" " , "(" ,")" , "-");
+            $mobile = str_replace($arrayRemove,"",$request->mobile);
+    /*         echo "<br> mobile --->  ".$mobile;
+            echo '<br> dni: '.$request->dni; */
+            $dni = str_replace(".","",$request->dni);
+           /*  echo '<br> dni: '.$dni;
+            dd('stop'); */
 
             $role = Role::where('id', $request->role)->first();
             $user = User::create([
                 'name'                  => $request->name,
                 'username'              => $request->username,
-                'fechadenacimiento'     => $request->fechadenacimiento,
                 'sexo'                  => $request->sexo,
                 'email'                 => $request->email,
-                'password'              => Hash::make($request->password),                
+                'password'              => Hash::make($request->password),            
             ]);
             $userData = UserData::create([
-                'user_id'               => $user->id,
-                'name'                  => $request->name,
-                'username'              => $request->username,
-                'fechadenacimiento'     => $request->fechadenacimiento,
-                'sexo'                  => $request->sexo,
-                'email'                 => $request->email,
+                'user_id'           =>  $user->id,
+                'first_name'        =>  $request->first_name,
+                'last_name'         =>  $request->last_name,
+                'dni'               =>  $dni,
+                'address'           =>  $request->address,
+                'mobile'            =>  $mobile,
+                'date_of_birth'     =>  $request->date_of_birth,
                 ]);
 
 
@@ -89,7 +92,7 @@ class UserController extends Controller
                 DB::commit();
                 $notification = Notification::Notification('User Successfully Created', 'success'); /* Notification es un helpers, que usamos para dar notificaciones */
                                                            /* Mensaje a mostrar       , estilo a mostrar */   
-                return redirect('user/index')->with('notification', $notification);
+                return redirect('user/list')->with('notification', $notification);
             }
 
 

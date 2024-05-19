@@ -15,16 +15,16 @@ class CreateUsersDataTable extends Migration
     {
         Schema::create('users_data', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->string('name');
-            $table->string('username');
-            $table->date('fechadenacimiento');
-            $table->string('sexo');
-            $table->string('email')->unique();
+            $table->unsignedbigInteger('user_id');
+            $table->string('first_name',100);
+            $table->string('last_name',100);
+            $table->string('dni',8);
+            $table->string('address',200);
+            $table->string('mobile')->nullable();
+            $table->date('date_of_birth');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->softDeletes();
             $table->timestamps();
-
-            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

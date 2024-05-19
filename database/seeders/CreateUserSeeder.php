@@ -18,7 +18,6 @@ class CreateUserSeeder extends Seeder
         User::create([
             'name'=> 'maxis',
             'username'=> 'maxis',
-            'fechadenacimiento'=> 1212/01/01,
             'sexo'=> 'femenino',
             'email'=> 'maxis@gmail.com',
             'password'=> '12345678',

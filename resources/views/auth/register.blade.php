@@ -1,5 +1,11 @@
 @extends('quickmart')
-
+<style>
+    .card{
+        text-align: center;
+    background-color: red;
+    color: blue;
+    }
+</style>
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
