@@ -1,13 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.inicio')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+<div class="contenedorLogin" style="text-align: center ; background:red; margin: 50px auto; width: 400px; heigth: 80px; border: 1px solid black">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="tituloLoginr" style="background: #004d29; color:aliceblue; padding: 10px;border-bottom: 1px solid black" ">{{ __('Login') }}</div>
 
-                <div class="card-body">
+                <div class="formularioLogin">
                         @if (Session::has('flash_message'))
                             @if (Session::get('flash_message_class') <> "")
                                 <div class="alert alert-{{Session::get('flash_message_class')}}">{{ Session::get('flash_message') }}</div>
@@ -15,12 +13,12 @@
                                 <div class="alert alert-success">{{ Session::get('flash_message') }}</div>
                             @endif
                         @endif
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('login') }}" style="background: white; padding: 50px">
                         @csrf
 
                         <div class="row mb-3">
                             <label for="login" class="col-md-4 col-form-label text-md-end">{{ __('Email Address | Username') }}</label>
-
+                            <br>
                             <div class="col-md-6">
                                 <input id="login" type="text" class="form-control @error('login') is-invalid @enderror" name="login" value="{{ old('login') }}" required autocomplete="login" autofocus>
 
@@ -58,23 +56,20 @@
                             </div>
                         </div>
 
-                        <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" >
                                     {{ __('Login') }}
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <a class="btn btn-link" href="{{ route('password.request') }}" style="color: black">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
                             </div>
-                        </div>
                     </form>
                 </div>
             </div>
-        </div>
-    </div>
+        
 </div>
 @endsection

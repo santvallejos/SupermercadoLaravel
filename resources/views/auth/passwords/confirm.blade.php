@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('quickmart')
 
 @section('content')
 <div class="container">

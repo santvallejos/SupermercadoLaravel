@@ -1,14 +1,14 @@
 <!-- Vista en donde se actualiza la contraseña, luego de que te llega el email, el link de reseteo de contraseña te direcciona a esta vista -->
 
-@extends('layouts.app')
+@extends('quickmart')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+<div class="contenedorLogin" style="text-align: center ; background:white; margin: 50px auto; width: 400px; heigth: 80px; border: 1px solid black">
 
+    
+            <div class="card">
+                <div class="card-header"  style="background: #004d29; color:aliceblue; padding: 10px;border-bottom: 1px solid black">{{ __('Reset Password') }}</div>
+                <br>
                 @if (Session::has('flash_message'))
                     @if (Session::get('flash_message_class') <> "")
                         <div class="alert alert-{{Session::get('flash_message_class')}}">{{ Session::get('flash_message') }}</div>
@@ -57,18 +57,17 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
-
-                        <div class="row mb-0">
+                            <br>
+                        
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Reset Password') }}
                                 </button>
                             </div>
-                        </div>
+                        <br><br>
                     </form>
                 </div>
             </div>
-        </div>
-    </div>
+
 </div>
 @endsection

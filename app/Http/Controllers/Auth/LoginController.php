@@ -56,14 +56,9 @@ class LoginController extends Controller
         }else{
             if(!empty($credentials['username'])){
                 $userLocal = User::where('username',$credentials['username'])->first();
-                //where('username','=',$credentials['username'])
-                //select * from users where username='.$variable.' limit 1
             }else if(!empty($credentials['email'])){
                 $userLocal = User::where('email',$credentials['email'])->first();
             }
-            /* $typeField = filter_var($request->input($this->username()), FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
-            $userLocal = User::where($typeField,$credentials[$typeField])->first(); */
-
             if(is_null($userLocal)){
                 Session::flash('flash_message','The User is wrong');
                 Session::flash('flash_message_class','danger');

@@ -1,13 +1,12 @@
-@extends('layouts.app')
+@extends('quickmart')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+<div class="contenedorLogin" style="text-align: center ; background:white; margin: 50px auto; width: 400px; heigth: 80px; border: 1px solid black">
+    <div class="card">
+        <div class="tituloLoginr" style="background: #004d29; color:aliceblue; padding: 10px;border-bottom: 1px solid black" >{{ __('Register') }}</div>
 
-                <div class="card-body">
+        <div class="formularioLogin">
+                      <div class="card-body">
                     <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
 
@@ -118,7 +117,7 @@
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="terminos" id="terminos" required>
                                 <label class="form-check-label" for="terminos">
-                                 <a href={{ url('terminos') }} target="_blank" >{{ __('Acepta los terminos y condiciones') }} </a> 
+                                 <a href={{ url('terminos') }} target="_blank" style="color: black" >{{ __('Acepta los terminos y condiciones') }} </a> 
                                 </label>
                                 @error('terminos')
                                     <span class="invalid-feedback" role="alert">

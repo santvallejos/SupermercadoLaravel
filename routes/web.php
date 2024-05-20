@@ -68,4 +68,26 @@ Route::post('carrito/removeitem', [App\Http\Controllers\CartController::class, '
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('adminUserRole');
+Route::get('password/reset/{token}', [App\Http\Controllers\Auth\ForgotPasswordController::class, 'passwordReset'])->name('password.reset');
+/* Route::get('password/reset/{token}', 'Auth\ForgotPasswordController@passwordReset')->name('password.reset'); */
+/* Route::post('password/reset', 'Auth\ForgotPasswordController@passwordUpdate')->name('password.update');  */
+Route::post('password/reset', [App\Http\Controllers\Auth\ForgotPasswordController::class, 'passwordUpdate'])->name('password.update');
+
+
+
+Route::group([
+    'middleware'    =>  ['auth','adminUserRole'],
+    'prefix'        =>  'user'
+],function(){
+    Route::get('create','UserController@create')->name('user.create');
+    Route::get('list','UserController@index')->name('user.index');
+    Route::get('{user}/edit','UserController@edit')->name('user.edit');
+    Route::post('store','UserController@store')->name('user.store');
+    Route::post('search','UserController@searchUser')->name('user.search');
+    Route::get('destroy','UserController@destroy')->name('user.destroy');
+    Route::put('{user}/update', 'UserController@update')->name('user.update');
+    Route::get('show','UserController@show')->name('user.show');
+});
+
+

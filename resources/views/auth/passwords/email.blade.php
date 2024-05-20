@@ -1,13 +1,13 @@
 <!-- Vista donde procedes a colocar tu email o username para que te envie el email con el reset password -->
-@extends('layouts.app')
+@extends('quickmart')
 
 @section('content')
-<div class="container">
+<div class="container class="contenedorLogin" style="text-align: center ; background:white; margin: 50px auto; width: 400px; heigth: 80px; border: 1px solid black">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
-
+                <div class="tituloLoginr" style="background: #004d29; color:aliceblue; padding: 10px;border-bottom: 1px solid black" >{{ __('Reset Password') }}</div>
+                <br>
                 <!-- Controla el envio de mensajes ya sea de ingreso exitoso o datos incorrectos -->
                 <div class="card-body">
                     @if (Session::has('flash_message'))
@@ -35,15 +35,14 @@
                                 @enderror
                             </div>
                         </div>
-
-                        <div class="row mb-0">
+                        <br>
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Send Password Reset Link') }}
                                 </button>
                             </div>
-                        </div>
                     </form>
+                    <br><br>
                 </div>
             </div>
         </div>

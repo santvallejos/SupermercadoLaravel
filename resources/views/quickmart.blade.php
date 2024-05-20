@@ -53,22 +53,102 @@
                 </button>
             </div>
 
-            {{-- Cuenta --}}
+            {{-- Cuentas autenticacion de usuario cuando esta logueado o es un guest --}}
             @if (Route::has('login'))
                 <div class="cuenta">
-                    @auth
-                        <a href="{{ url('/home') }}" class="">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="">Log in</a>
-    
-                        <p>|</p>
-    
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="">Register</a>
+                   <!-- Right Side Of Navbar -->
+                    <!-- Authentication Links -->
+                    @guest
+                        @if (Route::has('login'))
+                                <a href="{{ route('login') }}">{{ __('Login') }}</a>
+                            @endif
+                            <p>|</p>
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}">{{ __('Register') }}</a>
                         @endif
-                    @endauth
+                        @else
+                            @auth
+                                <span> {{ Auth::user()->name }} </span>
+                                <p>|</p>
+                                <a href="{{ url('home') }}">Dashborad</a>                               
+                                <p>|</p>
+                                <div class="contenidoLogout">
+                                    <a href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            @endauth
+                    @endguest    
+                      {{--   @else
+
+                           @auth
+                            <!-- Este if es para consultar el rol del usuario si es distinto de 1 que es client, muestra el avatar admin -->
+                            @if (auth()->check() && auth()->user()->roles[0]->id!=1)
+                                <div class="contenidoUserLogueado" style="display: block; teex-align:center" >
+                                    <img src="https://i.postimg.cc/sgVHzPTc/avatar-admin-removebg-preview.png" alt="avataradmin" width="30" height="30">
+                                </div>
+                                <span> {{ Auth::user()->name }} </span>
+                                <p>|</p>
+                                <a href="{{ url('home') }}">Dashborad</a>                               
+                                <p>|</p>
+                                <div class="contenidoLogout">
+                                    <a href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            @else
+                            <!-- Ya que no es admin, consulta el sexo del usuario para determinar su avatar y nombre -->
+                                @if(Auth::user()->userdata->sexo == 'Masculino')
+                                    <div class="contenidoUserLogueado" style="display: block; teex-align:center" >
+                                        <img src="https://i.postimg.cc/YS2r72DN/nino.png" alt="avatarniño" width="30" height="30">
+                                    </div>
+                                    <span> {{ Auth::user()->name }} </span>
+                                    <p>|</p>
+                                    <div class="contenidoLogout">
+                                        <a href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                @endif    
+                                @else
+                                    <div class="contenidoUserLogueado" style="display: block; teex-align:center" >
+                                        <img src="https://i.postimg.cc/Wpx1Zvtj/nina.png" alt="avatarniña" width="30" height="30">
+                                    </div>
+                                    <span> {{ Auth::user()->name }} </span>
+                                    <p>|</p>
+                                    <div class="contenidoLogout">
+                                        <a href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                                    </div>
+ 
+                                @endif
+                              @endif                            
+                            @endauth  
+                    @endguest --}}
                 </div>
             @endif
+            
             {{-- Carrito de compras --}}
             <div>
                 <a href="{{ route('checkout') }}" class="carritoCompras"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="white"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg> <span class="carritoCount">{{ \Cart::count()}}</span></a>
