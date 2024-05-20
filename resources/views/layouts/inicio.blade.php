@@ -265,7 +265,7 @@
                     <h4>Pan Bimbo</h4>
                     <p>$3,99</p>
                     <button>
-                        <div data-tooltip="Price:-$20" class="buttonMasEleguidos">
+                        <div class="buttonMasEleguidos">
                             <div class="button-wrapper">
                                 <div class="texBotonMasEleguidos">Buy Now</div>
                                 <span class="carritoMasEleguidos">
@@ -405,7 +405,7 @@
                     <h4>Patitas grangas de sol</h4>
                     <p>$3,99</p>
                     <button>
-                        <div data-tooltip="Price:-$20" class="buttonMasEleguidos">
+                        <div class="buttonMasEleguidos">
                             <div class="button-wrapper">
                                 <div class="texBotonMasEleguidos">Buy Now</div>
                                 <span class="carritoMasEleguidos">

@@ -21,21 +21,12 @@ Route::get('/', function () {
     return view('layouts.inicio');
 });
 
-Route::get('/ofertas', function () {
-    return view('layouts.ofertas');
-});
-
 Route::get('/categorias', function () {
     return view('layouts.categorias');
 });
 
 Route::get('/sucursales', function () {
     return view('layouts.sucursales');
-});
-
-
-Route::get('/comoComprar', function () {
-    return view('layouts.comoComprar');
 });
 
 Route::get('/sobreNosotros', function () {

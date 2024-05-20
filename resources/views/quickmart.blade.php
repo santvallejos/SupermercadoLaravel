@@ -31,10 +31,10 @@
                 </button>
                 {{-- Lista del menú --}}
                 <ul class="navbarList">
-                    <li><a href="{{ url('ofertas') }}">Ofertas</a></li>
-                    <li><a href="">Categorias</a></li>
+                    <li><a href="{{ url('productos') }}">Productos</a></li>
+                    <li><a href="{{ url('categorias') }}">Categorias</a></li>
                     <li><a href="{{ url('sucursales') }}">Sucursales</a></li>
-                    <li><a href="{{ url('comoComprar') }}">Como comprar?</a></li>
+                    <li><a href="{{ url('preguntasFrecuentes') }}">Preguntas Frecuentes</a></li>
                     <li><a href="{{ url('sobreNosotros') }}">Sobre nosotros</a></li>
                 </ul>
             </nav>
@@ -70,8 +70,8 @@
                 </div>
             @endif
             {{-- Carrito de compras --}}
-            <div class="carritoCompras">
-                <a href=""><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="white"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></a>
+            <div>
+                <a href="{{ route('checkout') }}" class="carritoCompras"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="white"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg> <span class="carritoCount">{{ \Cart::count()}}</span></a>
             </div>
         </header>
 

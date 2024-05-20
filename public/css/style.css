@@ -154,6 +154,25 @@ a {
 /* Carrito de compras navbar */
 .carritoCompras {
     padding-right: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.carritoCount {
+  position: absolute;
+  top: -10px;
+  right: -1px;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  min-width: 20px;
+  min-height: 20px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
 /* diseño responsive */
@@ -289,7 +308,6 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 4rem;
 }
 
 .carruselCategorias {
@@ -364,6 +382,7 @@ a {
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 0.6rem;
     margin-bottom: 4rem;
+    margin-top: 4rem;
 }
 
 .productoMasEleguido {
@@ -476,6 +495,29 @@ a {
     bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
 }
 
+.botonAgregar{
+  display: flex;
+  background-color: #004d29;
+  color: #ffffff;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  gap: 0.75rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: .6s ease;
+}
+
+.botonAgregar:hover {
+  box-shadow: none;
+}
+
 /* Bento Grid 1 */
 
 .containerBento1{
@@ -518,6 +560,78 @@ a {
     width: 100%;
     margin: auto;
 }
+
+/* Estilos para el sistema de carrito */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.cart-table thead {
+  background-color: #f8f8f8;
+}
+
+.cart-table th, .cart-table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.cart-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.cart-table img {
+  max-width: 100px;
+  height: auto;
+}
+
+.cart-table .subtotal-row, .cart-table .tax-row, .cart-table .total-row {
+  font-weight: bold;
+}
+
+.cart-table .total-row {
+  background-color: #f0f0f0;
+}
+
+.cart-table .remove-form {
+  display: inline-block;
+}
+
+.cart-table .remove-form input[type="submit"] {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cart-table .remove-form input[type="submit"]:hover {
+  background-color: #ff1a1a;
+}
+
+.cart-actions {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.cart-actions a {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cart-actions a:hover {
+  background-color: #0056b3;
+}
+
 
 /* Footer*/
 footer{
