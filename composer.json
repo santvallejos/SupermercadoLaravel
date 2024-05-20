@@ -12,11 +12,8 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.4",
-<<<<<<< HEAD
-        "mindscms/laravelshoppingcart": "^2.1"
-=======
+        "mindscms/laravelshoppingcart": "^2.1",
         "spatie/laravel-permission": "^6.7"
->>>>>>> 28a94f86f3d9738e132b5a5f2ba2aad4fa5792ed
     },
     "require-dev": {
         "facade/ignition": "^2.5",
