@@ -150,46 +150,10 @@
                         <p>Limpieza</p>
                     </div>
                     <div class="item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="icon icon-tabler icons-tabler-outline icon-tabler-toilet-paper">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M6 10m-3 0a3 7 0 1 0 6 0a3 7 0 1 0 -6 0" />
-                            <path d="M21 10c0 -3.866 -1.343 -7 -3 -7" />
-                            <path d="M6 3h12" />
-                            <path d="M21 10v10l-3 -1l-3 2l-3 -3l-3 2v-10" />
-                            <path d="M6 10h.01" />
-                        </svg>
-                        <p>Limpieza</p>
                     </div>
                     <div class="item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="icon icon-tabler icons-tabler-outline icon-tabler-toilet-paper">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M6 10m-3 0a3 7 0 1 0 6 0a3 7 0 1 0 -6 0" />
-                            <path d="M21 10c0 -3.866 -1.343 -7 -3 -7" />
-                            <path d="M6 3h12" />
-                            <path d="M21 10v10l-3 -1l-3 2l-3 -3l-3 2v-10" />
-                            <path d="M6 10h.01" />
-                        </svg>
-                        <p>Limpieza</p>
                     </div>
                     <div class="item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="icon icon-tabler icons-tabler-outline icon-tabler-toilet-paper">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M6 10m-3 0a3 7 0 1 0 6 0a3 7 0 1 0 -6 0" />
-                            <path d="M21 10c0 -3.866 -1.343 -7 -3 -7" />
-                            <path d="M6 3h12" />
-                            <path d="M21 10v10l-3 -1l-3 2l-3 -3l-3 2v-10" />
-                            <path d="M6 10h.01" />
-                        </svg>
-                        <p>Limpieza</p>
                     </div>
                     <div class="item">
 
@@ -448,8 +412,12 @@
         </section>
 
         <section class="containerBento1">
-            <div><img src="https://newpap.s3.us-west-2.amazonaws.com/wp-content/uploads/2022/05/12191743/MasOnline_Logo_-18.png" alt=""></div>
-            <div><img src="https://scontent.fcnq2-1.fna.fbcdn.net/v/t39.30808-6/296904389_5253609368080182_4538774671224260308_n.png?stp=dst-png_s640x640&_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=FAoJEPGXmz4Q7kNvgGVRrKi&_nc_ht=scontent.fcnq2-1.fna&oh=00_AYCuCKIdVMK9hWMVqjkzlT-8hiA9y1h95kNXRWq-_bpY1g&oe=6643437D"alt=""></div>
+            <div><img
+                    src="https://newpap.s3.us-west-2.amazonaws.com/wp-content/uploads/2022/05/12191743/MasOnline_Logo_-18.png"
+                    alt=""></div>
+            <div><img
+                    src="https://scontent.fcnq2-2.fna.fbcdn.net/v/t39.30808-6/274857679_4835150446592745_4890295049975605508_n.png?stp=dst-png_s1080x2048&_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=-yOLfv0RbLEQ7kNvgGaCFBW&_nc_oc=Adiki_4b1vhauOksnN0E_sLJ3gwjC6yFPOwCvDMAMuu80dz81naXKbDKuWeGzqceOxE&_nc_ht=scontent.fcnq2-2.fna&oh=00_AYCDx0XSavAdH5b8OY2CHXYgF6vSKcURiPrxJtb8Wkyarw&oe=66515A4B"alt="">
+            </div>
             <div><img src="https://i.ytimg.com/vi/aDuflivVI6c/maxresdefault.jpg" alt=""></div>
         </section>
 
@@ -458,4 +426,16 @@
     <section>
         <div class="banner"></div>
     </section>
+
+    <div class="containerHome" style="margin-top: 3rem;">
+        <section class="containerBento1">
+            <div><img
+                    src="https://newpap.s3.us-west-2.amazonaws.com/wp-content/uploads/2022/05/12191743/MasOnline_Logo_-18.png"
+                    alt=""></div>
+            <div><img
+                    src="https://scontent.fcnq2-2.fna.fbcdn.net/v/t39.30808-6/274857679_4835150446592745_4890295049975605508_n.png?stp=dst-png_s1080x2048&_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=-yOLfv0RbLEQ7kNvgGaCFBW&_nc_oc=Adiki_4b1vhauOksnN0E_sLJ3gwjC6yFPOwCvDMAMuu80dz81naXKbDKuWeGzqceOxE&_nc_ht=scontent.fcnq2-2.fna&oh=00_AYCDx0XSavAdH5b8OY2CHXYgF6vSKcURiPrxJtb8Wkyarw&oe=66515A4B"alt="">
+            </div>
+            <div><img src="https://i.ytimg.com/vi/aDuflivVI6c/maxresdefault.jpg" alt=""></div>
+        </section>
+    </div>
 @endsection
