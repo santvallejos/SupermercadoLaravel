@@ -57,8 +57,10 @@ Route::get('/retiro', function () {
     return view('layouts.retiro');
 });
 
+//Ruta donde se enceuntran los productos
 Route::get('/productos', [App\Http\Controllers\FrontController::class, 'index']);
 
+//rutas para acciones que se realicen en el sistema de compras
 Route::post('carrito/add', [App\Http\Controllers\CartController::class, 'add'])->name('add');
 Route::get('carrito/checkout', [App\Http\Controllers\CartController::class, 'checkout'])->name('checkout');
 Route::get('carrito/clear', [App\Http\Controllers\CartController::class, 'clear'])->name('clear');

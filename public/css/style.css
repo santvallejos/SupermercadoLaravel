@@ -562,45 +562,41 @@ a {
 }
 
 /* Estilos para el sistema de carrito */
-.cart-table {
+.cartTable {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
 }
 
-.cart-table thead {
+.cartTable thead {
   background-color: #f8f8f8;
 }
 
-.cart-table th, .cart-table td {
+.cartTable th, .cartTable td {
   padding: 12px;
   text-align: center;
   border: 1px solid #ddd;
 }
 
-.cart-table th {
+.cartTable th {
   background-color: #f2f2f2;
   font-weight: bold;
 }
 
-.cart-table img {
+.cartTable img {
   max-width: 100px;
   height: auto;
 }
 
-.cart-table .subtotal-row, .cart-table .tax-row, .cart-table .total-row {
+.cartTable .subtotalRow{
   font-weight: bold;
 }
 
-.cart-table .total-row {
-  background-color: #f0f0f0;
-}
-
-.cart-table .remove-form {
+.cartTable .removeForm {
   display: inline-block;
 }
 
-.cart-table .remove-form input[type="submit"] {
+.cartTable .removeForm input[type="submit"] {
   background-color: #ff4d4d;
   color: white;
   border: none;
@@ -610,16 +606,16 @@ a {
   transition: background-color 0.3s ease;
 }
 
-.cart-table .remove-form input[type="submit"]:hover {
+.cartTable .removeForm input[type="submit"]:hover {
   background-color: #ff1a1a;
 }
 
-.cart-actions {
-  margin-top: 20px;
+.cartActions {
+  margin: 20px;
   text-align: right;
 }
 
-.cart-actions a {
+.cartActions a {
   background-color: #007bff;
   color: white;
   padding: 10px 20px;
@@ -628,7 +624,7 @@ a {
   transition: background-color 0.3s ease;
 }
 
-.cart-actions a:hover {
+.cartActions a:hover {
   background-color: #0056b3;
 }
 

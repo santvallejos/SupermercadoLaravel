@@ -14,10 +14,10 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->id();
-            $table->string("name", 50);
-            $table->decimal("price", 7,2);
-            $table->string("image", 600)->nullable();
+            $table->increments('id'); // Campo autoincremental para la clave primaria
+            $table->string("name", 50); //nombre del producto
+            $table->decimal("price", 7,2); //precio
+            $table->string("image", 600)->nullable();//imagen
             $table->timestamps();
         });
     }
