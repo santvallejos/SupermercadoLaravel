@@ -3,5 +3,10 @@
 @section('title', 'categorias')
 
 @section('content')
-    <h1>Esta es la pagina de categorias</h1>
+
+    <div id="app">
+        <homecategorias></homecategorias>
+    </div>
+
+    <script src="{{ asset('js/app.js') }}"></script>
 @endsection
