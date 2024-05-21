@@ -249,7 +249,7 @@
 
             <div class="columnaMedia">
                 <div class="infoFooter">
-                    <lu class="linksFooter"><a href="{{ url('retiro') }}">Retiro - Cambios/Devoluciones</a></lu>
+                    <lu class="linksFooter"><a href="{{ url('cambiosydevoluciones') }}">Retiro - Cambios/Devoluciones</a></lu>
                     <lu class="linksFooter"><a href="{{ url('terminos') }}">Términos y condiciones</a></lu>
                     <lu class="linksFooter"><a href="{{ url('metodosDePago') }}">Metodos de pago</a></lu>
                 </div>

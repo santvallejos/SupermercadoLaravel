@@ -1,0 +1,13 @@
+.volverAtras {
+    text-decoration: none;
+    color: #ffde59;
+    padding: 10px 15px;
+    border: 1px solid #004d29;
+    border-radius: 5px;
+    background-color: #004d29;
+    margin-left: 1%;
+  }
+  .volverAtras:hover {
+    background-color: #ffde59; /* Cambio de color de fondo al pasar el mouse */
+    color: #004d29;
+  }

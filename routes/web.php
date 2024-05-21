@@ -53,8 +53,8 @@ Route::get('/contacto', function () {
     return view('layouts.contacto');
 });
 
-Route::get('/retiro', function () {
-    return view('layouts.retiro');
+Route::get('/cambiosydevoluciones', function () {
+    return view('layouts.cambiosydevoluciones');
 });
 
 //Ruta donde se enceuntran los productos
