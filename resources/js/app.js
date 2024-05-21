@@ -11,19 +11,18 @@ Vue.use(VueRouter);
 
 import homecategorias from './components/homecategorias.vue'; // Asegúrate de tener la ruta correcta aquí
 import sobreNosotros from './components/sobreNosotros.vue';
-import cambiosydevoluciones from './components/retiro.vue';
-import terminos from './components/terminos.vue';
+import cambiosydevoluciones from './components/cambiosydevoluciones.vue';
 import sucursales from './components/sucursales.vue';
 import preguntas from './components/preguntas.vue';
 import contacto from './components/contacto.vue';
 import cambiosydevoluciones from './components/cambiosydevoluciones.vue';
-import atencionAlCliente from './components/atencionAlCliente.vue';
+import atencionalcliente from './components/atencionAlCliente.vue';
 
 // Crea una instancia de Vue y registra los componentes
 const app = new Vue({
   el: '#app',
     components: {
-      atencionAlCliente,
+      atencionalcliente,
       cambiosydevoluciones,
       contacto,
       preguntas,   

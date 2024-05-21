@@ -81,8 +81,7 @@
     </div>
     <br><br>
     <hr>
-    
-    <!-- creado por javiniguez.com, Julio 2019 -->
+
     </div>    
 </div>
 </template>
