@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+.pFTitulo {
+  text-align: center;
+  margin: 40px 0;
+  color: #F2EEE4;
+  font-size: 25px;
+  font-style: bold;
+}
+
+/*toda la seccion del box de preguntas*/
+.accordion {
+  width: 800px;
+  margin: 90px auto;
+  color: black;
+  background-color:#004d29;
+  padding: 45px 45px;
+}
+
+/*seccion de preguntas*/
+.accordion .containerPF {
+  position: relative;
+  margin: 10px 10px;
+  
+}
+
+/*Seccion de preguntas*/
+.accordion .labelP {
+  position: relative;
+  padding: 10px 0;
+  font-size: 20px;
+  cursor: pointer;color: #F7F7F7;
+}
+
+/*mas y menos*/
+.accordion .labelP::before {
+  content: '+';
+  color: black;
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  font-size: 30px;
+  transform: translateY(-50%);
+}
+
+/*mas y menos*/
+.accordion .content {
+  position: relative;
+  background:#F2EEE4;
+  max-height: 0;
+  font-size: 20px;
+  text-align: justify;
+  width: 700px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+/*Mas y menos*/
+.accordion hr {
+  width: 100%;
+  margin-left: 0;
+  border: 1px solid grey;
+}
+
+.accordion .containerPF.active .content {
+  max-height: 150px;
+ }
+
+.accordion .containerPF.active .labelP::before {
+  content: '-';
+  font-size: 30px;
+}
+
+#app{
+  display: flex;
+  justify-content: right;
+  margin-left: 80%;
+  width: 20%;
+  text-align: right;
+ 
+}
+
+#back-to-top {
+  color: #000000; /* Color del texto */
+  background-color: #F2EEE4; /* Color de fondo */
+  padding: 10px 20px; /* Espaciado interno */
+  text-decoration: none; /* Sin subrayado */
+  border-radius: 5px; /* Bordes redondeados */
+  border: 1px solid #004d29;
+}
+
+/* Estilos para el botón al pasar el mouse */
+#back-to-top:hover {
+  background-color: #ffde59; /* Cambio de color de fondo al pasar el mouse */
+}
+.volverAtras {
+  text-decoration: none;
+  color: #ffde59;
+  padding: 10px 15px;
+  border: 1px solid #004d29;
+  border-radius: 5px;
+  background-color: #004d29;
+  margin-left: 1%;
+}
+.volverAtras:hover {
+  background-color: #ffde59; /* Cambio de color de fondo al pasar el mouse */
+  color: #004d29;
+}

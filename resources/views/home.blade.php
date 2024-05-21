@@ -1,23 +1,13 @@
 @extends('layouts.app')
+@extends('layouts.dashboard.navbaradmin')
+@extends('layouts.dashboard.sidebar')
+@extends('layouts.dashboard.menuSuperior')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+  <h2 style="text-align: center">Bienvenido <span > {{ Auth::user()->name }} </span></h2>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+  </main>
+  </div>
+  </div>
+ 
 @endsection
